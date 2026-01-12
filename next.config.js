@@ -25,6 +25,8 @@ const nextConfig = {
   experimental: {
     // Optimize package imports
     optimizePackageImports: ['lucide-react', 'framer-motion'],
+    // Use system TLS certs for font fetching (helps in restricted environments)
+    turbopackUseSystemTlsCerts: true,
   },
 
   // Headers for security and caching

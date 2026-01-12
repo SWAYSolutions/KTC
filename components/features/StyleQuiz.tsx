@@ -13,7 +13,8 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ArrowLeft, RefreshCw, Sparkles } from 'lucide-react';
 import { Button, Card, Badge } from '@/components/ui';
-import { quizQuestions, calculateStyleResult, type QuizResult } from '@/data/style-quiz';
+import { quizQuestions, calculateStyleResult } from '@/data/style-quiz';
+import { type QuizResult } from '@/types';
 import { cn } from '@/lib/utils';
 
 interface StyleQuizProps {
@@ -93,7 +94,7 @@ export function StyleQuiz({ onComplete }: StyleQuizProps) {
               We Recommend for You:
             </h3>
             <ul className="space-y-2">
-              {result.recommendations.map((rec, idx) => (
+              {result.recommendations.map((rec: string, idx: number) => (
                 <li key={idx} className="flex items-center gap-2 text-charcoal-600">
                   <span className="w-2 h-2 bg-gold rounded-full" />
                   {rec}
