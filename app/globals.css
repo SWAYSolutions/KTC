@@ -1,0 +1,345 @@
+/**
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Kitchen Table Cabinetry - Global Styles
+ * Tailwind CSS base, components, and utilities with custom luxury styles
+ * ═══════════════════════════════════════════════════════════════════════════════
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Google Fonts Import
+   Playfair Display for headings, Inter for body text
+   ───────────────────────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Base Layer - HTML & Body Defaults
+   ───────────────────────────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    @apply scroll-smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-charcoal font-sans;
+  }
+
+  /* Typography Defaults */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-semibold text-charcoal;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  /* Focus States for Accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-gold ring-offset-2;
+  }
+
+  /* Selection Color */
+  ::selection {
+    @apply bg-gold/30 text-charcoal;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Component Layer - Reusable Patterns
+   ───────────────────────────────────────────────────────────────────────────── */
+@layer components {
+  /* Container with responsive padding */
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* Luxury gradient text */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold via-wood to-gold;
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+
+  /* Premium button hover effect */
+  .btn-premium {
+    @apply relative overflow-hidden;
+  }
+
+  .btn-premium::before {
+    @apply content-[''] absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent;
+    @apply -translate-x-full transition-transform duration-500;
+  }
+
+  .btn-premium:hover::before {
+    @apply translate-x-full;
+  }
+
+  /* Image hover zoom effect */
+  .img-zoom {
+    @apply overflow-hidden;
+  }
+
+  .img-zoom img {
+    @apply transition-transform duration-700 ease-out;
+  }
+
+  .img-zoom:hover img {
+    @apply scale-105;
+  }
+
+  /* Animated underline for links */
+  .link-underline {
+    @apply relative;
+  }
+
+  .link-underline::after {
+    @apply content-[''] absolute left-0 bottom-0 w-0 h-0.5 bg-gold;
+    @apply transition-all duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Utility Layer - Custom Utilities
+   ───────────────────────────────────────────────────────────────────────────── */
+@layer utilities {
+  /* Text balance for better typography */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Custom scrollbar styling */
+  .scrollbar-luxury {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.gold.DEFAULT') theme('colors.charcoal.100');
+  }
+
+  .scrollbar-luxury::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-luxury::-webkit-scrollbar-track {
+    background: theme('colors.charcoal.100');
+    border-radius: 4px;
+  }
+
+  .scrollbar-luxury::-webkit-scrollbar-thumb {
+    background: theme('colors.gold.DEFAULT');
+    border-radius: 4px;
+  }
+
+  .scrollbar-luxury::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.gold.600');
+  }
+
+  /* Parallax helper */
+  .parallax {
+    transform-style: preserve-3d;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Animation Classes
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Fade animations */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.6s ease-out forwards;
+}
+
+/* Slide animations */
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
+/* Scale animations */
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out forwards;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Delayed animation utilities */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Loading Spinner - Kitchen themed
+   ───────────────────────────────────────────────────────────────────────────── */
+.loading-spinner {
+  width: 48px;
+  height: 48px;
+  border: 3px solid theme('colors.charcoal.100');
+  border-top-color: theme('colors.gold.DEFAULT');
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Kitchen icon loading animation */
+.loading-kitchen {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.loading-kitchen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 3px solid transparent;
+  border-top-color: theme('colors.gold.DEFAULT');
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+}
+
+.loading-kitchen::after {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 3px solid transparent;
+  border-bottom-color: theme('colors.wood.DEFAULT');
+  border-radius: 50%;
+  animation: spin 1s linear infinite reverse;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Print Styles
+   ───────────────────────────────────────────────────────────────────────────── */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: ' (' attr(href) ')';
+  }
+}
