@@ -34,7 +34,7 @@ export const projects: Project[] = [
       'Hidden pantry storage',
       'Under-cabinet LED lighting',
     ],
-    products: ['tk-infinity-series', 'kc-quartz-supreme'],
+    products: ['tk-m-line', 'kc-shaker-elegance'],
     testimonial: {
       quote: 'Kitchen Table Cabinetry transformed our outdated kitchen into something we never dreamed possible. Every detail was considered, and the result is absolutely stunning.',
       author: 'Sarah & Michael Chen',
@@ -95,7 +95,7 @@ export const projects: Project[] = [
       'Built-in beverage center',
       'Seamless indoor-outdoor flow',
     ],
-    products: ['kc-modern-slab', 'tk-artisan-island'],
+    products: ['kc-modern-slab', 'tk-classic-collection'],
     completedDate: '2024-02-10',
     isFeatured: true,
   },
@@ -142,7 +142,7 @@ export const projects: Project[] = [
       'Commercial-style range',
       'Integrated wine storage',
     ],
-    products: ['tk-infinity-series', 'tk-premium-hardware'],
+    products: ['tk-m-line', 'tk-m-line'],
     completedDate: '2023-09-15',
   },
   {
@@ -165,7 +165,7 @@ export const projects: Project[] = [
       'Walk-in pantry',
       'Homework station built-in',
     ],
-    products: ['kc-shaker-elegance', 'tk-smart-storage'],
+    products: ['kc-shaker-elegance', 'tk-storage-solutions'],
     testimonial: {
       quote: 'With three kids under 10, we needed a kitchen that could handle anything. Kitchen Table Cabinetry delivered a space that\'s both gorgeous and practically indestructible.',
       author: 'Jennifer Williams',

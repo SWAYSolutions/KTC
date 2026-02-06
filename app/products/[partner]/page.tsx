@@ -166,8 +166,6 @@ export default async function PartnerProductsPage({ params }: PageProps) {
                 <p className="text-charcoal-500 text-sm line-clamp-2 mb-4">
                   {product.shortDescription}
                 </p>
-                <p className="text-charcoal font-medium mb-4">{product.priceRange}</p>
-
                 <div className="flex gap-3">
                   <Link href={`/products/${partner.id}/${product.id}`} className="flex-1">
                     <Button variant="primary" size="sm" className="w-full group/btn">

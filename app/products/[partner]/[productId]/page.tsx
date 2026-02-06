@@ -136,14 +136,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
               {product.description}
             </p>
 
-            {/* Price */}
-            <div className="bg-cream rounded-xl p-4 mb-6">
-              <span className="text-charcoal-400 text-sm">Starting from</span>
-              <span className="block text-2xl font-serif font-semibold text-charcoal">
-                {product.priceRange}
-              </span>
-            </div>
-
             {/* Features */}
             <div className="mb-6">
               <h3 className="font-semibold text-charcoal mb-3 flex items-center">
@@ -198,13 +190,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
             {/* Actions */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href={`/contact?product=${product.id}`} className="flex-1">
-                <Button variant="gold" size="lg" className="w-full">
-                  Request a Quote
-                </Button>
-              </Link>
               <Link href="/contact" className="flex-1">
-                <Button variant="outline" size="lg" className="w-full">
+                <Button variant="gold" size="lg" className="w-full">
                   Schedule Consultation
                 </Button>
               </Link>
@@ -235,7 +222,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   <h3 className="font-serif font-semibold text-charcoal mb-1">
                     {relatedProduct.name}
                   </h3>
-                  <p className="text-charcoal-400 text-sm mb-3">{relatedProduct.priceRange}</p>
+                  <p className="text-charcoal-400 text-sm mb-3">{relatedProduct.shortDescription}</p>
                   <Link href={`/products/${partner.id}/${relatedProduct.id}`}>
                     <Button variant="outline" size="sm" className="w-full">
                       View Details

@@ -197,20 +197,12 @@ function ProductCard({ product }: { product: Product }) {
           {product.shortDescription}
         </p>
 
-        {/* Price Range */}
-        <p className="text-charcoal font-medium mb-4">{product.priceRange}</p>
-
         {/* Actions */}
         <div className="flex gap-3">
           <Link href={`/products/${product.partner}/${product.id}`} className="flex-1">
             <Button variant="primary" size="sm" className="w-full group/btn">
               View Details
               <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
-            </Button>
-          </Link>
-          <Link href={`/contact?product=${product.id}`}>
-            <Button variant="outline" size="sm">
-              Request Quote
             </Button>
           </Link>
         </div>
@@ -248,7 +240,6 @@ function ProductListItem({ product }: { product: Product }) {
               {product.name}
             </h3>
           </div>
-          <span className="text-charcoal font-medium">{product.priceRange}</span>
         </div>
 
         <p className="text-charcoal-500 mb-4">{product.shortDescription}</p>
@@ -272,11 +263,6 @@ function ProductListItem({ product }: { product: Product }) {
             <Button variant="primary" size="sm" className="group">
               View Details
               <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </Link>
-          <Link href={`/contact?product=${product.id}`}>
-            <Button variant="outline" size="sm">
-              Request Quote
             </Button>
           </Link>
         </div>

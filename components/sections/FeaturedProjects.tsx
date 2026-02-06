@@ -2,161 +2,172 @@
 
 /**
  * ═══════════════════════════════════════════════════════════════════════════════
- * Kitchen Table Cabinetry - Featured Projects Section
- * Elegant gallery carousel showcasing our best work
+ * Kitchen Table Cabinetry - Style Finder Section
+ * Interactive slideshow showcasing different kitchen styles
  * ═══════════════════════════════════════════════════════════════════════════════
  */
 
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { ArrowLeft, ArrowRight, MapPin } from 'lucide-react';
-import { Section, SectionHeader, Badge, Button } from '@/components/ui';
-import { getFeaturedProjects } from '@/data/projects';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { Section, SectionHeader, Button } from '@/components/ui';
 import { cn } from '@/lib/utils';
 
+const kitchenStyles = [
+  {
+    id: 'contemporary',
+    name: 'Contemporary',
+    description:
+      'Clean lines, minimal ornamentation, and a focus on function define the contemporary kitchen. Think flat-panel frameless cabinetry, integrated handles, and a neutral palette with bold accent pieces.',
+    image: 'https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=1200&q=80',
+  },
+  {
+    id: 'farmhouse',
+    name: 'Farmhouse',
+    description:
+      'Warm, inviting, and full of character. Farmhouse kitchens feature shaker-style cabinetry, apron-front sinks, open shelving, and natural wood tones that create a welcoming gathering space.',
+    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80',
+  },
+  {
+    id: 'scandinavian',
+    name: 'Scandinavian',
+    description:
+      'Light, airy, and effortlessly functional. Scandinavian kitchens emphasize white and light wood tones, streamlined cabinetry, and thoughtful storage solutions that keep everything organized.',
+    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80',
+  },
+  {
+    id: 'modern',
+    name: 'Modern',
+    description:
+      'Bold and forward-thinking. Modern kitchens push boundaries with handleless cabinetry, high-gloss or matte finishes, waterfall countertops, and integrated appliances for a seamless look.',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
+  },
+  {
+    id: 'transitional',
+    name: 'Transitional',
+    description:
+      'The best of both worlds. Transitional kitchens bridge traditional warmth with modern simplicity — think shaker doors paired with sleek hardware, neutral tones, and a balanced, timeless feel.',
+    image: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1200&q=80',
+  },
+  {
+    id: 'traditional',
+    name: 'Traditional',
+    description:
+      'Rich in detail and craftsmanship. Traditional kitchens feature raised-panel or ornate door profiles, crown mouldings, decorative hardware, and warm wood stains that exude classic elegance.',
+    image: 'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=1200&q=80',
+  },
+  {
+    id: 'rustic',
+    name: 'Rustic',
+    description:
+      'Rugged beauty meets comfort. Rustic kitchens celebrate natural materials — rough-hewn wood, stone countertops, iron hardware — creating a cozy, lived-in feel with authentic character.',
+    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
+  },
+];
+
 export function FeaturedProjects() {
-  const projects = getFeaturedProjects();
   const [activeIndex, setActiveIndex] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
 
   const scrollTo = (index: number) => {
-    if (index < 0) index = projects.length - 1;
-    if (index >= projects.length) index = 0;
+    if (index < 0) index = kitchenStyles.length - 1;
+    if (index >= kitchenStyles.length) index = 0;
     setActiveIndex(index);
   };
+
+  const activeStyle = kitchenStyles[activeIndex];
 
   return (
     <Section background="cream" padding="xl">
       <SectionHeader
-        subtitle="Our Portfolio"
-        title="Featured Projects"
-        description="Explore our collection of stunning kitchen transformations, each one a testament to our commitment to excellence and attention to detail."
+        subtitle="Find Your Style"
+        title="Kitchen Style Finder"
+        description="Explore the kitchen styles we design and build. Each style can be tailored to your space using our Canadian-made frameless cabinetry."
       />
 
-      {/* Project Cards Container */}
+      {/* Style Navigation Tabs */}
+      <div className="flex flex-wrap justify-center gap-2 mb-10">
+        {kitchenStyles.map((style, index) => (
+          <button
+            key={style.id}
+            onClick={() => setActiveIndex(index)}
+            className={cn(
+              'px-4 py-2 rounded-full text-sm font-medium transition-all',
+              index === activeIndex
+                ? 'bg-gold text-white shadow-gold'
+                : 'bg-white text-charcoal-600 hover:bg-charcoal-100'
+            )}
+          >
+            {style.name}
+          </button>
+        ))}
+      </div>
+
+      {/* Main Slideshow */}
       <div className="relative">
         {/* Navigation Arrows */}
         <button
           onClick={() => scrollTo(activeIndex - 1)}
           className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 rounded-full bg-white shadow-luxury flex items-center justify-center hover:shadow-luxury-lg hover:scale-110 transition-all hidden lg:flex"
-          aria-label="Previous project"
+          aria-label="Previous style"
         >
           <ArrowLeft className="w-5 h-5 text-charcoal" />
         </button>
         <button
           onClick={() => scrollTo(activeIndex + 1)}
           className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 rounded-full bg-white shadow-luxury flex items-center justify-center hover:shadow-luxury-lg hover:scale-110 transition-all hidden lg:flex"
-          aria-label="Next project"
+          aria-label="Next style"
         >
           <ArrowRight className="w-5 h-5 text-charcoal" />
         </button>
 
-        {/* Projects Grid */}
-        <div
-          ref={containerRef}
-          className="overflow-hidden rounded-2xl"
-        >
-          <div
-            className="flex transition-transform duration-500 ease-out"
-            style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+        {/* Style Card */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeStyle.id}
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -30 }}
+            transition={{ duration: 0.4 }}
+            className="grid lg:grid-cols-2 gap-8 items-center"
           >
-            {projects.map((project, index) => (
-              <div
-                key={project.id}
-                className="w-full flex-shrink-0 px-2"
-              >
-                <div className="grid lg:grid-cols-2 gap-8 items-center">
-                  {/* Image */}
-                  <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    className="relative aspect-[4/3] rounded-2xl overflow-hidden group"
-                  >
-                    <Image
-                      src={project.coverImage}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            {/* Image */}
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image
+                src={activeStyle.image}
+                alt={`${activeStyle.name} kitchen style`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
 
-                    {/* Hover overlay with link */}
-                    <Link
-                      href={`/gallery/${project.slug}`}
-                      className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    >
-                      <span className="px-6 py-3 bg-white rounded-full font-medium text-charcoal shadow-luxury">
-                        View Project
-                      </span>
-                    </Link>
-                  </motion.div>
+            {/* Content */}
+            <div className="py-4">
+              <span className="text-gold font-medium text-sm uppercase tracking-wider">
+                Kitchen Style
+              </span>
+              <h3 className="text-3xl md:text-4xl font-serif font-semibold text-charcoal mt-2 mb-4">
+                {activeStyle.name}
+              </h3>
+              <p className="text-charcoal-500 leading-relaxed mb-8 text-lg">
+                {activeStyle.description}
+              </p>
 
-                  {/* Content */}
-                  <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    className="py-4"
-                  >
-                    <div className="flex items-center gap-3 mb-4">
-                      <Badge variant="gold">{project.style.replace('-', ' ')}</Badge>
-                      <span className="flex items-center text-charcoal-400 text-sm">
-                        <MapPin className="w-4 h-4 mr-1" />
-                        {project.location}
-                      </span>
-                    </div>
-
-                    <h3 className="text-3xl md:text-4xl font-serif font-semibold text-charcoal mb-4">
-                      {project.title}
-                    </h3>
-
-                    <p className="text-charcoal-500 leading-relaxed mb-6">
-                      {project.shortDescription}
-                    </p>
-
-                    {/* Features */}
-                    <ul className="space-y-2 mb-8">
-                      {project.features.slice(0, 4).map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-charcoal-600">
-                          <span className="w-2 h-2 bg-gold rounded-full mr-3" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-
-                    {/* Testimonial Preview */}
-                    {project.testimonial && (
-                      <blockquote className="border-l-4 border-gold pl-4 mb-6">
-                        <p className="text-charcoal-600 italic">
-                          &quot;{project.testimonial.quote.substring(0, 120)}...&quot;
-                        </p>
-                        <cite className="text-sm text-charcoal-400 not-italic mt-2 block">
-                          — {project.testimonial.author}
-                        </cite>
-                      </blockquote>
-                    )}
-
-                    <Link href={`/gallery/${project.slug}`}>
-                      <Button variant="primary" className="group">
-                        Explore This Project
-                        <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                      </Button>
-                    </Link>
-                  </motion.div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+              <Link href="/contact">
+                <Button variant="primary" className="group">
+                  Discuss This Style With Us
+                  <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
+        </AnimatePresence>
 
         {/* Dots Navigation */}
         <div className="flex justify-center mt-8 gap-2">
-          {projects.map((_, index) => (
+          {kitchenStyles.map((_, index) => (
             <button
               key={index}
               onClick={() => scrollTo(index)}
@@ -166,20 +177,10 @@ export function FeaturedProjects() {
                   ? 'w-8 h-2 bg-gold'
                   : 'w-2 h-2 bg-charcoal-200 hover:bg-charcoal-300'
               )}
-              aria-label={`Go to project ${index + 1}`}
+              aria-label={`Go to style ${index + 1}`}
             />
           ))}
         </div>
-      </div>
-
-      {/* View All Link */}
-      <div className="text-center mt-12">
-        <Link href="/gallery">
-          <Button variant="outline" size="lg">
-            View All Projects
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
-        </Link>
       </div>
     </Section>
   );

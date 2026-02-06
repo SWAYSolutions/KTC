@@ -49,15 +49,15 @@ const steps = [
     icon: Package,
     title: 'Product Selection',
     description:
-      'Choose from our curated selection of Kitchen Craft and Triangle Kitchens products. Our designers guide you through materials, finishes, and hardware.',
+      'Choose from our curated selection of timeless cabinetry and finishes. Our designers guide you through materials, finishes, and hardware.',
     duration: '1-2 weeks',
   },
   {
     number: '05',
     icon: Hammer,
-    title: 'Expert Installation',
+    title: 'Expert Renovation & Installation',
     description:
-      'Our skilled craftsmen bring your design to life with precision installation. We maintain a clean, respectful workspace throughout the process.',
+      'Our skilled craftsmen bring your design to life with precision renovation and installation. We maintain a clean, respectful workspace throughout the process.',
     duration: '1-3 weeks',
   },
   {
@@ -65,7 +65,7 @@ const steps = [
     icon: Sparkles,
     title: 'Final Reveal',
     description:
-      'We conduct a thorough walkthrough to ensure every detail meets your expectations. Your dream kitchen is ready to enjoy for years to come.',
+      'We conduct a thorough walkthrough to ensure every detail meets your expectations. Your dream kitchen is ready to be enjoyed for years to come. With peace of mind that your investment is covered by our 5 year manufacturer and installation warranty.',
     duration: '1 day',
   },
 ];

@@ -11,25 +11,30 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui';
 import { cn } from '@/lib/utils';
 
 const heroImages = [
   {
     src: 'https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=1920&q=90',
-    alt: 'Modern luxury kitchen with handleless cabinets',
+    alt: 'Frameless kitchen cabinetry with clean lines and modern hardware',
     title: 'Modern Elegance',
   },
   {
     src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=90',
-    alt: 'Warm rustic luxury kitchen',
+    alt: 'Warm kitchen with custom cabinetry and timeless finishes',
     title: 'Timeless Warmth',
   },
   {
-    src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=90',
-    alt: 'Contemporary coastal kitchen',
-    title: 'Coastal Serenity',
+    src: 'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=1920&q=90',
+    alt: 'Traditional kitchen with Canadian-crafted frameless cabinets',
+    title: 'Classic Craftsmanship',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=90',
+    alt: 'Contemporary kitchen renovation featuring sleek frameless cabinetry',
+    title: 'Contemporary Living',
   },
 ];
 
@@ -143,12 +148,6 @@ export function Hero() {
               <Button variant="gold" size="lg" className="group">
                 Start Your Design Journey
                 <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </Link>
-            <Link href="/gallery">
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-charcoal">
-                <Play className="mr-2 w-5 h-5" />
-                View Our Work
               </Button>
             </Link>
           </motion.div>
