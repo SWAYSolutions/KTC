@@ -121,10 +121,8 @@ export function WhyUs() {
         className="mt-16 flex flex-wrap justify-center items-center gap-8 lg:gap-16"
       >
         {[
-          { value: '20+', label: 'Years Experience' },
-          { value: '500+', label: 'Projects Completed' },
-          { value: '100%', label: 'Client Satisfaction' },
-          { value: '5 Star', label: 'Google Rating' },
+          { value: '20+', label: 'Years of Kitchen Renovation Experience' },
+          { value: '5 Star', label: 'Google Reviews' },
         ].map((stat, index) => (
           <div key={index} className="text-center">
             <div className="text-3xl lg:text-4xl font-serif font-bold text-gold mb-1">

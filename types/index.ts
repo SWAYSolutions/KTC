@@ -41,7 +41,7 @@ export interface Product {
   features: string[];
   materials: string[];
   finishes: string[];
-  priceRange: string;
+  priceRange?: string;
   isNew?: boolean;
   isFeatured?: boolean;
 }

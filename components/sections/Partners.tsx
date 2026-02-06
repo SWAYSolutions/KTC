@@ -3,14 +3,13 @@
 /**
  * ═══════════════════════════════════════════════════════════════════════════════
  * Kitchen Table Cabinetry - Partners Section
- * Showcase of our premium partner brands: Kitchen Craft and Triangle Kitchens
+ * Showcase of our Canadian cabinet manufacturers
  * ═══════════════════════════════════════════════════════════════════════════════
  */
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle, ExternalLink } from 'lucide-react';
+import { ArrowRight, CheckCircle, ExternalLink, MapPin } from 'lucide-react';
 import { Section, SectionHeader, Button, Card } from '@/components/ui';
 import { partners } from '@/data/partners';
 
@@ -18,9 +17,9 @@ export function Partners() {
   return (
     <Section background="white" padding="xl">
       <SectionHeader
-        subtitle="Our Partners"
-        title="Premium Brands, Exceptional Quality"
-        description="We proudly partner with industry-leading cabinet manufacturers to bring you the finest quality and most innovative designs available."
+        subtitle="Canadian Quality"
+        title="Premium Canadian-Made Cabinetry"
+        description="We work exclusively with Canadian cabinet manufacturers who share our commitment to quality craftsmanship and frameless construction. Every cabinet is built right here in Canada."
       />
 
       <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
@@ -42,7 +41,6 @@ export function Partners() {
                   <p className="text-gold font-medium">{partner.tagline}</p>
                 </div>
                 <div className="w-20 h-20 bg-cream rounded-xl flex items-center justify-center">
-                  {/* Placeholder for partner logo */}
                   <span className="text-3xl font-serif font-bold text-charcoal-400">
                     {partner.name.charAt(0)}
                   </span>
@@ -89,25 +87,37 @@ export function Partners() {
         ))}
       </div>
 
-      {/* Partner Benefits */}
+      {/* Canadian Manufacturing Emphasis */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="mt-16 p-8 bg-cream rounded-2xl"
       >
-        <div className="grid md:grid-cols-3 gap-8 text-center">
-          <div>
-            <div className="text-4xl font-serif font-bold text-gold mb-2">50+</div>
-            <p className="text-charcoal-600">Years Combined Experience</p>
+        <div className="text-center mb-6">
+          <h3 className="text-2xl font-serif font-semibold text-charcoal mb-2">
+            Proudly Canadian-Made Frameless Cabinetry
+          </h3>
+          <p className="text-charcoal-500 max-w-2xl mx-auto">
+            We sell exclusively frameless (full-access) cabinetry from Canadian manufacturers.
+            Frameless construction maximizes interior cabinet space with clean, modern lines
+            that suit any kitchen style.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6 text-center">
+          <div className="flex items-center justify-center gap-3">
+            <MapPin className="w-5 h-5 text-gold" />
+            <div>
+              <div className="text-lg font-serif font-bold text-charcoal">Kitchen Craft</div>
+              <p className="text-charcoal-500 text-sm">Winnipeg, Manitoba</p>
+            </div>
           </div>
-          <div>
-            <div className="text-4xl font-serif font-bold text-gold mb-2">600+</div>
-            <p className="text-charcoal-600">Door Styles Available</p>
-          </div>
-          <div>
-            <div className="text-4xl font-serif font-bold text-gold mb-2">100%</div>
-            <p className="text-charcoal-600">Customer Satisfaction</p>
+          <div className="flex items-center justify-center gap-3">
+            <MapPin className="w-5 h-5 text-gold" />
+            <div>
+              <div className="text-lg font-serif font-bold text-charcoal">Triangle Kitchen</div>
+              <p className="text-charcoal-500 text-sm">Dieppe, New Brunswick</p>
+            </div>
           </div>
         </div>
       </motion.div>
