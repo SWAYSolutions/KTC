@@ -17,24 +17,24 @@ import { cn } from '@/lib/utils';
 
 const heroImages = [
   {
-    src: 'https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=1920&q=90',
-    alt: 'Frameless kitchen cabinetry with clean lines and modern hardware',
+    src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/gentry/gentry2.jpg',
+    alt: 'Kitchen Craft Gentry frameless cabinetry with walnut island and sage green cabinets',
     title: 'Modern Elegance',
   },
   {
-    src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=90',
-    alt: 'Warm kitchen with custom cabinetry and timeless finishes',
+    src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen1.jpg',
+    alt: 'Kitchen Craft Summit contemporary kitchen with dark island and pendant lighting',
+    title: 'Contemporary Living',
+  },
+  {
+    src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_2.jpg',
+    alt: 'Kitchen Craft Lexington casual kitchen with light cabinetry and wine storage',
     title: 'Timeless Warmth',
   },
   {
-    src: 'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=1920&q=90',
-    alt: 'Traditional kitchen with Canadian-crafted frameless cabinets',
+    src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_5.jpg',
+    alt: 'Kitchen Craft Lexington off-white cabinets in a bright casual kitchen',
     title: 'Classic Craftsmanship',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=90',
-    alt: 'Contemporary kitchen renovation featuring sleek frameless cabinetry',
-    title: 'Contemporary Living',
   },
 ];
 
