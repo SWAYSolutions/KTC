@@ -98,11 +98,7 @@ export const navigation: NavItem[] = [
     label: 'Gallery',
     href: '/gallery',
   },
-  {
-    label: 'About',
-    href: '/about',
-  },
-  {
+{
     label: 'Blog',
     href: '/blog',
   },
@@ -127,11 +123,9 @@ export const footerLinks = {
     { label: 'Renovation', href: '/services#renovation' },
   ],
   company: [
-    { label: 'About Us', href: '/about' },
-    { label: 'Our Team', href: '/about#team' },
     { label: 'Gallery', href: '/gallery' },
-    { label: 'Testimonials', href: '/about#testimonials' },
     { label: 'Blog', href: '/blog' },
+    { label: 'Contact Us', href: '/contact' },
   ],
   support: [
     { label: 'Contact Us', href: '/contact' },
