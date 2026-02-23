@@ -83,12 +83,14 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.products.map((link) => (
                 <li key={link.href}>
-                  <Link
+                  <a
                     href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-charcoal-300 hover:text-gold transition-colors"
                   >
                     {link.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -175,9 +177,9 @@ export function Footer() {
               Authorized Dealer
             </span>
             <div className="flex items-center space-x-8">
-              <span className="text-white font-serif text-xl">Kitchen Craft</span>
+              <a href="https://www.kitchencraft.com/products" target="_blank" rel="noopener noreferrer" className="text-white font-serif text-xl hover:text-gold transition-colors">Kitchen Craft</a>
               <span className="text-charcoal-500">|</span>
-              <span className="text-white font-serif text-xl">Triangle Kitchens</span>
+              <a href="https://trianglekitchen.com/products/styles" target="_blank" rel="noopener noreferrer" className="text-white font-serif text-xl hover:text-gold transition-colors">Triangle Kitchen</a>
             </div>
           </div>
         </div>

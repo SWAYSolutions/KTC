@@ -18,6 +18,7 @@ export interface Partner {
   description: string;
   logo: string;
   website: string;
+  productsUrl: string;
   features: string[];
 }
 

@@ -10,7 +10,6 @@ import {
   FeaturedProjects,
   Partners,
   WhyUs,
-  Testimonials,
   CTA,
   DesignProcess,
 } from '@/components/sections';
@@ -32,9 +31,6 @@ export default function HomePage() {
 
       {/* Partners - Kitchen Craft and Triangle Kitchens showcase */}
       <Partners />
-
-      {/* Testimonials - Client reviews carousel */}
-      <Testimonials />
 
       {/* Call to Action - Free consultation */}
       <CTA variant="split" />

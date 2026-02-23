@@ -48,23 +48,13 @@ export const navigation: NavItem[] = [
     children: [
       {
         label: 'Kitchen Craft',
-        href: '/products/kitchen-craft',
-        description: 'Durable, stylish cabinetry solutions',
+        href: 'https://www.kitchencraft.com/products',
+        description: 'Canadian-made frameless cabinetry',
       },
       {
-        label: 'Triangle Kitchens',
-        href: '/products/triangle-kitchens',
-        description: 'Innovative, ergonomic designs',
-      },
-      {
-        label: 'All Cabinets',
-        href: '/products?category=cabinets',
-        description: 'Browse our full cabinet collection',
-      },
-      {
-        label: 'Countertops',
-        href: '/products?category=countertops',
-        description: 'Premium surface options',
+        label: 'Triangle Kitchen',
+        href: 'https://trianglekitchen.com/products/styles',
+        description: 'Atlantic Canadian cabinetry',
       },
     ],
   },
@@ -95,10 +85,6 @@ export const navigation: NavItem[] = [
     ],
   },
   {
-    label: 'Gallery',
-    href: '/gallery',
-  },
-{
     label: 'Blog',
     href: '/blog',
   },
@@ -110,11 +96,8 @@ export const navigation: NavItem[] = [
 
 export const footerLinks = {
   products: [
-    { label: 'Kitchen Craft', href: '/products/kitchen-craft' },
-    { label: 'Triangle Kitchens', href: '/products/triangle-kitchens' },
-    { label: 'Cabinets', href: '/products?category=cabinets' },
-    { label: 'Countertops', href: '/products?category=countertops' },
-    { label: 'Islands', href: '/products?category=islands' },
+    { label: 'Kitchen Craft', href: 'https://www.kitchencraft.com/products' },
+    { label: 'Triangle Kitchen', href: 'https://trianglekitchen.com/products/styles' },
   ],
   services: [
     { label: 'Custom Design', href: '/services#custom-design' },
@@ -123,7 +106,6 @@ export const footerLinks = {
     { label: 'Renovation', href: '/services#renovation' },
   ],
   company: [
-    { label: 'Gallery', href: '/gallery' },
     { label: 'Blog', href: '/blog' },
     { label: 'Contact Us', href: '/contact' },
   ],
