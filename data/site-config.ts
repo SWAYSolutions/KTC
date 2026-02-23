@@ -17,10 +17,10 @@ export const siteConfig: SiteConfig = {
     phone: '9023242224',
     email: 'info@kitchentablecabinetry.com',
     address: {
-      street: '123 Main Street',
+      street: '152 Esplanade St',
       city: 'Truro',
       province: 'Nova Scotia',
-      postalCode: 'B2N 1A1',
+      postalCode: 'B2N 2K3',
       country: 'Canada',
     },
     hours: {
