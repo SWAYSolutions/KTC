@@ -143,8 +143,6 @@ const structuredData = {
   sameAs: [
     siteConfig.social.facebook,
     siteConfig.social.instagram,
-    siteConfig.social.pinterest,
-    siteConfig.social.houzz,
   ],
 };
 

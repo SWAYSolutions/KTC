@@ -245,7 +245,5 @@ export interface SiteConfig {
   social: {
     facebook: string;
     instagram: string;
-    pinterest: string;
-    houzz: string;
   };
 }

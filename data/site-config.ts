@@ -30,10 +30,8 @@ export const siteConfig: SiteConfig = {
     },
   },
   social: {
-    facebook: 'https://facebook.com/kitchentablecabinetry',
-    instagram: 'https://instagram.com/kitchentablecabinetry',
-    pinterest: 'https://pinterest.com/kitchentablecabinetry',
-    houzz: 'https://houzz.com/pro/kitchentablecabinetry',
+    facebook: 'https://www.facebook.com/people/Kitchen-Table-Cabinetry/61584518031082/',
+    instagram: 'https://www.instagram.com/kitchentablecabinetry/',
   },
 };
 
