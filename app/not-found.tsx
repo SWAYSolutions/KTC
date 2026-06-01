@@ -37,10 +37,10 @@ export default function NotFound() {
               Go Home
             </Button>
           </Link>
-          <Link href="/gallery">
+          <Link href="/contact">
             <Button variant="outline" size="lg">
               <Search className="mr-2 w-5 h-5" />
-              Browse Gallery
+              Contact Us
             </Button>
           </Link>
         </div>
@@ -55,10 +55,7 @@ export default function NotFound() {
             <Link href="/services" className="text-gold hover:underline">
               Services
             </Link>
-            <Link href="/gallery" className="text-gold hover:underline">
-              Gallery
-            </Link>
-            <Link href="/contact" className="text-gold hover:underline">
+<Link href="/contact" className="text-gold hover:underline">
               Contact
             </Link>
           </div>

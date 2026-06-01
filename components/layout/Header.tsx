@@ -138,22 +138,28 @@ export function Header() {
                         className="absolute left-0 top-full pt-2 w-64"
                       >
                         <div className="bg-white rounded-xl shadow-luxury-lg p-2 border border-charcoal-100">
-                          {item.children.map((child) => (
-                            <Link
-                              key={child.href}
-                              href={child.href}
-                              className="block px-4 py-3 rounded-lg hover:bg-cream transition-colors"
-                            >
-                              <span className="font-medium text-charcoal block">
-                                {child.label}
-                              </span>
-                              {child.description && (
-                                <span className="text-sm text-charcoal-400">
-                                  {child.description}
+                          {item.children.map((child) => {
+                            const isExternal = child.href.startsWith('http');
+                            const Component = isExternal ? 'a' : Link;
+                            const extraProps = isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {};
+                            return (
+                              <Component
+                                key={child.href}
+                                href={child.href}
+                                className="block px-4 py-3 rounded-lg hover:bg-cream transition-colors"
+                                {...extraProps}
+                              >
+                                <span className="font-medium text-charcoal block">
+                                  {child.label}
                                 </span>
-                              )}
-                            </Link>
-                          ))}
+                                {child.description && (
+                                  <span className="text-sm text-charcoal-400">
+                                    {child.description}
+                                  </span>
+                                )}
+                              </Component>
+                            );
+                          })}
                         </div>
                       </motion.div>
                     )}
@@ -226,15 +232,28 @@ export function Header() {
                               exit={{ opacity: 0, height: 0 }}
                               className="pl-4 overflow-hidden"
                             >
-                              {item.children.map((child) => (
-                                <Link
-                                  key={child.href}
-                                  href={child.href}
-                                  className="block px-4 py-2 text-charcoal-600 hover:text-gold"
-                                >
-                                  {child.label}
-                                </Link>
-                              ))}
+                              {item.children.map((child) => {
+                                const isExternal = child.href.startsWith('http');
+                                return isExternal ? (
+                                  <a
+                                    key={child.href}
+                                    href={child.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block px-4 py-2 text-charcoal-600 hover:text-gold"
+                                  >
+                                    {child.label}
+                                  </a>
+                                ) : (
+                                  <Link
+                                    key={child.href}
+                                    href={child.href}
+                                    className="block px-4 py-2 text-charcoal-600 hover:text-gold"
+                                  >
+                                    {child.label}
+                                  </Link>
+                                );
+                              })}
                             </motion.div>
                           )}
                         </AnimatePresence>

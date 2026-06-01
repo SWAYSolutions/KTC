@@ -34,7 +34,9 @@ export default function ProductsPage() {
           {partners.map((partner) => (
             <a
               key={partner.id}
-              href={`#${partner.id}`}
+              href={partner.productsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white p-6 rounded-2xl shadow-luxury hover:shadow-luxury-lg hover:-translate-y-1 transition-all duration-300"
             >
               <div className="flex items-center gap-4 mb-3">

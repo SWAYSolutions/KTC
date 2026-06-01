@@ -18,6 +18,7 @@ export interface Partner {
   description: string;
   logo: string;
   website: string;
+  productsUrl: string;
   features: string[];
 }
 
@@ -244,7 +245,5 @@ export interface SiteConfig {
   social: {
     facebook: string;
     instagram: string;
-    pinterest: string;
-    houzz: string;
   };
 }

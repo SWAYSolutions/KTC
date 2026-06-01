@@ -14,13 +14,13 @@ export const siteConfig: SiteConfig = {
     'Premium kitchen building and cabinetry service in Truro, Nova Scotia. Specializing in high-end custom kitchen designs featuring Kitchen Craft and Triangle Kitchens products.',
   url: 'https://kitchentablecabinetry.com',
   contact: {
-    phone: '9025550123',
+    phone: '9023242224',
     email: 'info@kitchentablecabinetry.com',
     address: {
-      street: '123 Main Street',
+      street: '152 Esplanade St',
       city: 'Truro',
       province: 'Nova Scotia',
-      postalCode: 'B2N 1A1',
+      postalCode: 'B2N 2K3',
       country: 'Canada',
     },
     hours: {
@@ -30,10 +30,8 @@ export const siteConfig: SiteConfig = {
     },
   },
   social: {
-    facebook: 'https://facebook.com/kitchentablecabinetry',
-    instagram: 'https://instagram.com/kitchentablecabinetry',
-    pinterest: 'https://pinterest.com/kitchentablecabinetry',
-    houzz: 'https://houzz.com/pro/kitchentablecabinetry',
+    facebook: 'https://www.facebook.com/people/Kitchen-Table-Cabinetry/61584518031082/',
+    instagram: 'https://www.instagram.com/kitchentablecabinetry/',
   },
 };
 
@@ -48,23 +46,13 @@ export const navigation: NavItem[] = [
     children: [
       {
         label: 'Kitchen Craft',
-        href: '/products/kitchen-craft',
-        description: 'Durable, stylish cabinetry solutions',
+        href: 'https://www.kitchencraft.com/products',
+        description: 'Canadian-made frameless cabinetry',
       },
       {
-        label: 'Triangle Kitchens',
-        href: '/products/triangle-kitchens',
-        description: 'Innovative, ergonomic designs',
-      },
-      {
-        label: 'All Cabinets',
-        href: '/products?category=cabinets',
-        description: 'Browse our full cabinet collection',
-      },
-      {
-        label: 'Countertops',
-        href: '/products?category=countertops',
-        description: 'Premium surface options',
+        label: 'Triangle Kitchen',
+        href: 'https://trianglekitchen.com/products/styles',
+        description: 'Atlantic Canadian cabinetry',
       },
     ],
   },
@@ -95,14 +83,6 @@ export const navigation: NavItem[] = [
     ],
   },
   {
-    label: 'Gallery',
-    href: '/gallery',
-  },
-  {
-    label: 'About',
-    href: '/about',
-  },
-  {
     label: 'Blog',
     href: '/blog',
   },
@@ -114,11 +94,8 @@ export const navigation: NavItem[] = [
 
 export const footerLinks = {
   products: [
-    { label: 'Kitchen Craft', href: '/products/kitchen-craft' },
-    { label: 'Triangle Kitchens', href: '/products/triangle-kitchens' },
-    { label: 'Cabinets', href: '/products?category=cabinets' },
-    { label: 'Countertops', href: '/products?category=countertops' },
-    { label: 'Islands', href: '/products?category=islands' },
+    { label: 'Kitchen Craft', href: 'https://www.kitchencraft.com/products' },
+    { label: 'Triangle Kitchen', href: 'https://trianglekitchen.com/products/styles' },
   ],
   services: [
     { label: 'Custom Design', href: '/services#custom-design' },
@@ -127,11 +104,8 @@ export const footerLinks = {
     { label: 'Renovation', href: '/services#renovation' },
   ],
   company: [
-    { label: 'About Us', href: '/about' },
-    { label: 'Our Team', href: '/about#team' },
-    { label: 'Gallery', href: '/gallery' },
-    { label: 'Testimonials', href: '/about#testimonials' },
     { label: 'Blog', href: '/blog' },
+    { label: 'Contact Us', href: '/contact' },
   ],
   support: [
     { label: 'Contact Us', href: '/contact' },

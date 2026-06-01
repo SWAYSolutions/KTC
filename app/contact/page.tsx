@@ -127,7 +127,7 @@ export default function ContactPage() {
             />
             <div className="rounded-2xl overflow-hidden shadow-luxury h-[400px] lg:h-[500px]">
               <iframe
-                src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || 'AIzaSyBFw0Qbyq9zTFTd-tUY6CE80AWe7fD4ymw'}&q=${mapQuery}`}
+                src={`https://maps.google.com/maps?q=${mapQuery}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

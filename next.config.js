@@ -13,6 +13,12 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.kitchencraft.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
     // Optimize images for web
     formats: ['image/avif', 'image/webp'],

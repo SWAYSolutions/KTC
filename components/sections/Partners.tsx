@@ -7,9 +7,8 @@
  * ═══════════════════════════════════════════════════════════════════════════════
  */
 
-import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle, ExternalLink, MapPin } from 'lucide-react';
+import { CheckCircle, ExternalLink, MapPin } from 'lucide-react';
 import { Section, SectionHeader, Button, Card } from '@/components/ui';
 import { partners } from '@/data/partners';
 
@@ -64,12 +63,17 @@ export function Partners() {
 
               {/* Actions */}
               <div className="flex flex-col sm:flex-row gap-3 mt-auto">
-                <Link href={`/products/${partner.id}`} className="flex-1">
+                <a
+                  href={partner.productsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1"
+                >
                   <Button variant="primary" className="w-full group/btn">
                     View Products
-                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                    <ExternalLink className="ml-2 w-4 h-4" />
                   </Button>
-                </Link>
+                </a>
                 <a
                   href={partner.website}
                   target="_blank"
