@@ -34,6 +34,7 @@ export const products: Product[] = [
     ],
     materials: ['Maple', 'Oak', 'Cherry', 'Birch'],
     finishes: ['Pure White', 'Ivory Cream', 'Slate Grey', 'Espresso', 'Natural Oak'],
+    priceRange: 'Contact for quote',
     isFeatured: true,
   },
   {
@@ -58,6 +59,7 @@ export const products: Product[] = [
     ],
     materials: ['MDF', 'High-Pressure Laminate', 'Acrylic'],
     finishes: ['Glacier White', 'Graphite', 'Midnight Blue', 'Warm Taupe'],
+    priceRange: 'Contact for quote',
     isNew: true,
   },
   {
@@ -81,6 +83,7 @@ export const products: Product[] = [
     ],
     materials: ['Solid Maple', 'Cherry', 'Alder'],
     finishes: ['Antique White', 'Honey Maple', 'Chestnut', 'Burgundy'],
+    priceRange: 'Contact for quote',
   },
 
   // ─────────────────────────────────────────────────────────────────────────────
@@ -108,6 +111,7 @@ export const products: Product[] = [
     ],
     materials: ['MDF', 'Laminate', 'Acrylic', 'Polyester'],
     finishes: ['Matte White', 'Silk Grey', 'Forest Green', 'Terra Cotta'],
+    priceRange: 'Contact for quote',
     isFeatured: true,
     isNew: true,
   },
@@ -132,6 +136,7 @@ export const products: Product[] = [
     ],
     materials: ['Solid Wood', 'MDF', 'Thermoplastic', 'Laminate', 'Polyester'],
     finishes: ['Custom Paint Match', 'Wood Stain Options', 'Thermofoil Colours'],
+    priceRange: 'Contact for quote',
     isFeatured: true,
   },
   {
@@ -155,6 +160,7 @@ export const products: Product[] = [
     ],
     materials: ['Solid Wood', 'Chrome', 'Stainless Steel'],
     finishes: ['Natural Wood', 'Anthracite', 'Chrome', 'White'],
+    priceRange: 'Contact for quote',
   },
 ];
 

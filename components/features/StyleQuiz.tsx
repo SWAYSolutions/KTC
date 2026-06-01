@@ -13,7 +13,8 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ArrowLeft, RefreshCw, Sparkles } from 'lucide-react';
 import { Button, Card, Badge } from '@/components/ui';
-import { quizQuestions, calculateStyleResult, type QuizResult } from '@/data/style-quiz';
+import { quizQuestions, calculateStyleResult } from '@/data/style-quiz';
+import { type QuizResult } from '@/types';
 import { cn } from '@/lib/utils';
 
 interface StyleQuizProps {
