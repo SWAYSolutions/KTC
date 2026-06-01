@@ -7,7 +7,7 @@
 
 import {
   Hero,
-  FeaturedProjects,
+  StyleFinder,
   Partners,
   WhyUs,
   Testimonials,
@@ -24,8 +24,8 @@ export default function HomePage() {
       {/* Why Choose Us - Our unique value propositions */}
       <WhyUs />
 
-      {/* Featured Projects - Gallery carousel of our best work */}
-      <FeaturedProjects />
+      {/* Style Finder - Explore different kitchen design styles */}
+      <StyleFinder />
 
       {/* Design Process - Interactive timeline showing our journey */}
       <DesignProcess />

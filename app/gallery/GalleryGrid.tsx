@@ -219,7 +219,7 @@ export function GalleryGrid({ projects, styles }: GalleryGridProps) {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               className="relative max-w-5xl max-h-[80vh] w-full h-full mx-4"
-              onClick={(e) => e.stopPropagation()}
+              onClick={(e: React.MouseEvent) => e.stopPropagation()}
             >
               <Image
                 src={lightboxProject.images[lightboxImageIndex].src}

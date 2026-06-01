@@ -31,7 +31,7 @@ const benefits = [
     icon: Award,
     title: 'Premium Quality',
     description:
-      'We partner exclusively with industry-leading manufacturers like Kitchen Craft and Triangle Kitchens, ensuring exceptional craftsmanship and durability.',
+      'We partner exclusively with Canadian manufacturers, ensuring exceptional craftsmanship, durability, and support for local industry.',
     color: 'wood',
   },
   {
@@ -122,7 +122,7 @@ export function WhyUs() {
       >
         {[
           { value: '20+', label: 'Years of Kitchen Renovation Experience' },
-          { value: '5 Star', label: 'Google Reviews' },
+          { value: '5 Star', label: 'Google Rating' },
         ].map((stat, index) => (
           <div key={index} className="text-center">
             <div className="text-3xl lg:text-4xl font-serif font-bold text-gold mb-1">

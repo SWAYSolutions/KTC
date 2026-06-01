@@ -12,3 +12,4 @@ export { WhyUs } from './WhyUs';
 export { Testimonials } from './Testimonials';
 export { CTA } from './CTA';
 export { DesignProcess } from './DesignProcess';
+export { StyleFinder } from './StyleFinder';
