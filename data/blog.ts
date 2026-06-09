@@ -44,7 +44,7 @@ Luxury now means everything has its place—and that place is beautifully organi
 
 *Ready to incorporate these trends into your kitchen? Contact Kitchen Table Cabinetry for a design consultation.*
     `,
-    coverImage: 'https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=1200&q=80',
+    coverImage: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/gentry/gentry2.jpg',
     author: {
       name: 'Jennifer Mitchell',
       avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80',

@@ -17,15 +17,15 @@ export const projects: Project[] = [
     description:
       'A stunning transformation of a 1960s ranch home into a sleek, contemporary kitchen that maximizes natural light and functionality. The handleless cabinetry from Triangle Kitchens creates an uninterrupted visual flow, while the waterfall quartz island serves as the room\'s dramatic centerpiece.',
     shortDescription: 'Sleek handleless design with waterfall quartz island and integrated appliances.',
-    coverImage: 'https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=1200&q=80',
+    coverImage: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen1.jpg',
     images: [
-      { src: 'https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=1200&q=80', alt: 'Modern kitchen overview' },
-      { src: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=80', alt: 'Kitchen island detail' },
-      { src: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80', alt: 'Cabinetry closeup' },
+      { src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen1.jpg', alt: 'Modern kitchen overview' },
+      { src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/gentry/gentry2.jpg', alt: 'Kitchen island detail' },
+      { src: 'https://images.unsplash.com/photo-1604709177225-055f99402ea3?w=1200&q=80', alt: 'Cabinetry closeup' },
     ],
     beforeAfter: {
       before: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80',
-      after: 'https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=800&q=80',
+      after: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen1.jpg',
     },
     features: [
       'Handleless push-to-open cabinetry',
@@ -83,10 +83,10 @@ export const projects: Project[] = [
     description:
       'Inspired by the Atlantic coastline, this kitchen features a calming palette of soft blues and crisp whites. The design maximizes the ocean views while providing a highly functional space for a family that loves to entertain.',
     shortDescription: 'Ocean-inspired design with soft blues, panoramic views, and entertainer\'s island.',
-    coverImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
+    coverImage: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_2.jpg',
     images: [
-      { src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80', alt: 'Coastal kitchen panorama' },
-      { src: 'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=1200&q=80', alt: 'Island seating' },
+      { src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_2.jpg', alt: 'Coastal kitchen panorama' },
+      { src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_5.jpg', alt: 'Island seating' },
     ],
     features: [
       'Custom blue-grey cabinetry',
@@ -131,9 +131,9 @@ export const projects: Project[] = [
     description:
       'Converting a former warehouse into a modern living space required a kitchen that embraced the building\'s industrial heritage. Matte black cabinetry, concrete countertops, and exposed ductwork create an edgy, urban aesthetic.',
     shortDescription: 'Industrial chic with matte black cabinets, concrete counters, and exposed elements.',
-    coverImage: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1200&q=80',
     images: [
-      { src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80', alt: 'Industrial loft kitchen' },
+      { src: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1200&q=80', alt: 'Industrial loft kitchen' },
     ],
     features: [
       'Matte black handleless cabinets',
@@ -154,9 +154,9 @@ export const projects: Project[] = [
     description:
       'Designed for a busy family of five, this transitional kitchen balances beautiful design with bulletproof durability. Soft-close everything, quartz surfaces that resist sticky fingers, and ample storage keep the chaos contained.',
     shortDescription: 'Family-friendly design balancing style with durability and smart storage.',
-    coverImage: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1200&q=80',
+    coverImage: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_5.jpg',
     images: [
-      { src: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1200&q=80', alt: 'Family kitchen overview' },
+      { src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_5.jpg', alt: 'Family kitchen overview' },
     ],
     features: [
       'Soft-close cabinets throughout',

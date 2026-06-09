@@ -21,7 +21,7 @@ const kitchenStyles = [
     name: 'Contemporary',
     description:
       'Clean lines, minimal ornamentation, and a focus on function define the contemporary kitchen. Think flat-panel frameless cabinetry, integrated handles, and a neutral palette with bold accent pieces.',
-    image: 'https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=1200&q=80',
+    image: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen1.jpg',
   },
   {
     id: 'farmhouse',
@@ -35,21 +35,21 @@ const kitchenStyles = [
     name: 'Scandinavian',
     description:
       'Light, airy, and effortlessly functional. Scandinavian kitchens emphasize white and light wood tones, streamlined cabinetry, and thoughtful storage solutions that keep everything organized.',
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80',
+    image: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_2.jpg',
   },
   {
     id: 'modern',
     name: 'Modern',
     description:
       'Bold and forward-thinking. Modern kitchens push boundaries with handleless cabinetry, high-gloss or matte finishes, waterfall countertops, and integrated appliances for a seamless look.',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
+    image: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/gentry/gentry2.jpg',
   },
   {
     id: 'transitional',
     name: 'Transitional',
     description:
       'The best of both worlds. Transitional kitchens bridge traditional warmth with modern simplicity — think shaker doors paired with sleek hardware, neutral tones, and a balanced, timeless feel.',
-    image: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1200&q=80',
+    image: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_5.jpg',
   },
   {
     id: 'traditional',
@@ -63,7 +63,7 @@ const kitchenStyles = [
     name: 'Rustic',
     description:
       'Rugged beauty meets comfort. Rustic kitchens celebrate natural materials — rough-hewn wood, stone countertops, iron hardware — creating a cozy, lived-in feel with authentic character.',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1200&q=80',
   },
 ];
 

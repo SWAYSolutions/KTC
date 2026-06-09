@@ -49,7 +49,7 @@ const services = [
       'Quality assurance inspections',
       'Post-installation support',
     ],
-    image: 'https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=800&q=80',
+    image: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/gentry/gentry2.jpg',
   },
   {
     id: 'consultation',
@@ -65,7 +65,7 @@ const services = [
       'Product recommendations',
       'Written summary and action plan',
     ],
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
+    image: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_2.jpg',
   },
   {
     id: 'renovation',
@@ -81,7 +81,7 @@ const services = [
       'Flooring and backsplash installation',
       'Appliance procurement assistance',
     ],
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
+    image: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen1.jpg',
   },
 ];
 

@@ -56,7 +56,7 @@ export function CTA({
           {/* Image Side */}
           <div className="relative h-64 lg:h-auto min-h-[400px]">
             <Image
-              src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80"
+              src="https://www.kitchencraft.com/file/media/kitchencraft/products/environment/gentry/gentry2.jpg"
               alt="Luxury kitchen interior"
               fill
               className="object-cover"
@@ -131,7 +131,7 @@ export function CTA({
       {/* Background */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80"
+          src="https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen1.jpg"
           alt="Modern kitchen background"
           fill
           className="object-cover"

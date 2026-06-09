@@ -44,10 +44,10 @@ export const products: Product[] = [
     description:
       'Clean lines and seamless aesthetics define the Modern Slab Series. These frameless cabinets feature integrated pulls and a smooth, continuous facade for a contemporary look. Kitchen Craft\'s European-style full-access construction delivers maximum interior space with whisper-quiet soft-close operation.',
     shortDescription: 'Sleek frameless cabinets with integrated pulls for a seamless modern look.',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
+    image: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen1.jpg',
     images: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80',
+      'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen1.jpg',
+      'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/gentry/gentry2.jpg',
     ],
     features: [
       'Full-access frameless construction',
@@ -94,10 +94,10 @@ export const products: Product[] = [
     description:
       'Triangle\'s M Line is inspired by modern European design, featuring handleless slab doors and clean frameless construction. Born from inspiration at EuroCucina in Milan, the M Line delivers sleek Italian-inspired aesthetics manufactured right in Atlantic Canada. Available in a range of contemporary finishes.',
     shortDescription: 'European-inspired handleless frameless cabinetry made in Atlantic Canada.',
-    image: 'https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&q=80',
     images: [
-      'https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=1200&q=80',
-      'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=80',
+      'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1200&q=80',
+      'https://images.unsplash.com/photo-1604709177225-055f99402ea3?w=1200&q=80',
     ],
     features: [
       'Handleless slab door design',
@@ -119,9 +119,9 @@ export const products: Product[] = [
     description:
       'Triangle\'s Classic Collection offers traditional and transitional door styles in solid wood and composite materials. With over 50 door profiles to choose from and a wide range of paint and stain options, this collection covers everything from simple shaker doors to detailed raised panels — all manufactured in their Dieppe, NB facility.',
     shortDescription: 'Traditional and transitional cabinetry with 50+ door styles.',
-    image: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800&q=80',
     images: [
-      'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1200&q=80',
+      'https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=1200&q=80',
     ],
     features: [
       'Over 50 door styles',
