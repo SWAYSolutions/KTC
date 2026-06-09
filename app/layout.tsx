@@ -9,6 +9,7 @@ import type { Metadata, Viewport } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
 import { Header, Footer } from '@/components/layout';
 import { siteConfig } from '@/data/site-config';
+import { FB_PIXEL_ID } from '@/lib/fpixel';
 import './globals.css';
 
 // Font configuration
@@ -162,7 +163,7 @@ export default function RootLayout({
           }}
         />
         {/* Meta (Facebook) Pixel - powers the ad campaign's Lead optimization */}
-        {process.env.NEXT_PUBLIC_FB_PIXEL_ID && (
+        {FB_PIXEL_ID && (
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -174,7 +175,7 @@ export default function RootLayout({
                 t.src=v;s=b.getElementsByTagName(e)[0];
                 s.parentNode.insertBefore(t,s)}(window, document,'script',
                 'https://connect.facebook.net/en_US/fbevents.js');
-                fbq('init', '${process.env.NEXT_PUBLIC_FB_PIXEL_ID}');
+                fbq('init', '${FB_PIXEL_ID}');
                 fbq('track', 'PageView');
               `,
             }}
@@ -192,7 +193,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col font-sans antialiased">
         {/* Meta Pixel noscript fallback */}
-        {process.env.NEXT_PUBLIC_FB_PIXEL_ID && (
+        {FB_PIXEL_ID && (
           <noscript>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -200,7 +201,7 @@ export default function RootLayout({
               width="1"
               style={{ display: 'none' }}
               alt=""
-              src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FB_PIXEL_ID}&ev=PageView&noscript=1`}
+              src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
             />
           </noscript>
         )}
