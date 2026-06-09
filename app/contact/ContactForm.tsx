@@ -13,6 +13,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { Button, Input, Textarea } from '@/components/ui';
 import { isValidEmail, isValidPhone } from '@/lib/utils';
+import { trackLead } from '@/lib/fpixel';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -97,7 +98,12 @@ export function ContactForm() {
 
     try {
       // Formspree submission
-      const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID || 'mqedggev';
+      const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+      if (!formspreeId) {
+        // No form endpoint configured - fail loudly rather than silently
+        // sending leads to an unknown account.
+        throw new Error('NEXT_PUBLIC_FORMSPREE_ID is not configured');
+      }
       const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
         method: 'POST',
         headers: {
@@ -110,6 +116,8 @@ export function ContactForm() {
       });
 
       if (response.ok) {
+        // Fire the Meta Pixel "Lead" conversion event.
+        trackLead({ content_name: 'Contact Page' });
         setStatus('success');
         setFormData(initialFormData);
       } else {

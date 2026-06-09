@@ -13,6 +13,7 @@ import { motion } from 'framer-motion';
 import { Send, CheckCircle, AlertCircle, ShieldCheck } from 'lucide-react';
 import { Button, Input, Textarea } from '@/components/ui';
 import { isValidEmail, isValidPhone } from '@/lib/utils';
+import { trackLead } from '@/lib/fpixel';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -84,7 +85,12 @@ export function LeadForm({ source = 'Facebook Ad - Kitchen Renovations' }: LeadF
     setStatus('submitting');
 
     try {
-      const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID || 'mqedggev';
+      const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+      if (!formspreeId) {
+        // No form endpoint configured - fail loudly rather than silently
+        // sending leads to an unknown account.
+        throw new Error('NEXT_PUBLIC_FORMSPREE_ID is not configured');
+      }
       const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
         method: 'POST',
         headers: {
@@ -98,6 +104,9 @@ export function LeadForm({ source = 'Facebook Ad - Kitchen Renovations' }: LeadF
       });
 
       if (response.ok) {
+        // Fire the Meta Pixel "Lead" conversion event so the ad campaign
+        // can optimize for and report on form submissions.
+        trackLead({ content_name: source });
         setStatus('success');
         setFormData(initialFormData);
       } else {
