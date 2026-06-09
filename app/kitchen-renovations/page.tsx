@@ -69,15 +69,15 @@ const benefits = [
 const galleryImages = [
   {
     src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/gentry/gentry2.jpg',
-    alt: 'Modern kitchen renovation with sage green cabinets and walnut island',
+    alt: 'Kitchen renovation with sage-blue shaker cabinets and oak island',
   },
   {
     src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen1.jpg',
-    alt: 'Contemporary kitchen renovation with dark island and pendant lighting',
+    alt: 'Contemporary kitchen renovation with high-gloss cabinetry and blue island',
   },
   {
     src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_2.jpg',
-    alt: 'Bright casual kitchen renovation with off-white cabinetry',
+    alt: 'Traditional kitchen renovation with cream cabinetry and granite counters',
   },
 ];
 

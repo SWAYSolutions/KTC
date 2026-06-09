@@ -18,12 +18,12 @@ import { cn } from '@/lib/utils';
 const heroImages = [
   {
     src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/gentry/gentry2.jpg',
-    alt: 'Kitchen Craft Gentry frameless cabinetry with walnut island and sage green cabinets',
+    alt: 'Kitchen Craft Gentry kitchen with sage-blue shaker cabinets and light oak island',
     title: 'Modern Elegance',
   },
   {
     src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen1.jpg',
-    alt: 'Kitchen Craft Summit contemporary kitchen with dark island and pendant lighting',
+    alt: 'Kitchen Craft Summit contemporary kitchen with high-gloss cabinetry and blue island',
     title: 'Contemporary Living',
   },
   {

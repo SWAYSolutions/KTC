@@ -20,8 +20,8 @@ export const projects: Project[] = [
     coverImage: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen1.jpg',
     images: [
       { src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen1.jpg', alt: 'Modern kitchen overview' },
-      { src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/gentry/gentry2.jpg', alt: 'Kitchen island detail' },
-      { src: 'https://images.unsplash.com/photo-1604709177225-055f99402ea3?w=1200&q=80', alt: 'Cabinetry closeup' },
+      { src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen2.jpg', alt: 'Kitchen island detail' },
+      { src: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1200&q=80', alt: 'Minimalist white cabinetry' },
     ],
     beforeAfter: {
       before: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80',
@@ -52,10 +52,10 @@ export const projects: Project[] = [
     description:
       'This project brings together the warmth of traditional farmhouse design with the sophistication of luxury finishes. Custom Kitchen Craft cabinetry in a warm honey tone pairs beautifully with reclaimed wood beams and professional-grade appliances.',
     shortDescription: 'Warm farmhouse elegance with custom wood cabinetry and professional appliances.',
-    coverImage: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=1200&q=80',
     images: [
-      { src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80', alt: 'Farmhouse kitchen view' },
-      { src: 'https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=1200&q=80', alt: 'Kitchen range area' },
+      { src: 'https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=1200&q=80', alt: 'Farmhouse kitchen view' },
+      { src: 'https://images.unsplash.com/photo-1556912173-3bb406ef7e77?w=1200&q=80', alt: 'Kitchen range area' },
       { src: 'https://images.unsplash.com/photo-1556909190-eccf4a8bf97a?w=1200&q=80', alt: 'Pantry storage' },
     ],
     features: [
@@ -83,10 +83,10 @@ export const projects: Project[] = [
     description:
       'Inspired by the Atlantic coastline, this kitchen features a calming palette of soft blues and crisp whites. The design maximizes the ocean views while providing a highly functional space for a family that loves to entertain.',
     shortDescription: 'Ocean-inspired design with soft blues, panoramic views, and entertainer\'s island.',
-    coverImage: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_2.jpg',
+    coverImage: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/gentry/gentry2.jpg',
     images: [
-      { src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_2.jpg', alt: 'Coastal kitchen panorama' },
-      { src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_5.jpg', alt: 'Island seating' },
+      { src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/gentry/gentry2.jpg', alt: 'Coastal kitchen panorama' },
+      { src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/gentry/gentry3.jpg', alt: 'Glass-front display cabinets' },
     ],
     features: [
       'Custom blue-grey cabinetry',
@@ -106,14 +106,16 @@ export const projects: Project[] = [
     style: 'traditional',
     location: 'Wolfville, Nova Scotia',
     description:
-      'A grand kitchen befitting a historic estate home. Rich cherry cabinetry with intricate raised panels, granite countertops, and professional-grade appliances create a space that honors tradition while meeting modern demands.',
-    shortDescription: 'Grand estate kitchen with cherry cabinetry, granite, and professional appliances.',
-    coverImage: 'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=1200&q=80',
+      'A grand kitchen befitting a historic estate home. Rich cream cabinetry with intricate raised panels, granite countertops, and professional-grade appliances create a space that honors tradition while meeting modern demands.',
+    shortDescription: 'Grand estate kitchen with cream cabinetry, granite, and professional appliances.',
+    coverImage: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_2.jpg',
     images: [
-      { src: 'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=1200&q=80', alt: 'Traditional kitchen' },
+      { src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_2.jpg', alt: 'Traditional kitchen' },
+      { src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_5.jpg', alt: 'Professional range area' },
+      { src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_4.jpg', alt: 'Custom cabinetry storage' },
     ],
     features: [
-      'Custom cherry raised panel cabinets',
+      'Custom cream raised panel cabinets',
       'Granite countertops with ogee edge',
       'Crown molding throughout',
       'Built-in hutch and display',
@@ -129,16 +131,16 @@ export const projects: Project[] = [
     style: 'contemporary',
     location: 'Dartmouth, Nova Scotia',
     description:
-      'Converting a former warehouse into a modern living space required a kitchen that embraced the building\'s industrial heritage. Matte black cabinetry, concrete countertops, and exposed ductwork create an edgy, urban aesthetic.',
-    shortDescription: 'Industrial chic with matte black cabinets, concrete counters, and exposed elements.',
-    coverImage: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1200&q=80',
+      'Converting a former warehouse into a modern living space required a kitchen that embraced the building\'s industrial heritage. Sleek slab-front cabinetry, dark concrete-look countertops, and utilitarian rail storage create an edgy, urban aesthetic.',
+    shortDescription: 'Industrial chic with slab-front cabinets, dark counters, and utilitarian details.',
+    coverImage: 'https://images.unsplash.com/photo-1556185781-a47769abb7ee?w=1200&q=80',
     images: [
-      { src: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1200&q=80', alt: 'Industrial loft kitchen' },
+      { src: 'https://images.unsplash.com/photo-1556185781-a47769abb7ee?w=1200&q=80', alt: 'Industrial loft kitchen' },
     ],
     features: [
-      'Matte black handleless cabinets',
+      'Handleless slab-front cabinets',
       'Concrete countertops',
-      'Open shelving with metal brackets',
+      'Open rail storage with hanging cookware',
       'Commercial-style range',
       'Integrated wine storage',
     ],
@@ -154,9 +156,9 @@ export const projects: Project[] = [
     description:
       'Designed for a busy family of five, this transitional kitchen balances beautiful design with bulletproof durability. Soft-close everything, quartz surfaces that resist sticky fingers, and ample storage keep the chaos contained.',
     shortDescription: 'Family-friendly design balancing style with durability and smart storage.',
-    coverImage: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_5.jpg',
+    coverImage: 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=1200&q=80',
     images: [
-      { src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_5.jpg', alt: 'Family kitchen overview' },
+      { src: 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=1200&q=80', alt: 'Family kitchen overview' },
     ],
     features: [
       'Soft-close cabinets throughout',

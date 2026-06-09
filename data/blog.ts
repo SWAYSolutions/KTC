@@ -174,7 +174,7 @@ For most luxury kitchens, we recommend quartz for primary work surfaces and natu
 
 *Visit our showroom to see countertop samples from our Quartz Supreme and Dekton collections.*
     `,
-    coverImage: 'https://images.unsplash.com/photo-1604709177225-055f99402ea3?w=1200&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1556912167-f556f1f39fdf?w=1200&q=80',
     author: {
       name: 'Jennifer Mitchell',
       avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80',

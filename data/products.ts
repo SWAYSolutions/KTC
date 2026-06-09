@@ -47,7 +47,7 @@ export const products: Product[] = [
     image: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen1.jpg',
     images: [
       'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen1.jpg',
-      'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/gentry/gentry2.jpg',
+      'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen2.jpg',
     ],
     features: [
       'Full-access frameless construction',
@@ -68,9 +68,10 @@ export const products: Product[] = [
     description:
       'For those who appreciate the grandeur of traditional design, the Heritage Raised Panel collection offers timeless elegance with intricate detailing. Raised center panels, decorative moldings, and optional glazing techniques add depth and character — all built on Kitchen Craft\'s frameless full-access platform for modern functionality.',
     shortDescription: 'Traditional raised panel frameless cabinets with ornate detailing.',
-    image: 'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=800&q=80',
+    image: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_3.jpg',
     images: [
-      'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=1200&q=80',
+      'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_3.jpg',
+      'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_4.jpg',
     ],
     features: [
       'Full-access frameless construction',
@@ -97,7 +98,7 @@ export const products: Product[] = [
     image: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&q=80',
     images: [
       'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1200&q=80',
-      'https://images.unsplash.com/photo-1604709177225-055f99402ea3?w=1200&q=80',
+      'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200&q=80',
     ],
     features: [
       'Handleless slab door design',
@@ -119,9 +120,10 @@ export const products: Product[] = [
     description:
       'Triangle\'s Classic Collection offers traditional and transitional door styles in solid wood and composite materials. With over 50 door profiles to choose from and a wide range of paint and stain options, this collection covers everything from simple shaker doors to detailed raised panels — all manufactured in their Dieppe, NB facility.',
     shortDescription: 'Traditional and transitional cabinetry with 50+ door styles.',
-    image: 'https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=800&q=80',
     images: [
-      'https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=1200&q=80',
+      'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=1200&q=80',
+      'https://images.unsplash.com/photo-1556912167-f556f1f39fdf?w=1200&q=80',
     ],
     features: [
       'Over 50 door styles',
@@ -142,9 +144,9 @@ export const products: Product[] = [
     description:
       'Maximize every inch of your kitchen with Triangle\'s integrated storage solutions. Pull-out pantry units, corner solutions, and custom drawer organizers transform chaotic cabinets into organized, functional spaces. Designed to work seamlessly with both the M Line and Classic Collection cabinetry.',
     shortDescription: 'Integrated storage solutions for maximum kitchen organization.',
-    image: 'https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1556909190-eccf4a8bf97a?w=800&q=80',
     images: [
-      'https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=1200&q=80',
+      'https://images.unsplash.com/photo-1556909190-eccf4a8bf97a?w=1200&q=80',
     ],
     features: [
       'Pull-out pantry systems',
