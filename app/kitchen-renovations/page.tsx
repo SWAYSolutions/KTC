@@ -68,16 +68,16 @@ const benefits = [
 
 const galleryImages = [
   {
-    src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/gentry/gentry2.jpg',
-    alt: 'Kitchen renovation with sage-blue shaker cabinets and oak island',
+    src: '/images/projects/proud-1.jpg',
+    alt: 'White shaker kitchen with black hardware, butcher-block dining table, and open oak shelving',
   },
   {
-    src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen1.jpg',
-    alt: 'Contemporary kitchen renovation with high-gloss cabinetry and blue island',
+    src: '/images/projects/proud-2.jpg',
+    alt: 'Black granite sink and gooseneck faucet with white subway tile and floating oak shelves',
   },
   {
-    src: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_2.jpg',
-    alt: 'Traditional kitchen renovation with cream cabinetry and granite counters',
+    src: '/images/projects/proud-3.jpg',
+    alt: 'White shaker kitchen with stainless appliances, marble subway backsplash, and window over sink',
   },
 ];
 
