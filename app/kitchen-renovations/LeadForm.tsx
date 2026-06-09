@@ -162,7 +162,7 @@ export function LeadForm({ source = 'Facebook Ad - Kitchen Renovations' }: LeadF
           >
             <AlertCircle className="w-5 h-5 flex-shrink-0" />
             <p className="text-sm">
-              Something went wrong. Please try again or call us at (902) 324-2224.
+              Something went wrong. Please try again or call us at (902) 955-2225.
             </p>
           </motion.div>
         )}

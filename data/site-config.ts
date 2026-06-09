@@ -14,7 +14,7 @@ export const siteConfig: SiteConfig = {
     'Premium kitchen building and cabinetry service in Truro, Nova Scotia. Specializing in high-end custom kitchen designs featuring Kitchen Craft and Triangle Kitchens products.',
   url: 'https://kitchentablecabinetry.com',
   contact: {
-    phone: '9023242224',
+    phone: '9029552225',
     email: 'info@kitchentablecabinetry.com',
     address: {
       street: '152 Esplanade St',

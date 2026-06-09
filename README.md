@@ -205,5 +205,5 @@ For high-quality luxury kitchen imagery, use these Unsplash collections:
 
 For questions or support, contact:
 - Email: info@kitchentablecabinetry.com
-- Phone: (902) 555-0123
+- Phone: (902) 955-2225
 - Address: 123 Main Street, Truro, NS B2N 1A1, Canada
