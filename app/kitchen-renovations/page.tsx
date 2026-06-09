@@ -69,15 +69,15 @@ const benefits = [
 const galleryImages = [
   {
     src: '/images/projects/proud-1.jpg',
-    alt: 'White shaker kitchen with black hardware, butcher-block dining table, and open oak shelving',
+    alt: 'White shaker kitchen with butcher-block countertops, a large island, and black hardware',
   },
   {
     src: '/images/projects/proud-2.jpg',
-    alt: 'Black granite sink and gooseneck faucet with white subway tile and floating oak shelves',
+    alt: 'White shaker kitchen with stainless appliances, marble subway backsplash, and open wood shelving',
   },
   {
     src: '/images/projects/proud-3.jpg',
-    alt: 'White shaker kitchen with stainless appliances, marble subway backsplash, and window over sink',
+    alt: 'Natural hickory kitchen with a wood-plank vaulted ceiling and rustic wood island',
   },
 ];
 
