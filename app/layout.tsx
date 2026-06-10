@@ -25,6 +25,12 @@ const playfair = Playfair_Display({
   variable: '--font-playfair',
 });
 
+// Google Analytics 4 Measurement ID. Defaults to the live property so GA
+// works on deploy without extra env config; NEXT_PUBLIC_GOOGLE_ANALYTICS_ID
+// overrides it. Measurement IDs are non-secret (exposed client-side).
+const GA_MEASUREMENT_ID =
+  process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || 'G-7SQZE4VR3T';
+
 // Metadata for SEO
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -223,11 +229,11 @@ export default function RootLayout({
         <Footer />
 
         {/* Google Analytics */}
-        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID && (
+        {GA_MEASUREMENT_ID && (
           <>
             <script
               async
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
             />
             <script
               dangerouslySetInnerHTML={{
@@ -235,7 +241,7 @@ export default function RootLayout({
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}', {
+                  gtag('config', '${GA_MEASUREMENT_ID}', {
                     page_path: window.location.pathname,
                   });
                 `,
