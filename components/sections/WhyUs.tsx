@@ -29,9 +29,9 @@ const benefits = [
   },
   {
     icon: Award,
-    title: 'Premium Quality',
+    title: 'Licensed Distributor',
     description:
-      'We partner exclusively with industry-leading manufacturers like Kitchen Craft and Triangle Kitchens, ensuring exceptional craftsmanship and durability.',
+      'As a licensed distributor of Kitchen Craft and Triangle Kitchen, we supply industry-leading Canadian-made cabinetry — whether we install it for you or you buy cabinets and parts directly from us.',
     color: 'wood',
   },
   {

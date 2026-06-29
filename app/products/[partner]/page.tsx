@@ -60,7 +60,7 @@ export default async function PartnerProductsPage({ params }: PageProps) {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <Badge variant="gold" className="mb-4">
-              Authorized Dealer
+              Licensed Distributor
             </Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-white mb-4">
               {partner.name}
@@ -75,6 +75,16 @@ export default async function PartnerProductsPage({ params }: PageProps) {
                 <Button variant="gold" size="lg" className="group">
                   Browse Products
                   <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
+              <Link href={`/contact?product=${partner.id}`}>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-white text-white hover:bg-white hover:text-charcoal"
+                >
+                  Request a Quote
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
               <a href={partner.website} target="_blank" rel="noopener noreferrer">
@@ -183,8 +193,8 @@ export default async function PartnerProductsPage({ params }: PageProps) {
       {/* CTA */}
       <CTA
         variant="default"
-        title={`Ready to Explore ${partner.name}?`}
-        description="Schedule a showroom visit to see these products in person and discuss your project with our design team."
+        title={`Ready to Order ${partner.name}?`}
+        description="Request a quote on cabinets or parts, or schedule a showroom visit to see these products in person and discuss your project with our team."
       />
     </>
   );

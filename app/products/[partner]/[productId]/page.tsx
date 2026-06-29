@@ -190,8 +190,13 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
             {/* Actions */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="flex-1">
+              <Link href={`/contact?product=${product.id}`} className="flex-1">
                 <Button variant="gold" size="lg" className="w-full">
+                  Request a Quote
+                </Button>
+              </Link>
+              <Link href="/contact" className="flex-1">
+                <Button variant="outline" size="lg" className="w-full">
                   Schedule Consultation
                 </Button>
               </Link>

@@ -35,7 +35,7 @@ const GA_MEASUREMENT_ID =
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Premium Kitchen Design in Truro, Nova Scotia`,
+    default: `${siteConfig.name} | Kitchen Renovations & Cabinet Distribution in Truro, Nova Scotia`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -50,6 +50,15 @@ export const metadata: Metadata = {
     'luxury kitchens',
     'kitchen renovation',
     'custom cabinets',
+    'cabinet distributor',
+    'Kitchen Craft dealer',
+    'Triangle Kitchen dealer',
+    'cabinet parts',
+    'replacement cabinet doors',
+    'drawer fronts',
+    'cabinet hardware',
+    'buy cabinets Nova Scotia',
+    'cabinet supply Truro',
   ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
@@ -64,7 +73,7 @@ export const metadata: Metadata = {
     locale: 'en_CA',
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} | Premium Kitchen Design`,
+    title: `${siteConfig.name} | Kitchen Renovations & Licensed Cabinet Distributor`,
     description: siteConfig.description,
     images: [
       {
@@ -111,10 +120,18 @@ export const viewport: Viewport = {
 // Structured Data for Local Business
 const structuredData = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+  '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
   '@id': siteConfig.url,
   name: siteConfig.name,
   description: siteConfig.description,
+  knowsAbout: [
+    'Kitchen renovation',
+    'Kitchen design',
+    'Cabinet distribution',
+    'Kitchen Craft cabinetry',
+    'Triangle Kitchen cabinetry',
+    'Cabinet parts and replacement components',
+  ],
   url: siteConfig.url,
   telephone: siteConfig.contact.phone,
   email: siteConfig.contact.email,

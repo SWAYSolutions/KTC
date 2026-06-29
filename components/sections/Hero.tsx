@@ -113,7 +113,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <span className="inline-block text-gold font-medium text-sm uppercase tracking-wider mb-4 px-4 py-2 bg-gold/10 rounded-full backdrop-blur-sm">
-              Premium Kitchen Design in Nova Scotia
+              Custom Kitchens &amp; Cabinet Supply in Nova Scotia
             </span>
           </motion.div>
 
@@ -134,8 +134,10 @@ export function Hero() {
             className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl leading-relaxed"
           >
             Experience the art of bespoke kitchen design. We craft extraordinary
-            spaces that blend innovative functionality with uncompromising elegance,
-            featuring premium products from Kitchen Craft and Triangle Kitchens.
+            spaces that blend innovative functionality with uncompromising elegance —
+            and as licensed distributors of Kitchen Craft and Triangle Kitchen, we also
+            sell and supply cabinets and cabinet parts on their own, for homeowners and
+            builders alike.
           </motion.p>
 
           <motion.div

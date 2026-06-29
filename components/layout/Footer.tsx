@@ -152,7 +152,7 @@ export function Footer() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12">
             <span className="text-charcoal-400 text-sm uppercase tracking-wider">
-              Authorized Dealer
+              Licensed Distributor Of
             </span>
             <div className="flex items-center space-x-8">
               <a href="https://www.kitchencraft.com/products" target="_blank" rel="noopener noreferrer" className="text-white font-serif text-xl hover:text-gold transition-colors">Kitchen Craft</a>
@@ -160,6 +160,9 @@ export function Footer() {
               <a href="https://trianglekitchen.com/products/styles" target="_blank" rel="noopener noreferrer" className="text-white font-serif text-xl hover:text-gold transition-colors">Triangle Kitchen</a>
             </div>
           </div>
+          <p className="text-charcoal-400 text-sm text-center mt-4">
+            Cabinets &amp; cabinet parts — doors, drawer fronts, hardware &amp; replacement components.
+          </p>
         </div>
       </div>
 

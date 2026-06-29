@@ -229,6 +229,7 @@ export function ContactForm() {
           >
             <option value="">Select a project type</option>
             <option value="full-renovation">Full Kitchen Renovation</option>
+            <option value="cabinet-parts-order">Cabinet/Parts Order or Quote</option>
             <option value="cabinet-replacement">Cabinet Replacement</option>
             <option value="countertop-upgrade">Countertop Upgrade</option>
             <option value="new-construction">New Construction</option>

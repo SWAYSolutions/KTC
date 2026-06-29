@@ -13,9 +13,9 @@ import { products, productCategories } from '@/data/products';
 import { partners } from '@/data/partners';
 
 export const metadata: Metadata = {
-  title: 'Products - Canadian-Made Frameless Cabinetry',
+  title: 'Cabinets & Cabinet Parts We Sell — Kitchen Craft & Triangle Kitchen',
   description:
-    'Explore our curated collection of frameless cabinetry from Kitchen Craft and Triangle Kitchen — proudly Canadian-made.',
+    'As a licensed distributor of Kitchen Craft and Triangle Kitchen, we sell and supply Canadian-made frameless cabinets and cabinet parts. Browse the collections and request a quote.',
 };
 
 export default function ProductsPage() {
@@ -24,9 +24,9 @@ export default function ProductsPage() {
       {/* Hero Section */}
       <Section background="cream" padding="xl">
         <SectionHeader
-          subtitle="Our Manufacturers"
-          title="Canadian-Made Cabinet Collections"
-          description="We work exclusively with Canadian cabinet manufacturers. Browse our collections from Kitchen Craft and Triangle Kitchen — all frameless construction, all built in Canada."
+          subtitle="Licensed Distributor"
+          title="Cabinets & Cabinet Parts We Sell"
+          description="As a licensed distributor of Kitchen Craft and Triangle Kitchen, we sell and supply Canadian-made frameless cabinetry — full kitchens, individual cabinets, and replacement parts like doors, drawer fronts, and hardware. Browse the collections below, then request a quote."
         />
 
         {/* Manufacturer Cards */}
@@ -66,8 +66,8 @@ export default function ProductsPage() {
       {/* CTA */}
       <CTA
         variant="simple"
-        title="Need Help Choosing?"
-        description="Our design experts are here to help you find the perfect cabinetry for your kitchen."
+        title="Request a Quote on Cabinets or Parts"
+        description="Tell us what you need — full cabinets, replacement doors, drawer fronts, or hardware — and we'll price and order it for you."
       />
     </>
   );

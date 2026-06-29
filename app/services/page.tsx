@@ -8,14 +8,14 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { PenTool, Wrench, MessageSquare, Home, ArrowRight, CheckCircle } from 'lucide-react';
+import { PenTool, Wrench, MessageSquare, Home, Package, ArrowRight, CheckCircle } from 'lucide-react';
 import { Section, SectionHeader, Button, Card } from '@/components/ui';
 import { DesignProcess, CTA } from '@/components/sections';
 
 export const metadata: Metadata = {
-  title: 'Services - Kitchen Design, Installation & Consultation',
+  title: 'Services - Kitchen Design, Installation & Cabinet Supply',
   description:
-    'Explore our comprehensive kitchen services including custom design, professional installation, design consultation, and complete renovation.',
+    'Explore our kitchen services: custom design, professional installation, design consultation, complete renovation, and cabinet & parts supply as a licensed distributor of Kitchen Craft and Triangle Kitchen.',
 };
 
 const services = [
@@ -83,6 +83,23 @@ const services = [
     ],
     image: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen1.jpg',
   },
+  {
+    id: 'cabinet-supply',
+    icon: Package,
+    title: 'Cabinet & Parts Supply',
+    tagline: 'Licensed Distributor — Buy Direct',
+    description:
+      'Beyond full renovations, we are licensed distributors of Kitchen Craft and Triangle Kitchen cabinetry. Buy cabinets and cabinet parts directly from us — whether you are a homeowner replacing a few doors or a builder outfitting a new kitchen. We quote, order, and supply.',
+    features: [
+      'Full cabinet orders from Kitchen Craft & Triangle Kitchen',
+      'Replacement doors, drawer fronts & panels',
+      'Cabinet hardware, hinges & soft-close components',
+      'Supply-only or supply-and-install options',
+      'Quotes for homeowners, builders & contractors',
+    ],
+    image:
+      'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_2.jpg',
+  },
 ];
 
 export default function ServicesPage() {
@@ -98,8 +115,10 @@ export default function ServicesPage() {
             Comprehensive <span className="text-gold">Kitchen Solutions</span>
           </h1>
           <p className="text-charcoal-300 text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            From initial concept to final reveal, we offer a complete range of services to bring
-            your dream kitchen to life with precision and care.
+            From initial concept to final reveal, we offer a complete range of services — custom
+            design, installation, and cabinet supply — to bring your dream kitchen to life with
+            precision and care. As licensed distributors of Kitchen Craft and Triangle Kitchen,
+            we also sell cabinets and cabinet parts on their own.
           </p>
           <Link href="/contact">
             <Button variant="gold" size="lg" className="group">

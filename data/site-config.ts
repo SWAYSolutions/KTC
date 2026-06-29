@@ -11,7 +11,7 @@ export const siteConfig: SiteConfig = {
   name: 'Kitchen Table Cabinetry',
   tagline: 'Elevate Your Home with Timeless Luxury Kitchens',
   description:
-    'Premium kitchen building and cabinetry service in Truro, Nova Scotia. Specializing in high-end custom kitchen designs featuring Kitchen Craft and Triangle Kitchens products.',
+    'Kitchen renovation and design experts in Truro, Nova Scotia — and licensed distributors of Kitchen Craft and Triangle Kitchen cabinetry. We design and install complete custom kitchens, and we sell and supply Canadian-made cabinets and cabinet parts (doors, drawer fronts, hardware, and replacement components) to homeowners, builders, and contractors.',
   url: 'https://kitchentablecabinetry.com',
   contact: {
     phone: '9029552225',
@@ -80,6 +80,11 @@ export const navigation: NavItem[] = [
         href: '/services#renovation',
         description: 'Complete kitchen transformations',
       },
+      {
+        label: 'Cabinet & Parts Supply',
+        href: '/services#cabinet-supply',
+        description: 'Buy cabinets & parts direct',
+      },
     ],
   },
   {
@@ -94,6 +99,7 @@ export const navigation: NavItem[] = [
 
 export const footerLinks = {
   products: [
+    { label: 'Cabinet & Parts Supply', href: '/services#cabinet-supply' },
     { label: 'Kitchen Craft', href: 'https://www.kitchencraft.com/products' },
     { label: 'Triangle Kitchen', href: 'https://trianglekitchen.com/products/styles' },
   ],

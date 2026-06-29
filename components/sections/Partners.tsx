@@ -7,8 +7,9 @@
  * ═══════════════════════════════════════════════════════════════════════════════
  */
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { CheckCircle, ExternalLink, MapPin } from 'lucide-react';
+import { CheckCircle, ExternalLink, MapPin, ArrowRight } from 'lucide-react';
 import { Section, SectionHeader, Button, Card } from '@/components/ui';
 import { partners } from '@/data/partners';
 
@@ -16,9 +17,9 @@ export function Partners() {
   return (
     <Section background="white" padding="xl">
       <SectionHeader
-        subtitle="Canadian Quality"
-        title="Premium Canadian-Made Cabinetry"
-        description="We work exclusively with Canadian cabinet manufacturers who share our commitment to quality craftsmanship and frameless construction. Every cabinet is built right here in Canada."
+        subtitle="Licensed Distributor"
+        title="Cabinets & Cabinet Parts We Sell"
+        description="Kitchen Table Cabinetry is a licensed distributor of Kitchen Craft and Triangle Kitchen. We sell and supply their Canadian-made frameless cabinetry — full kitchens, individual cabinets, and replacement parts like doors, drawer fronts, and hardware — to homeowners and builders, with or without installation."
       />
 
       <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
@@ -100,13 +101,19 @@ export function Partners() {
       >
         <div className="text-center mb-6">
           <h3 className="text-2xl font-serif font-semibold text-charcoal mb-2">
-            Proudly Canadian-Made Frameless Cabinetry
+            Licensed Distributor — Buy Cabinets &amp; Cabinet Parts From Us
           </h3>
-          <p className="text-charcoal-500 max-w-2xl mx-auto">
-            We sell exclusively frameless (full-access) cabinetry from Canadian manufacturers.
-            Frameless construction maximizes interior cabinet space with clean, modern lines
-            that suit any kitchen style.
+          <p className="text-charcoal-500 max-w-2xl mx-auto mb-6">
+            We sell exclusively frameless (full-access) cabinetry from Canadian manufacturers,
+            plus individual components — replacement doors, drawer fronts, panels, and hardware.
+            Need cabinets or parts without a full renovation? We can quote and order them for you.
           </p>
+          <Link href="/contact?product=cabinet-parts">
+            <Button variant="gold" className="group">
+              Request a Cabinet or Parts Quote
+              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
         <div className="grid md:grid-cols-2 gap-6 text-center">
           <div className="flex items-center justify-center gap-3">
