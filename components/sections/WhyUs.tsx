@@ -31,7 +31,7 @@ const benefits = [
     icon: Award,
     title: 'Licensed Distributor',
     description:
-      'As a licensed distributor of Kitchen Craft and Triangle Kitchen, we supply industry-leading Canadian-made cabinetry — whether we install it for you or you buy cabinets and parts directly from us.',
+      'As a licensed distributor of Kitchen Craft and Triangle Kitchen, you get industry-leading Canadian-made cabinetry — whether we install it for you or you simply order the cabinets and components you need.',
     color: 'wood',
   },
   {

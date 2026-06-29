@@ -17,9 +17,9 @@ export function Partners() {
   return (
     <Section background="white" padding="xl">
       <SectionHeader
-        subtitle="Licensed Distributor"
-        title="Cabinets & Cabinet Parts We Sell"
-        description="Kitchen Table Cabinetry is a licensed distributor of Kitchen Craft and Triangle Kitchen. We sell and supply their Canadian-made frameless cabinetry — full kitchens, individual cabinets, and replacement parts like doors, drawer fronts, and hardware — to homeowners and builders, with or without installation."
+        subtitle="Kitchen Craft & Triangle Kitchen"
+        title="Canadian Craftsmanship, Supplied by Us"
+        description="As a licensed distributor of Kitchen Craft and Triangle Kitchen, we bring their Canadian-made, full-access cabinetry to Nova Scotia — whether we're designing your whole kitchen or supplying exactly what you need: a single cabinet, replacement doors and drawer fronts, or just the hardware. Homeowners and builders order through us, with or without installation."
       />
 
       <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
@@ -101,16 +101,17 @@ export function Partners() {
       >
         <div className="text-center mb-6">
           <h3 className="text-2xl font-serif font-semibold text-charcoal mb-2">
-            Licensed Distributor — Buy Cabinets &amp; Cabinet Parts From Us
+            Order Cabinets &amp; Components, Your Way
           </h3>
           <p className="text-charcoal-500 max-w-2xl mx-auto mb-6">
-            We sell exclusively frameless (full-access) cabinetry from Canadian manufacturers,
-            plus individual components — replacement doors, drawer fronts, panels, and hardware.
-            Need cabinets or parts without a full renovation? We can quote and order them for you.
+            We supply frameless (full-access) cabinetry from Canada&apos;s leading makers, along with
+            the individual pieces that finish a space beautifully — doors, drawer fronts, panels,
+            and soft-close hardware. Planning a refresh rather than a full renovation? We&apos;ll quote
+            and order precisely what you need.
           </p>
-          <Link href="/contact?product=cabinet-parts">
+          <Link href="/cabinetry">
             <Button variant="gold" className="group">
-              Request a Cabinet or Parts Quote
+              Explore Cabinetry &amp; Parts
               <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </Link>

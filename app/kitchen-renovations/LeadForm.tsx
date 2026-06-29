@@ -2,9 +2,11 @@
 
 /**
  * ═══════════════════════════════════════════════════════════════════════════════
- * Kitchen Table Cabinetry - Renovation Lead Form
- * Streamlined, high-conversion lead capture form for the Facebook ad campaign.
- * Fewer fields than the full contact form to maximize completed submissions.
+ * Kitchen Table Cabinetry - Lead Capture Form
+ * Streamlined, high-conversion lead form shared by the campaign landing pages
+ * (kitchen renovations + cabinet sales). Parameterized via props; defaults
+ * preserve the original renovation-page behavior. Fewer required fields than the
+ * full contact form to maximize completed submissions.
  * ═══════════════════════════════════════════════════════════════════════════════
  */
 
@@ -25,6 +27,11 @@ interface LeadFormData {
   message: string;
 }
 
+interface ProjectOption {
+  value: string;
+  label: string;
+}
+
 const initialFormData: LeadFormData = {
   name: '',
   email: '',
@@ -33,12 +40,49 @@ const initialFormData: LeadFormData = {
   message: '',
 };
 
+const defaultProjectOptions: ProjectOption[] = [
+  { value: 'full-renovation', label: 'Full Kitchen Renovation' },
+  { value: 'cabinet-replacement', label: 'Cabinet Replacement / Refacing' },
+  { value: 'countertop-upgrade', label: 'Countertop Upgrade' },
+  { value: 'new-construction', label: 'New Construction' },
+  { value: 'not-sure', label: 'Not Sure Yet' },
+];
+
 interface LeadFormProps {
   /** Campaign identifier sent with the submission for lead-source tracking */
   source?: string;
+  /** Form heading */
+  heading?: string;
+  /** Short line under the heading */
+  subheading?: string;
+  /** Submit button label */
+  submitLabel?: string;
+  /** Success-state title */
+  successTitle?: string;
+  /** Success-state body copy */
+  successBody?: string;
+  /** Label for the project-type select */
+  projectTypeLabel?: string;
+  /** First (placeholder) option in the project-type select */
+  projectTypePlaceholder?: string;
+  /** Options for the project-type select */
+  projectOptions?: ProjectOption[];
+  /** Prefix used to build the email subject line */
+  subjectPrefix?: string;
 }
 
-export function LeadForm({ source = 'Facebook Ad - Kitchen Renovations' }: LeadFormProps) {
+export function LeadForm({
+  source = 'Facebook Ad - Kitchen Renovations',
+  heading = 'Book Your Free Consultation',
+  subheading = "Takes 30 seconds. No obligation — just expert advice and a clear plan. We'll reply within one business day.",
+  submitLabel = 'Get My Free Consultation',
+  successTitle = 'Request Received!',
+  successBody = 'Thank you. One of our kitchen design experts will reach out within one business day to schedule your free, no-obligation consultation.',
+  projectTypeLabel = 'Project Type',
+  projectTypePlaceholder = 'Select a project type',
+  projectOptions = defaultProjectOptions,
+  subjectPrefix = 'New Renovation Lead',
+}: LeadFormProps) {
   const [formData, setFormData] = useState<LeadFormData>(initialFormData);
   const [errors, setErrors] = useState<Partial<LeadFormData>>({});
   const [status, setStatus] = useState<FormStatus>('idle');
@@ -67,9 +111,8 @@ export function LeadForm({ source = 'Facebook Ad - Kitchen Renovations' }: LeadF
       newErrors.email = 'Please enter a valid email address';
     }
 
-    if (!formData.phone.trim()) {
-      newErrors.phone = 'Phone number is required';
-    } else if (!isValidPhone(formData.phone)) {
+    // Phone is optional — validate only if provided.
+    if (formData.phone && !isValidPhone(formData.phone)) {
       newErrors.phone = 'Please enter a valid phone number';
     }
 
@@ -99,7 +142,7 @@ export function LeadForm({ source = 'Facebook Ad - Kitchen Renovations' }: LeadF
         body: JSON.stringify({
           ...formData,
           _source: source,
-          _subject: `New Renovation Lead (${source}): ${formData.name}`,
+          _subject: `${subjectPrefix} (${source}): ${formData.name}`,
         }),
       });
 
@@ -129,12 +172,9 @@ export function LeadForm({ source = 'Facebook Ad - Kitchen Renovations' }: LeadF
           <CheckCircle className="w-8 h-8 text-white" />
         </div>
         <h3 className="text-2xl font-serif font-semibold text-charcoal mb-2">
-          Request Received!
+          {successTitle}
         </h3>
-        <p className="text-charcoal-500 mb-6">
-          Thank you. One of our kitchen design experts will reach out within one business
-          day to schedule your free, no-obligation consultation.
-        </p>
+        <p className="text-charcoal-500 mb-6">{successBody}</p>
         <Button variant="outline" onClick={() => setStatus('idle')}>
           Submit Another Request
         </Button>
@@ -145,12 +185,8 @@ export function LeadForm({ source = 'Facebook Ad - Kitchen Renovations' }: LeadF
   return (
     <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-luxury">
       <div className="mb-6 text-center">
-        <h3 className="text-2xl font-serif font-semibold text-charcoal">
-          Book Your Free Consultation
-        </h3>
-        <p className="text-charcoal-500 text-sm mt-2">
-          Tell us about your project and we&apos;ll be in touch within one business day.
-        </p>
+        <h3 className="text-2xl font-serif font-semibold text-charcoal">{heading}</h3>
+        <p className="text-charcoal-500 text-sm mt-2">{subheading}</p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -196,13 +232,13 @@ export function LeadForm({ source = 'Facebook Ad - Kitchen Renovations' }: LeadF
             onChange={handleChange}
             error={errors.phone}
             placeholder="(902) 555-0123"
-            required
+            hint="Optional"
           />
         </div>
 
         <div className="w-full">
           <label className="block text-sm font-medium text-charcoal mb-2">
-            Project Type
+            {projectTypeLabel}
           </label>
           <select
             name="projectType"
@@ -210,12 +246,12 @@ export function LeadForm({ source = 'Facebook Ad - Kitchen Renovations' }: LeadF
             onChange={handleChange}
             className="w-full px-4 py-3 rounded-xl border border-charcoal-200 bg-white text-charcoal focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300"
           >
-            <option value="">Select a project type</option>
-            <option value="full-renovation">Full Kitchen Renovation</option>
-            <option value="cabinet-replacement">Cabinet Replacement / Refacing</option>
-            <option value="countertop-upgrade">Countertop Upgrade</option>
-            <option value="new-construction">New Construction</option>
-            <option value="not-sure">Not Sure Yet</option>
+            <option value="">{projectTypePlaceholder}</option>
+            {projectOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
           </select>
         </div>
 
@@ -224,7 +260,7 @@ export function LeadForm({ source = 'Facebook Ad - Kitchen Renovations' }: LeadF
           name="message"
           value={formData.message}
           onChange={handleChange}
-          placeholder="Tell us a little about your kitchen and what you'd like to change..."
+          placeholder="Tell us a little about your project and what you're looking for..."
           rows={3}
           hint="Optional"
         />
@@ -240,7 +276,7 @@ export function LeadForm({ source = 'Facebook Ad - Kitchen Renovations' }: LeadF
             'Sending...'
           ) : (
             <>
-              Get My Free Consultation
+              {submitLabel}
               <Send className="ml-2 w-5 h-5" />
             </>
           )}

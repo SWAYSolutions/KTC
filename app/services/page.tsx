@@ -86,15 +86,15 @@ const services = [
   {
     id: 'cabinet-supply',
     icon: Package,
-    title: 'Cabinet & Parts Supply',
-    tagline: 'Licensed Distributor — Buy Direct',
+    title: 'Cabinet & Component Supply',
+    tagline: 'Order Direct From Us',
     description:
-      'Beyond full renovations, we are licensed distributors of Kitchen Craft and Triangle Kitchen cabinetry. Buy cabinets and cabinet parts directly from us — whether you are a homeowner replacing a few doors or a builder outfitting a new kitchen. We quote, order, and supply.',
+      'You don\'t need a full renovation to work with us. As a licensed distributor of Kitchen Craft and Triangle Kitchen, we\'ll quote, order, and supply exactly what your project calls for — a full set of cabinets, a few replacement doors, or the hardware to finish the job — for homeowners, builders, and contractors.',
     features: [
       'Full cabinet orders from Kitchen Craft & Triangle Kitchen',
-      'Replacement doors, drawer fronts & panels',
-      'Cabinet hardware, hinges & soft-close components',
-      'Supply-only or supply-and-install options',
+      'Replacement doors, drawer fronts & matching panels',
+      'Hinges, handles & soft-close components',
+      'Supply-only or supply-and-install',
       'Quotes for homeowners, builders & contractors',
     ],
     image:
@@ -117,8 +117,8 @@ export default function ServicesPage() {
           <p className="text-charcoal-300 text-lg max-w-2xl mx-auto leading-relaxed mb-8">
             From initial concept to final reveal, we offer a complete range of services — custom
             design, installation, and cabinet supply — to bring your dream kitchen to life with
-            precision and care. As licensed distributors of Kitchen Craft and Triangle Kitchen,
-            we also sell cabinets and cabinet parts on their own.
+            precision and care. As a licensed distributor of Kitchen Craft and Triangle Kitchen,
+            we can also supply the cabinetry and components on their own.
           </p>
           <Link href="/contact">
             <Button variant="gold" size="lg" className="group">

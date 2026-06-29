@@ -45,6 +45,11 @@ export const navigation: NavItem[] = [
     href: '/products',
     children: [
       {
+        label: 'Cabinetry & Parts',
+        href: '/cabinetry',
+        description: 'Order cabinets, doors & hardware',
+      },
+      {
         label: 'Kitchen Craft',
         href: 'https://www.kitchencraft.com/products',
         description: 'Canadian-made frameless cabinetry',
@@ -81,9 +86,9 @@ export const navigation: NavItem[] = [
         description: 'Complete kitchen transformations',
       },
       {
-        label: 'Cabinet & Parts Supply',
+        label: 'Cabinet & Component Supply',
         href: '/services#cabinet-supply',
-        description: 'Buy cabinets & parts direct',
+        description: 'Order cabinets & components',
       },
     ],
   },
@@ -99,7 +104,7 @@ export const navigation: NavItem[] = [
 
 export const footerLinks = {
   products: [
-    { label: 'Cabinet & Parts Supply', href: '/services#cabinet-supply' },
+    { label: 'Cabinetry & Parts', href: '/cabinetry' },
     { label: 'Kitchen Craft', href: 'https://www.kitchencraft.com/products' },
     { label: 'Triangle Kitchen', href: 'https://trianglekitchen.com/products/styles' },
   ],

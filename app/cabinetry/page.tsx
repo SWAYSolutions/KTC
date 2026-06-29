@@ -1,8 +1,9 @@
 /**
  * ═══════════════════════════════════════════════════════════════════════════════
- * Kitchen Table Cabinetry - Kitchen Renovations Landing Page
- * Dedicated, conversion-focused landing page for the Facebook ad campaign.
- * Designed to generate contact form fills (free consultation requests).
+ * Kitchen Table Cabinetry - Cabinetry Page
+ * Homeowner-focused page for ordering Kitchen Craft & Triangle Kitchen cabinets and
+ * cabinet parts (doors, drawer fronts, hardware) — with or without installation.
+ * Indexable (organic + ad traffic). Primary CTA: request a quote.
  * ═══════════════════════════════════════════════════════════════════════════════
  */
 
@@ -12,136 +13,139 @@ import {
   CheckCircle2,
   Star,
   Phone,
-  Award,
-  Ruler,
-  Hammer,
-  Sparkles,
   MapPin,
+  Boxes,
+  DoorOpen,
+  Layers,
+  Wrench,
+  ShieldCheck,
+  Award,
+  Users,
+  ExternalLink,
 } from 'lucide-react';
 import { Section, Card, Badge } from '@/components/ui';
-import { LeadForm } from './LeadForm';
+import { LeadForm } from '@/app/kitchen-renovations/LeadForm';
+import { partners } from '@/data/partners';
 import { siteConfig } from '@/data/site-config';
 import { formatPhone } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Kitchen Renovations in Nova Scotia — Free Design Consultation',
+  title: 'Cabinetry & Cabinet Parts in Nova Scotia',
   description:
-    'Transform your kitchen with Kitchen Table Cabinetry. Custom cabinetry, expert installation, and a free design consultation. Serving Truro, Halifax & all of Nova Scotia.',
+    'Canadian-made Kitchen Craft and Triangle Kitchen cabinetry, replacement doors, drawer fronts, and hardware — supplied by a licensed distributor in Truro, NS. Request a quote, supply only or installed.',
   openGraph: {
-    title: 'Dream Kitchen Renovations in Nova Scotia',
+    title: 'Cabinetry & Cabinet Parts in Nova Scotia',
     description:
-      'Book your free, no-obligation design consultation with Kitchen Table Cabinetry today.',
+      'Genuine Kitchen Craft & Triangle Kitchen cabinetry and parts from a local licensed distributor. Request a quote today.',
   },
-  // Campaign landing pages are typically excluded from search indexing
   robots: {
-    index: false,
+    index: true,
     follow: true,
   },
 };
 
-const benefits = [
+const whatYouCanBuy = [
   {
-    icon: Ruler,
-    title: 'Custom Design, Tailored to You',
+    icon: Boxes,
+    title: 'Full Cabinets',
     description:
-      'Every kitchen is designed around the way you live, cook, and entertain — no cookie-cutter layouts.',
+      'Complete cabinet sets for a new kitchen or an addition — built to your layout and finish.',
   },
   {
-    icon: Award,
-    title: 'Premium Cabinetry Brands',
+    icon: DoorOpen,
+    title: 'Doors & Drawer Fronts',
     description:
-      'Authorized dealer for Kitchen Craft and Triangle Kitchens — quality that lasts for decades.',
+      'Refresh your kitchen by swapping fronts — keep the boxes, get a brand-new look.',
   },
   {
-    icon: Hammer,
-    title: 'Expert, In-House Installation',
+    icon: Layers,
+    title: 'Panels & Fillers',
     description:
-      'One accountable team from first sketch to final reveal. Done right, on time, the first time.',
+      'End panels, toe kicks, and matching fillers to finish the job cleanly.',
   },
   {
-    icon: Sparkles,
-    title: 'Stress-Free Process',
+    icon: Wrench,
+    title: 'Hardware & Hinges',
     description:
-      'We manage the details so you don\'t have to — clear timelines, transparent pricing, no surprises.',
+      'Handles, soft-close hinges, drawer slides, and the components that make it all work.',
   },
 ];
 
-const galleryImages = [
+const whyBuy = [
   {
-    src: '/images/projects/proud-1.jpg',
-    alt: 'White shaker kitchen with butcher-block countertops, a large island, and black hardware',
+    icon: Award,
+    title: 'Licensed Distributor',
+    description:
+      'Genuine Kitchen Craft and Triangle Kitchen product, backed by full manufacturer warranties.',
   },
   {
-    src: '/images/projects/proud-2.jpg',
-    alt: 'White shaker kitchen with stainless appliances, marble subway backsplash, and open wood shelving',
+    icon: MapPin,
+    title: 'Canadian-Made',
+    description:
+      'Built in Winnipeg and Dieppe — quality cabinetry made right here in Canada.',
   },
   {
-    src: '/images/projects/proud-3.jpg',
-    alt: 'Natural hickory kitchen with a wood-plank vaulted ceiling and rustic wood island',
+    icon: Users,
+    title: 'Local, In-Person Help',
+    description:
+      'Visit our Truro showroom and talk to real people who know these product lines inside out.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'We Match the Right Parts',
+    description:
+      "Not sure of your model? Bring photos or measurements and we'll help identify the right doors, finishes, and hardware.",
   },
 ];
 
 const steps = [
   {
     number: '01',
-    title: 'Free Consultation',
+    title: 'Measure & Choose',
     description:
-      'We learn about your space, style, and budget — in your home or our Truro showroom.',
+      'Tell us what you need — full cabinets, a few doors, or just hardware. Bring photos or measurements.',
   },
   {
     number: '02',
-    title: 'Custom Design & Quote',
-    description:
-      'See your new kitchen come to life with a detailed design and a clear, fixed quote.',
+    title: 'Get Your Quote',
+    description: 'We price it out clearly, with no obligation and no surprises.',
   },
   {
     number: '03',
-    title: 'Build & Install',
-    description:
-      'Our craftsmen handle everything and reveal a kitchen you\'ll love for years.',
-  },
-];
-
-const testimonials = [
-  {
-    quote:
-      'Kitchen Table Cabinetry transformed our outdated kitchen into something we never dreamed possible. Every detail was considered, and the result is absolutely stunning.',
-    author: 'Sarah & Michael Chen',
-    location: 'Halifax, NS',
+    title: 'We Order It',
+    description: 'Once approved, we place the order with the manufacturer for you.',
   },
   {
-    quote:
-      'They captured exactly what we wanted — a kitchen that feels like home but has all the modern conveniences. Our friends can\'t stop asking who designed it.',
-    author: 'The Morrison Family',
-    location: 'Truro, NS',
-  },
-  {
-    quote:
-      'Professional from start to finish. The project stayed on schedule and on budget, and the craftsmanship is incredible. Worth every penny.',
-    author: 'Jennifer L.',
-    location: 'Bible Hill, NS',
+    number: '04',
+    title: 'Pick Up or Install',
+    description: 'Collect your order, or have our team install it — your choice.',
   },
 ];
 
 const faqs = [
   {
-    question: 'How much does a kitchen renovation cost?',
+    question: 'What are your lead times?',
     answer:
-      'It depends on the size, materials, and scope of your project. A mid-range kitchen typically starts around $25,000, while high-end custom kitchens range higher. We provide a clear, detailed quote after your free consultation — no guesswork.',
+      'Most orders arrive in roughly 4–8 weeks depending on the manufacturer, finish, and time of year. We confirm the timeline when we quote.',
   },
   {
-    question: 'How long will my renovation take?',
+    question: 'Can I order just parts?',
     answer:
-      'A cabinet replacement usually takes 1–2 weeks, while a complete renovation typically runs 6–12 weeks from design to completion. We give you a firm timeline before we begin.',
+      'Absolutely. A single replacement door, a set of drawer fronts, or just hardware is no problem — you don\'t need to order a full kitchen.',
   },
   {
-    question: 'Is the consultation really free?',
+    question: 'Do I need to know the exact model?',
     answer:
-      'Yes — completely free and with no obligation. It\'s simply a conversation about your kitchen, your goals, and how we can help.',
+      'No. Bring photos and measurements and we\'ll help identify the right product, finish, and components to match what you already have.',
+  },
+  {
+    question: 'Supply only, or installed?',
+    answer:
+      'Your choice. We can supply the product for you to install, or have our experienced team handle the installation.',
   },
 ];
 
-export default function KitchenRenovationsLandingPage() {
+export default function CabinetSalesPage() {
   const phone = siteConfig.contact.phone;
 
   return (
@@ -152,7 +156,7 @@ export default function KitchenRenovationsLandingPage() {
         <div className="absolute inset-0">
           <Image
             src="https://www.kitchencraft.com/file/media/kitchencraft/products/environment/gentry/gentry2.jpg"
-            alt="Beautifully renovated luxury kitchen"
+            alt="Canadian-made kitchen cabinetry"
             fill
             priority
             className="object-cover"
@@ -167,26 +171,26 @@ export default function KitchenRenovationsLandingPage() {
             <div className="order-2 lg:order-1">
               <span className="inline-flex items-center gap-2 text-gold font-medium text-sm uppercase tracking-wider mb-5 px-4 py-2 bg-gold/10 rounded-full backdrop-blur-sm">
                 <MapPin className="w-4 h-4" />
-                Serving Truro, Halifax &amp; all of Nova Scotia
+                Licensed Kitchen Craft &amp; Triangle Kitchen Distributor · Truro, NS
               </span>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
-                Your Dream Kitchen,{' '}
-                <span className="text-gold">Beautifully Built</span>
+                Beautiful Cabinetry,{' '}
+                <span className="text-gold">Sourced for You</span>
               </h1>
 
               <p className="text-lg md:text-xl text-white/80 mb-8 max-w-xl leading-relaxed">
-                Custom cabinetry, expert design, and flawless installation — all from one
-                trusted local team. Book your <strong className="text-white">free design
-                consultation</strong> today and see what&apos;s possible.
+                Full kitchens, a single cabinet, replacement doors and drawer fronts, or just
+                the hardware — Canadian-made and expertly sourced. Request a{' '}
+                <strong className="text-white">free, no-obligation quote</strong> today.
               </p>
 
               {/* Trust points */}
               <ul className="space-y-3 mb-8">
                 {[
-                  'Free, no-obligation in-home consultation',
-                  'Premium Kitchen Craft & Triangle Kitchens cabinetry',
-                  'Transparent, fixed-price quotes',
+                  'Genuine Kitchen Craft & Triangle Kitchen product',
+                  'Order just what you need — supply only or installed',
+                  'Local help choosing the right doors, finishes & parts',
                 ].map((point) => (
                   <li key={point} className="flex items-center gap-3 text-white/90">
                     <CheckCircle2 className="w-5 h-5 text-gold flex-shrink-0" />
@@ -203,7 +207,7 @@ export default function KitchenRenovationsLandingPage() {
                       <Star key={i} className="w-5 h-5 fill-gold text-gold" />
                     ))}
                   </div>
-                  <span className="text-white/80 text-sm">Loved by Nova Scotia homeowners</span>
+                  <span className="text-white/80 text-sm">Trusted by Nova Scotia homeowners</span>
                 </div>
                 <a
                   href={`tel:${phone}`}
@@ -217,86 +221,96 @@ export default function KitchenRenovationsLandingPage() {
 
             {/* Lead Form */}
             <div id="get-started" className="order-1 lg:order-2 lg:pl-8 scroll-mt-24">
-              {/* Mobile-only trust strip (desktop shows trust in the copy column) */}
               <div className="lg:hidden flex items-center justify-center gap-2 mb-4 text-white/90 text-sm">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-gold text-gold" />
                   ))}
                 </div>
-                <span>Loved by Nova Scotia homeowners · Free &amp; no-obligation</span>
+                <span>Genuine product · Free &amp; no-obligation</span>
               </div>
-              <LeadForm />
+              <LeadForm
+                source="Cabinet Sales Page"
+                heading="Request Your Cabinet Quote"
+                subheading="Tell us what you need — full cabinets, doors, drawer fronts, or hardware. Takes 30 seconds, no obligation. We'll reply within one business day."
+                submitLabel="Request My Quote"
+                successTitle="Quote Request Received!"
+                successBody="Thanks! One of our cabinet specialists will reach out within one business day with pricing and next steps."
+                projectTypeLabel="What are you looking for?"
+                projectTypePlaceholder="Select what you need"
+                subjectPrefix="New Cabinet Sales Lead"
+                projectOptions={[
+                  { value: 'full-cabinet-order', label: 'Full cabinet order' },
+                  { value: 'doors-drawer-fronts', label: 'Replacement doors / drawer fronts' },
+                  { value: 'hardware-parts', label: 'Cabinet hardware / components' },
+                  { value: 'not-sure', label: 'Not sure yet' },
+                ]}
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ─── Benefits ────────────────────────────────────────────────────── */}
+      {/* ─── What You Can Buy ────────────────────────────────────────────── */}
       <Section background="cream" padding="lg">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-gold font-medium text-sm uppercase tracking-wider mb-3 block">
-            Why Homeowners Choose Us
+            What You Can Order
           </span>
           <h2 className="text-3xl md:text-4xl font-serif font-semibold text-charcoal">
-            Renovation Without the Headaches
+            From a Full Kitchen to a Single Door
           </h2>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((benefit) => (
-            <Card key={benefit.title} variant="elevated" padding="lg" className="text-center">
+          {whatYouCanBuy.map((item) => (
+            <Card key={item.title} variant="elevated" padding="lg" className="text-center">
               <div className="w-14 h-14 rounded-full bg-gold-50 flex items-center justify-center mx-auto mb-4">
-                <benefit.icon className="w-7 h-7 text-gold" />
+                <item.icon className="w-7 h-7 text-gold" />
               </div>
-              <h3 className="font-semibold text-charcoal mb-2">{benefit.title}</h3>
-              <p className="text-charcoal-500 text-sm leading-relaxed">{benefit.description}</p>
+              <h3 className="font-semibold text-charcoal mb-2">{item.title}</h3>
+              <p className="text-charcoal-500 text-sm leading-relaxed">{item.description}</p>
             </Card>
           ))}
         </div>
       </Section>
 
-      {/* ─── Gallery ─────────────────────────────────────────────────────── */}
+      {/* ─── Why Buy From Us ─────────────────────────────────────────────── */}
       <Section background="white" padding="lg">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-gold font-medium text-sm uppercase tracking-wider mb-3 block">
-            Recent Work
+            Why Order From Us
           </span>
           <h2 className="text-3xl md:text-4xl font-serif font-semibold text-charcoal">
-            Kitchens We&apos;re Proud Of
+            Local Experts, Genuine Product
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {galleryImages.map((image) => (
-            <div
-              key={image.src}
-              className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-luxury group"
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-            </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {whyBuy.map((item) => (
+            <Card key={item.title} variant="elevated" padding="lg" className="text-center">
+              <div className="w-14 h-14 rounded-full bg-gold-50 flex items-center justify-center mx-auto mb-4">
+                <item.icon className="w-7 h-7 text-gold" />
+              </div>
+              <h3 className="font-semibold text-charcoal mb-2">{item.title}</h3>
+              <p className="text-charcoal-500 text-sm leading-relaxed">{item.description}</p>
+            </Card>
           ))}
         </div>
       </Section>
 
-      {/* ─── Process ─────────────────────────────────────────────────────── */}
+      {/* ─── How It Works ────────────────────────────────────────────────── */}
       <Section background="cream" padding="lg">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-gold font-medium text-sm uppercase tracking-wider mb-3 block">
             How It Works
           </span>
           <h2 className="text-3xl md:text-4xl font-serif font-semibold text-charcoal">
-            Three Simple Steps to Your New Kitchen
+            Four Simple Steps to Your Order
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
           {steps.map((step) => (
             <div key={step.number} className="text-center">
               <div className="text-5xl font-serif font-bold text-gold/30 mb-3">
@@ -309,32 +323,33 @@ export default function KitchenRenovationsLandingPage() {
         </div>
       </Section>
 
-      {/* ─── Testimonials ────────────────────────────────────────────────── */}
+      {/* ─── Brands ──────────────────────────────────────────────────────── */}
       <Section background="white" padding="lg">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-gold font-medium text-sm uppercase tracking-wider mb-3 block">
-            Happy Clients
+            The Brands We Carry
           </span>
           <h2 className="text-3xl md:text-4xl font-serif font-semibold text-charcoal">
-            What Our Customers Say
+            Canada&apos;s Leading Cabinet Makers
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((testimonial) => (
-            <Card key={testimonial.author} variant="elevated" padding="lg">
-              <div className="flex mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-gold text-gold" />
-                ))}
-              </div>
-              <p className="text-charcoal-600 italic mb-6 leading-relaxed">
-                &ldquo;{testimonial.quote}&rdquo;
-              </p>
-              <div>
-                <p className="font-semibold text-charcoal">{testimonial.author}</p>
-                <p className="text-charcoal-400 text-sm">{testimonial.location}</p>
-              </div>
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {partners.map((partner) => (
+            <Card key={partner.id} variant="outlined" padding="lg">
+              <h3 className="text-2xl font-serif font-semibold text-charcoal mb-1">
+                {partner.name}
+              </h3>
+              <p className="text-gold font-medium mb-4">{partner.tagline}</p>
+              <a
+                href={partner.productsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-charcoal hover:text-gold transition-colors font-medium"
+              >
+                Explore {partner.name} styles
+                <ExternalLink className="w-4 h-4" />
+              </a>
             </Card>
           ))}
         </div>
@@ -365,21 +380,21 @@ export default function KitchenRenovationsLandingPage() {
       <Section background="charcoal" padding="xl">
         <div className="text-center max-w-3xl mx-auto">
           <Badge variant="gold" className="mb-6">
-            Limited Consultation Slots
+            Free, No-Obligation Quote
           </Badge>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-white mb-6">
-            Ready to Start Your <span className="text-gold">Dream Kitchen?</span>
+            Ready to Order Your <span className="text-gold">Cabinets?</span>
           </h2>
           <p className="text-charcoal-300 text-lg mb-8 leading-relaxed">
-            Book your free design consultation today. There&apos;s no obligation — just expert
-            advice and a clear plan for the kitchen you&apos;ve always wanted.
+            Tell us what you need and we&apos;ll price it out — full cabinets, replacement doors,
+            or just the hardware. No obligation, no pressure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#get-started"
               className="inline-flex items-center justify-center font-semibold bg-gold text-charcoal hover:bg-gold-400 shadow-gold hover:shadow-luxury-lg transition-all duration-300 px-8 py-4 text-lg rounded-xl"
             >
-              Get My Free Consultation
+              Request My Quote
             </a>
             <a
               href={`tel:${phone}`}

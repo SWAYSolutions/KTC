@@ -133,11 +133,10 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl leading-relaxed"
           >
-            Experience the art of bespoke kitchen design. We craft extraordinary
-            spaces that blend innovative functionality with uncompromising elegance —
-            and as licensed distributors of Kitchen Craft and Triangle Kitchen, we also
-            sell and supply cabinets and cabinet parts on their own, for homeowners and
-            builders alike.
+            Experience the art of bespoke kitchen design — extraordinary spaces that
+            blend innovative functionality with uncompromising elegance. And as a licensed
+            distributor of Kitchen Craft and Triangle Kitchen, we can supply the cabinetry
+            and components on their own, too — for homeowners and builders alike.
           </motion.p>
 
           <motion.div
