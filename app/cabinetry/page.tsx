@@ -24,8 +24,10 @@ import {
   ExternalLink,
 } from 'lucide-react';
 import { Section, Card, Badge } from '@/components/ui';
+import { DoorStyles } from '@/components/sections';
 import { LeadForm } from '@/app/kitchen-renovations/LeadForm';
 import { partners } from '@/data/partners';
+import { doorStyles } from '@/data/door-styles';
 import { siteConfig } from '@/data/site-config';
 import { formatPhone } from '@/lib/utils';
 
@@ -250,6 +252,20 @@ export default function CabinetSalesPage() {
           </div>
         </div>
       </section>
+
+      {/* ─── Door Styles (editorial; cards explore, CTA → quote form) ─────── */}
+      <DoorStyles
+        items={doorStyles}
+        limit={4}
+        variant="editorial"
+        eyebrow="Door Styles"
+        title="Find the Look You Love"
+        description="A sample of the Kitchen Craft and Triangle Kitchen door styles and finishes we supply. Explore the full range, then request a quote on exactly what you want."
+        linkCards
+        footer="form"
+        formHref="#get-started"
+        background="white"
+      />
 
       {/* ─── What You Can Buy ────────────────────────────────────────────── */}
       <Section background="cream" padding="lg">

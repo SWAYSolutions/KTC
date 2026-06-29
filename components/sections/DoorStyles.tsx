@@ -19,6 +19,7 @@ const brandLabel: Record<DoorStyle['brand'], string> = {
 };
 
 type FooterMode = 'makers' | 'products' | 'form' | 'none';
+type Variant = 'grid' | 'editorial';
 
 interface DoorStylesProps {
   items: DoorStyle[];
@@ -27,6 +28,8 @@ interface DoorStylesProps {
   description?: string;
   limit?: number;
   background?: 'white' | 'cream' | 'charcoal' | 'gradient';
+  /** Layout: 'grid' (3-up overlay cards) or 'editorial' (large 2-up + caption below). */
+  variant?: Variant;
   /** When true, each card deep-links (new tab) to its manufacturer browser. */
   linkCards?: boolean;
   /** CTA row under the grid. */
@@ -35,6 +38,7 @@ interface DoorStylesProps {
   formHref?: string;
 }
 
+/** Compact overlay card used by the default grid. */
 function Tile({ item }: { item: DoorStyle }) {
   return (
     <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-luxury group">
@@ -62,6 +66,40 @@ function Tile({ item }: { item: DoorStyle }) {
   );
 }
 
+/** Large image with the caption set beneath — magazine-style. */
+function EditorialTile({ item, linked }: { item: DoorStyle; linked?: boolean }) {
+  return (
+    <div className="group">
+      <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-luxury">
+        <Image
+          src={item.image}
+          alt={`${item.name} door style in ${item.finish} — ${brandLabel[item.brand]}`}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+        <div className="absolute top-4 left-4">
+          <Badge variant="gold" size="sm">
+            {brandLabel[item.brand]}
+          </Badge>
+        </div>
+      </div>
+      <div className="mt-4">
+        <h3 className="text-charcoal font-serif text-xl font-semibold leading-tight">
+          {item.name}
+        </h3>
+        <p className="text-charcoal-500 text-sm mt-0.5">{item.finish}</p>
+        {linked && (
+          <span className="inline-flex items-center gap-1.5 text-gold text-sm font-medium mt-2 transition-all group-hover:gap-2.5">
+            Explore the range
+            <ExternalLink className="w-3.5 h-3.5" />
+          </span>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export function DoorStyles({
   items,
   eyebrow = 'Door Styles',
@@ -69,17 +107,29 @@ export function DoorStyles({
   description,
   limit,
   background = 'cream',
+  variant = 'grid',
   linkCards = false,
   footer = 'none',
   formHref = '#get-started',
 }: DoorStylesProps) {
   const shown = typeof limit === 'number' ? items.slice(0, limit) : items;
+  const gridClass =
+    variant === 'editorial'
+      ? 'grid md:grid-cols-2 gap-8 lg:gap-10'
+      : 'grid sm:grid-cols-2 lg:grid-cols-3 gap-6';
+
+  const renderTile = (item: DoorStyle) =>
+    variant === 'editorial' ? (
+      <EditorialTile item={item} linked={linkCards} />
+    ) : (
+      <Tile item={item} />
+    );
 
   return (
     <Section background={background} padding="lg">
       <SectionHeader subtitle={eyebrow} title={title} description={description} />
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className={gridClass}>
         {shown.map((item) =>
           linkCards ? (
             <a
@@ -89,10 +139,10 @@ export function DoorStyles({
               rel="noopener noreferrer"
               aria-label={`View ${item.name} at ${brandLabel[item.brand]}`}
             >
-              <Tile item={item} />
+              {renderTile(item)}
             </a>
           ) : (
-            <Tile key={item.id} item={item} />
+            <div key={item.id}>{renderTile(item)}</div>
           )
         )}
       </div>
