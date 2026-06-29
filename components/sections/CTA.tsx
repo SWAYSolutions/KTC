@@ -24,7 +24,7 @@ interface CTAProps {
 export function CTA({
   variant = 'default',
   title = 'Ready to Transform Your Kitchen?',
-  description = 'Schedule a free consultation with our design experts and take the first step toward your dream kitchen.',
+  description = 'Schedule a free consultation with our design experts and we\'ll help you plan your new kitchen.',
 }: CTAProps) {
   if (variant === 'simple') {
     return (

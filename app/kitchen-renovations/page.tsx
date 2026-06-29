@@ -26,11 +26,11 @@ import { doorStyles } from '@/data/door-styles';
 import { formatPhone } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Kitchen Renovations in Nova Scotia — Free Design Consultation',
+  title: 'Kitchen Renovations in Nova Scotia: Free Design Consultation',
   description:
-    'Transform your kitchen with Kitchen Table Cabinetry. Custom cabinetry, expert installation, and a free design consultation. Serving Truro, Halifax & all of Nova Scotia.',
+    'Renovate your kitchen with Kitchen Table Cabinetry. Custom cabinetry, expert installation, and a free design consultation. Serving Truro, Halifax & all of Nova Scotia.',
   openGraph: {
-    title: 'Dream Kitchen Renovations in Nova Scotia',
+    title: 'Kitchen Renovations in Nova Scotia',
     description:
       'Book your free, no-obligation design consultation with Kitchen Table Cabinetry today.',
   },
@@ -46,13 +46,13 @@ const benefits = [
     icon: Ruler,
     title: 'Custom Design, Tailored to You',
     description:
-      'Every kitchen is designed around the way you live, cook, and entertain — no cookie-cutter layouts.',
+      'Every kitchen is designed around the way you live, cook, and entertain. No cookie-cutter layouts.',
   },
   {
     icon: Award,
     title: 'Premium Cabinetry Brands',
     description:
-      'Authorized dealer for Kitchen Craft and Triangle Kitchens — quality that lasts for decades.',
+      'Authorized dealer for Kitchen Craft and Triangle Kitchens. Quality that lasts for decades.',
   },
   {
     icon: Hammer,
@@ -64,7 +64,7 @@ const benefits = [
     icon: Sparkles,
     title: 'Stress-Free Process',
     description:
-      'We manage the details so you don\'t have to — clear timelines, transparent pricing, no surprises.',
+      'We manage the details so you don\'t have to: clear timelines, transparent pricing, no surprises.',
   },
 ];
 
@@ -88,7 +88,7 @@ const steps = [
     number: '01',
     title: 'Free Consultation',
     description:
-      'We learn about your space, style, and budget — in your home or our Truro showroom.',
+      'We learn about your space, style, and budget, in your home or our Truro showroom.',
   },
   {
     number: '02',
@@ -113,7 +113,7 @@ const testimonials = [
   },
   {
     quote:
-      'They captured exactly what we wanted — a kitchen that feels like home but has all the modern conveniences. Our friends can\'t stop asking who designed it.',
+      'They captured exactly what we wanted: a kitchen that feels like home but has all the modern conveniences. Our friends can\'t stop asking who designed it.',
     author: 'The Morrison Family',
     location: 'Truro, NS',
   },
@@ -129,17 +129,17 @@ const faqs = [
   {
     question: 'How much does a kitchen renovation cost?',
     answer:
-      'It depends on the size, materials, and scope of your project. A mid-range kitchen typically starts around $25,000, while high-end custom kitchens range higher. We provide a clear, detailed quote after your free consultation — no guesswork.',
+      'It depends on the size, materials, and scope of your project. A mid-range kitchen typically starts around $25,000, while high-end custom kitchens range higher. We provide a clear, detailed quote after your free consultation. No guesswork.',
   },
   {
     question: 'How long will my renovation take?',
     answer:
-      'A cabinet replacement usually takes 1–2 weeks, while a complete renovation typically runs 6–12 weeks from design to completion. We give you a firm timeline before we begin.',
+      'A cabinet replacement usually takes 1-2 weeks, while a complete renovation typically runs 6-12 weeks from design to completion. We give you a firm timeline before we begin.',
   },
   {
     question: 'Is the consultation really free?',
     answer:
-      'Yes — completely free and with no obligation. It\'s simply a conversation about your kitchen, your goals, and how we can help.',
+      'Yes. Completely free and with no obligation. It\'s simply a conversation about your kitchen, your goals, and how we can help.',
   },
 ];
 
@@ -178,7 +178,7 @@ export default function KitchenRenovationsLandingPage() {
               </h1>
 
               <p className="text-lg md:text-xl text-white/80 mb-8 max-w-xl leading-relaxed">
-                Custom cabinetry, expert design, and flawless installation — all from one
+                Custom cabinetry, expert design, and careful installation, all from one
                 trusted local team. Book your <strong className="text-white">free design
                 consultation</strong> today and see what&apos;s possible.
               </p>
@@ -293,7 +293,7 @@ export default function KitchenRenovationsLandingPage() {
         limit={6}
         eyebrow="Endless Options"
         title="Choose From Hundreds of Door Styles"
-        description="Kitchen Craft and Triangle Kitchen offer a style for every taste — we'll help you find yours during your free consultation."
+        description="Kitchen Craft and Triangle Kitchen offer a style for every taste. We'll help you find yours during your free consultation."
         linkCards={false}
         footer="form"
         formHref="#get-started"
@@ -383,10 +383,10 @@ export default function KitchenRenovationsLandingPage() {
             Limited Consultation Slots
           </Badge>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-white mb-6">
-            Ready to Start Your <span className="text-gold">Dream Kitchen?</span>
+            Ready to Start Your <span className="text-gold">New Kitchen?</span>
           </h2>
           <p className="text-charcoal-300 text-lg mb-8 leading-relaxed">
-            Book your free design consultation today. There&apos;s no obligation — just expert
+            Book your free design consultation today. There&apos;s no obligation, just expert
             advice and a clear plan for the kitchen you&apos;ve always wanted.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -74,7 +74,7 @@ interface LeadFormProps {
 export function LeadForm({
   source = 'Facebook Ad - Kitchen Renovations',
   heading = 'Book Your Free Consultation',
-  subheading = "Takes 30 seconds. No obligation — just expert advice and a clear plan. We'll reply within one business day.",
+  subheading = "Takes 30 seconds. No obligation, just expert advice and a clear plan. We'll reply within one business day.",
   submitLabel = 'Get My Free Consultation',
   successTitle = 'Request Received!',
   successBody = 'Thank you. One of our kitchen design experts will reach out within one business day to schedule your free, no-obligation consultation.',
@@ -111,7 +111,7 @@ export function LeadForm({
       newErrors.email = 'Please enter a valid email address';
     }
 
-    // Phone is optional — validate only if provided.
+    // Phone is optional; validate only if provided.
     if (formData.phone && !isValidPhone(formData.phone)) {
       newErrors.phone = 'Please enter a valid phone number';
     }

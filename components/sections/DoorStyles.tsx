@@ -44,7 +44,7 @@ function Tile({ item }: { item: DoorStyle }) {
     <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-luxury group">
       <Image
         src={item.image}
-        alt={`${item.name} door style in ${item.finish} — ${brandLabel[item.brand]}`}
+        alt={`${item.name} door style in ${item.finish} by ${brandLabel[item.brand]}`}
         fill
         className="object-cover transition-transform duration-500 group-hover:scale-105"
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -66,14 +66,14 @@ function Tile({ item }: { item: DoorStyle }) {
   );
 }
 
-/** Large image with the caption set beneath — magazine-style. */
+/** Large image with the caption set beneath (magazine-style). */
 function EditorialTile({ item, linked }: { item: DoorStyle; linked?: boolean }) {
   return (
     <div className="group">
       <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-luxury">
         <Image
           src={item.image}
-          alt={`${item.name} door style in ${item.finish} — ${brandLabel[item.brand]}`}
+          alt={`${item.name} door style in ${item.finish} by ${brandLabel[item.brand]}`}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, 50vw"

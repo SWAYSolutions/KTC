@@ -103,7 +103,7 @@ export const quizResults: Record<ProjectStyle, QuizResult> = {
     style: 'traditional',
     title: 'Traditional Elegance',
     description:
-      'You value timeless design, fine craftsmanship, and classic details that never go out of style. Your ideal kitchen features raised panel cabinetry, elegant hardware, and rich materials that speak to generations of design excellence.',
+      'You value classic design, fine craftsmanship, and details that never go out of style. Your ideal kitchen features raised panel cabinetry, elegant hardware, and rich materials with lasting appeal.',
     recommendations: [
       'Kitchen Craft Heritage Raised Panel',
       'Crown molding and decorative details',
@@ -117,13 +117,13 @@ export const quizResults: Record<ProjectStyle, QuizResult> = {
     style: 'rustic-luxury',
     title: 'Rustic Luxury',
     description:
-      'You love the warmth of natural materials elevated with refined finishes. Your ideal kitchen combines the charm of farmhouse design with the quality and functionality of a luxury space.',
+      'You love the warmth of natural materials paired with refined finishes. Your ideal kitchen combines the charm of farmhouse design with the quality and function of a high-end space.',
     recommendations: [
       'Kitchen Craft Shaker Elegance in warm wood tones',
       'Butcher block or honed stone counters',
       'Farmhouse apron-front sinks',
       'Copper or brass hardware',
-      'Open shelving with curated display',
+      'Open shelving for display',
     ],
     sampleProjects: ['proj-rustic-luxury-truro'],
   },
@@ -131,7 +131,7 @@ export const quizResults: Record<ProjectStyle, QuizResult> = {
     style: 'transitional',
     title: 'Transitional Harmony',
     description:
-      'You appreciate the best of both worlds—traditional warmth with modern sensibility. Your ideal kitchen bridges classic and contemporary with thoughtful material selections and balanced proportions.',
+      'You appreciate a blend of traditional warmth and modern simplicity. Your ideal kitchen bridges classic and contemporary with balanced proportions and considered materials.',
     recommendations: [
       'Kitchen Craft Shaker Elegance',
       'Quartz countertops in neutral tones',

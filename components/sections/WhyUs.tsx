@@ -22,16 +22,16 @@ import { cn } from '@/lib/utils';
 const benefits = [
   {
     icon: Palette,
-    title: 'Bespoke Design',
+    title: 'Custom Design',
     description:
-      'Every kitchen is uniquely crafted to reflect your personal style and lifestyle needs. Our designers work closely with you to create a space that\'s truly yours.',
+      'Every kitchen is designed around your style and how you live. Our designers work closely with you to create a space that\'s truly yours.',
     color: 'gold',
   },
   {
     icon: Award,
     title: 'Licensed Distributor',
     description:
-      'As a licensed distributor of Kitchen Craft and Triangle Kitchen, you get industry-leading Canadian-made cabinetry — whether we install it for you or you simply order the cabinets and components you need.',
+      'As a licensed distributor of Kitchen Craft and Triangle Kitchen, you get industry-leading Canadian-made cabinetry, whether we install it for you or you simply order the cabinets and components you need.',
     color: 'wood',
   },
   {
@@ -77,7 +77,7 @@ export function WhyUs() {
       <SectionHeader
         subtitle="Why Choose Us"
         title="The Kitchen Table Difference"
-        description="We believe that a kitchen should be more than functional—it should be extraordinary. Here's what sets us apart."
+        description="A kitchen should look great and work hard. Here's what sets us apart."
       />
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">

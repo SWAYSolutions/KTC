@@ -41,28 +41,28 @@ const kitchenStyles = [
     id: 'modern',
     name: 'Modern',
     description:
-      'Bold and forward-thinking. Modern kitchens push boundaries with handleless cabinetry, high-gloss or matte finishes, waterfall countertops, and integrated appliances for a seamless look.',
+      'Clean and current. Modern kitchens use handleless cabinetry, high-gloss or matte finishes, waterfall countertops, and integrated appliances for a streamlined look.',
     image: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen2.jpg',
   },
   {
     id: 'transitional',
     name: 'Transitional',
     description:
-      'The best of both worlds. Transitional kitchens bridge traditional warmth with modern simplicity — think shaker doors paired with sleek hardware, neutral tones, and a balanced, timeless feel.',
+      'A blend of old and new. Transitional kitchens pair traditional warmth with modern simplicity: shaker doors, sleek hardware, neutral tones, and balanced proportions.',
     image: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/gentry/gentry2.jpg',
   },
   {
     id: 'traditional',
     name: 'Traditional',
     description:
-      'Rich in detail and craftsmanship. Traditional kitchens feature raised-panel or ornate door profiles, crown mouldings, decorative hardware, and warm wood stains that exude classic elegance.',
+      'Rich in detail and craftsmanship. Traditional kitchens feature raised-panel or ornate door profiles, crown mouldings, decorative hardware, and warm wood stains for a classic look.',
     image: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/lexington/off_white_cabinets_in_casual_kitchen_2.jpg',
   },
   {
     id: 'rustic',
     name: 'Rustic',
     description:
-      'Rugged beauty meets comfort. Rustic kitchens celebrate natural materials — rough-hewn wood, stone countertops, iron hardware — creating a cozy, lived-in feel with authentic character.',
+      'Warm and natural. Rustic kitchens use natural materials like rough-hewn wood, stone countertops, and iron hardware for a cozy, lived-in feel.',
     image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1200&q=80',
   },
 ];

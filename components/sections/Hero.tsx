@@ -77,7 +77,7 @@ export function Hero() {
             />
           </div>
         ))}
-        {/* Overlay gradient — holds a strong scrim under the text column */}
+        {/* Overlay gradient: holds a strong scrim under the text column */}
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/10 to-charcoal/30" />
       </div>
@@ -112,10 +112,9 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.25 }}
             className="text-lg md:text-xl text-white/90 mb-8 max-w-xl leading-relaxed"
           >
-            Experience the art of bespoke kitchen design — extraordinary spaces that
-            blend innovative functionality with uncompromising elegance. And as a licensed
-            distributor of Kitchen Craft and Triangle Kitchen, we can supply the cabinetry
-            and components on their own, too — for homeowners and builders alike.
+            We design and build custom kitchens that look great and work hard, built to
+            last. As a licensed distributor of Kitchen Craft and Triangle Kitchen, we also
+            supply the cabinetry and parts on their own, for homeowners and builders.
           </motion.p>
 
           <motion.div

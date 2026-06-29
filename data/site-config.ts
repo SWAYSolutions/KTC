@@ -11,7 +11,7 @@ export const siteConfig: SiteConfig = {
   name: 'Kitchen Table Cabinetry',
   tagline: 'Elevate Your Home with Timeless Luxury Kitchens',
   description:
-    'Kitchen renovation and design experts in Truro, Nova Scotia — and licensed distributors of Kitchen Craft and Triangle Kitchen cabinetry. We design and install complete custom kitchens, and we sell and supply Canadian-made cabinets and cabinet parts (doors, drawer fronts, hardware, and replacement components) to homeowners, builders, and contractors.',
+    'Kitchen renovation and design experts in Truro, Nova Scotia, and licensed distributors of Kitchen Craft and Triangle Kitchen cabinetry. We design and install complete custom kitchens, and we sell and supply Canadian-made cabinets and cabinet parts (doors, drawer fronts, hardware, and replacement components) to homeowners, builders, and contractors.',
   url: 'https://kitchentablecabinetry.com',
   contact: {
     phone: '9029552225',

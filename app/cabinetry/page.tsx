@@ -2,7 +2,7 @@
  * ═══════════════════════════════════════════════════════════════════════════════
  * Kitchen Table Cabinetry - Cabinetry Page
  * Homeowner-focused page for ordering Kitchen Craft & Triangle Kitchen cabinets and
- * cabinet parts (doors, drawer fronts, hardware) — with or without installation.
+ * cabinet parts (doors, drawer fronts, hardware), with or without installation.
  * Indexable (organic + ad traffic). Primary CTA: request a quote.
  * ═══════════════════════════════════════════════════════════════════════════════
  */
@@ -34,7 +34,7 @@ import { formatPhone } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'Cabinetry & Cabinet Parts in Nova Scotia',
   description:
-    'Canadian-made Kitchen Craft and Triangle Kitchen cabinetry, replacement doors, drawer fronts, and hardware — supplied by a licensed distributor in Truro, NS. Request a quote, supply only or installed.',
+    'Canadian-made Kitchen Craft and Triangle Kitchen cabinetry, replacement doors, drawer fronts, and hardware, supplied by a licensed distributor in Truro, NS. Request a quote, supply only or installed.',
   openGraph: {
     title: 'Cabinetry & Cabinet Parts in Nova Scotia',
     description:
@@ -51,13 +51,13 @@ const whatYouCanBuy = [
     icon: Boxes,
     title: 'Full Cabinets',
     description:
-      'Complete cabinet sets for a new kitchen or an addition — built to your layout and finish.',
+      'Complete cabinet sets for a new kitchen or an addition, built to your layout and finish.',
   },
   {
     icon: DoorOpen,
     title: 'Doors & Drawer Fronts',
     description:
-      'Refresh your kitchen by swapping fronts — keep the boxes, get a brand-new look.',
+      'Refresh your kitchen by swapping fronts. Keep the boxes, get a brand-new look.',
   },
   {
     icon: Layers,
@@ -84,7 +84,7 @@ const whyBuy = [
     icon: MapPin,
     title: 'Canadian-Made',
     description:
-      'Built in Winnipeg and Dieppe — quality cabinetry made right here in Canada.',
+      'Built in Winnipeg and Dieppe, quality cabinetry made right here in Canada.',
   },
   {
     icon: Users,
@@ -105,7 +105,7 @@ const steps = [
     number: '01',
     title: 'Measure & Choose',
     description:
-      'Tell us what you need — full cabinets, a few doors, or just hardware. Bring photos or measurements.',
+      'Tell us what you need: full cabinets, a few doors, or just hardware. Bring photos or measurements.',
   },
   {
     number: '02',
@@ -120,7 +120,7 @@ const steps = [
   {
     number: '04',
     title: 'Pick Up or Install',
-    description: 'Collect your order, or have our team install it — your choice.',
+    description: 'Collect your order, or have our team install it. Your choice.',
   },
 ];
 
@@ -128,12 +128,12 @@ const faqs = [
   {
     question: 'What are your lead times?',
     answer:
-      'Most orders arrive in roughly 4–8 weeks depending on the manufacturer, finish, and time of year. We confirm the timeline when we quote.',
+      'Most orders arrive in roughly 4-8 weeks depending on the manufacturer, finish, and time of year. We confirm the timeline when we quote.',
   },
   {
     question: 'Can I order just parts?',
     answer:
-      'Absolutely. A single replacement door, a set of drawer fronts, or just hardware is no problem — you don\'t need to order a full kitchen.',
+      'Absolutely. A single replacement door, a set of drawer fronts, or just hardware is no problem. You don\'t need to order a full kitchen.',
   },
   {
     question: 'Do I need to know the exact model?',
@@ -183,7 +183,7 @@ export default function CabinetSalesPage() {
 
               <p className="text-lg md:text-xl text-white/80 mb-8 max-w-xl leading-relaxed">
                 Full kitchens, a single cabinet, replacement doors and drawer fronts, or just
-                the hardware — Canadian-made and expertly sourced. Request a{' '}
+                the hardware. Canadian-made and sourced for you. Request a{' '}
                 <strong className="text-white">free, no-obligation quote</strong> today.
               </p>
 
@@ -191,7 +191,7 @@ export default function CabinetSalesPage() {
               <ul className="space-y-3 mb-8">
                 {[
                   'Genuine Kitchen Craft & Triangle Kitchen product',
-                  'Order just what you need — supply only or installed',
+                  'Order just what you need (supply only or installed)',
                   'Local help choosing the right doors, finishes & parts',
                 ].map((point) => (
                   <li key={point} className="flex items-center gap-3 text-white/90">
@@ -234,7 +234,7 @@ export default function CabinetSalesPage() {
               <LeadForm
                 source="Cabinet Sales Page"
                 heading="Request Your Cabinet Quote"
-                subheading="Tell us what you need — full cabinets, doors, drawer fronts, or hardware. Takes 30 seconds, no obligation. We'll reply within one business day."
+                subheading="Tell us what you need: full cabinets, doors, drawer fronts, or hardware. Takes 30 seconds, no obligation. We'll reply within one business day."
                 submitLabel="Request My Quote"
                 successTitle="Quote Request Received!"
                 successBody="Thanks! One of our cabinet specialists will reach out within one business day with pricing and next steps."
@@ -402,7 +402,7 @@ export default function CabinetSalesPage() {
             Ready to Order Your <span className="text-gold">Cabinets?</span>
           </h2>
           <p className="text-charcoal-300 text-lg mb-8 leading-relaxed">
-            Tell us what you need and we&apos;ll price it out — full cabinets, replacement doors,
+            Tell us what you need and we&apos;ll price it out: full cabinets, replacement doors,
             or just the hardware. No obligation, no pressure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -161,7 +161,7 @@ export function Footer() {
             </div>
           </div>
           <p className="text-charcoal-400 text-sm text-center mt-4">
-            Cabinetry &amp; finishing components — doors, drawer fronts, hardware, and matching panels.
+            Cabinetry &amp; finishing components: doors, drawer fronts, hardware, and matching panels.
           </p>
         </div>
       </div>

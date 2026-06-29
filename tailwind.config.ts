@@ -145,7 +145,7 @@ const config: Config = {
       boxShadow: {
         'luxury': '0 4px 20px -2px rgba(45, 52, 54, 0.08), 0 2px 8px -2px rgba(45, 52, 54, 0.04)',
         'luxury-lg': '0 10px 40px -10px rgba(45, 52, 54, 0.12), 0 4px 16px -4px rgba(45, 52, 54, 0.08)',
-        // Refined, tight elevation (no glow) — reads premium, not "template".
+        // Refined, tight elevation (no glow): reads premium, not "template".
         'gold': '0 1px 2px 0 rgba(45, 52, 54, 0.10), 0 4px 12px -4px rgba(45, 52, 54, 0.18)',
         'gold-soft': '0 2px 8px -2px rgba(201, 169, 89, 0.18)',
         'inner-luxury': 'inset 0 2px 10px 0 rgba(45, 52, 54, 0.05)',

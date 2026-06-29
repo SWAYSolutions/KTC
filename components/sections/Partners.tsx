@@ -19,7 +19,7 @@ export function Partners() {
       <SectionHeader
         subtitle="Kitchen Craft & Triangle Kitchen"
         title="Canadian Craftsmanship, Supplied by Us"
-        description="As a licensed distributor of Kitchen Craft and Triangle Kitchen, we bring their Canadian-made, full-access cabinetry to Nova Scotia — whether we're designing your whole kitchen or supplying exactly what you need: a single cabinet, replacement doors and drawer fronts, or just the hardware. Homeowners and builders order through us, with or without installation."
+        description="As a licensed distributor of Kitchen Craft and Triangle Kitchen, we bring their Canadian-made, full-access cabinetry to Nova Scotia, whether we're designing your whole kitchen or supplying exactly what you need: a single cabinet, replacement doors and drawer fronts, or just the hardware. Homeowners and builders order through us, with or without installation."
       />
 
       <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
@@ -105,9 +105,9 @@ export function Partners() {
           </h3>
           <p className="text-charcoal-500 max-w-2xl mx-auto mb-6">
             We supply frameless (full-access) cabinetry from Canada&apos;s leading makers, along with
-            the individual pieces that finish a space beautifully — doors, drawer fronts, panels,
+            the individual pieces that finish a kitchen: doors, drawer fronts, panels,
             and soft-close hardware. Planning a refresh rather than a full renovation? We&apos;ll quote
-            and order precisely what you need.
+            and order exactly what you need.
           </p>
           <Link href="/cabinetry">
             <Button variant="gold" className="group">

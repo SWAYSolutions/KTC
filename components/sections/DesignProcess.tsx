@@ -25,7 +25,7 @@ const steps = [
     icon: MessageSquare,
     title: 'Initial Consultation',
     description:
-      'We begin with a complimentary consultation to understand your vision, lifestyle needs, and budget. This is where your dream kitchen starts taking shape.',
+      'We begin with a free consultation to understand your goals, how you use the space, and your budget. This is where your new kitchen starts taking shape.',
     duration: '1-2 hours',
   },
   {
@@ -49,7 +49,7 @@ const steps = [
     icon: Package,
     title: 'Product Selection',
     description:
-      'Choose from our curated selection of timeless cabinetry and finishes. Our designers guide you through materials, finishes, and hardware.',
+      'Choose from our selection of cabinetry and finishes. Our designers guide you through materials, finishes, and hardware.',
     duration: '1-2 weeks',
   },
   {
@@ -57,7 +57,7 @@ const steps = [
     icon: Hammer,
     title: 'Expert Renovation & Installation',
     description:
-      'Our skilled craftsmen bring your design to life with precision renovation and installation. We maintain a clean, respectful workspace throughout the process.',
+      'Our skilled craftsmen build your design with careful renovation and installation. We maintain a clean, respectful workspace throughout the process.',
     duration: '1-3 weeks',
   },
   {
@@ -65,7 +65,7 @@ const steps = [
     icon: Sparkles,
     title: 'Final Reveal',
     description:
-      'We conduct a thorough walkthrough to ensure every detail meets your expectations. Your dream kitchen is ready to be enjoyed for years to come. With peace of mind that your investment is covered by our 5 year manufacturer and installation warranty.',
+      'We conduct a thorough walkthrough to ensure every detail meets your expectations. Your new kitchen is ready to enjoy for years to come, with the peace of mind that it\'s covered by our 5 year manufacturer and installation warranty.',
     duration: '1 day',
   },
 ];

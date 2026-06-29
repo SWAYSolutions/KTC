@@ -17,7 +17,7 @@ import { formatDate } from '@/lib/utils';
 export const metadata: Metadata = {
   title: 'Blog - Kitchen Design Trends, Tips & Inspiration',
   description:
-    'Explore our blog for the latest kitchen design trends, expert tips, and inspiration for your dream kitchen project.',
+    'Explore our blog for the latest kitchen design trends, expert tips, and inspiration for your kitchen project.',
 };
 
 export default function BlogPage() {

@@ -12,9 +12,9 @@ import { partners } from '@/data/partners';
 import { doorStyles, cabinetInteriors } from '@/data/door-styles';
 
 export const metadata: Metadata = {
-  title: 'Cabinets & Components — Kitchen Craft & Triangle Kitchen',
+  title: 'Cabinets & Components from Kitchen Craft & Triangle Kitchen',
   description:
-    'As a licensed distributor of Kitchen Craft and Triangle Kitchen, we supply Canadian-made frameless cabinets and components — full kitchens, individual cabinets, doors, drawer fronts, and hardware. Browse the collections and request a quote.',
+    'As a licensed distributor of Kitchen Craft and Triangle Kitchen, we supply Canadian-made frameless cabinets and components: full kitchens, individual cabinets, doors, drawer fronts, and hardware. Browse the collections and request a quote.',
 };
 
 export default function ProductsPage() {
@@ -25,7 +25,7 @@ export default function ProductsPage() {
         <SectionHeader
           subtitle="Kitchen Craft & Triangle Kitchen"
           title="Browse the Collections"
-          description="As a licensed distributor of Kitchen Craft and Triangle Kitchen, we supply their Canadian-made frameless cabinetry — full kitchens, individual cabinets, and the finishing pieces like doors, drawer fronts, and hardware. Browse a sample of door styles below, explore the full collections at each maker, then tell us what you have in mind."
+          description="As a licensed distributor of Kitchen Craft and Triangle Kitchen, we supply their Canadian-made frameless cabinetry: full kitchens, individual cabinets, and the finishing pieces like doors, drawer fronts, and hardware. Browse a sample of door styles below, explore the full collections at each maker, then tell us what you have in mind."
         />
 
         {/* Manufacturer Cards */}
@@ -57,7 +57,7 @@ export default function ProductsPage() {
         </div>
       </Section>
 
-      {/* Featured Door Styles — deep-link out to the manufacturer browsers */}
+      {/* Featured Door Styles: deep-link out to the manufacturer browsers */}
       <DoorStyles
         items={doorStyles}
         eyebrow="Door Styles"
@@ -83,7 +83,7 @@ export default function ProductsPage() {
       <CTA
         variant="simple"
         title="Tell Us What You're Looking For"
-        description="Full cabinets, replacement doors and drawer fronts, or just the hardware — share your project and we'll price and order it for you."
+        description="Full cabinets, replacement doors and drawer fronts, or just the hardware. Share your project and we'll price and order it for you."
       />
     </>
   );

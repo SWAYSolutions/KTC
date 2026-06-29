@@ -25,7 +25,7 @@ const services = [
     title: 'Custom Design',
     tagline: 'Your Vision, Our Expertise',
     description:
-      'Our design team creates bespoke kitchen layouts tailored to your lifestyle, preferences, and space. Using advanced 3D visualization, you\'ll see your dream kitchen come to life before construction begins.',
+      'Our design team creates custom kitchen layouts tailored to your lifestyle, preferences, and space. With 3D renderings, you\'ll see your new kitchen before construction begins.',
     features: [
       'In-home consultation and measurement',
       '3D design renderings',
@@ -41,7 +41,7 @@ const services = [
     title: 'Professional Installation',
     tagline: 'Precision Craftsmanship',
     description:
-      'Our experienced installation team brings your design to life with meticulous attention to detail. We handle everything from demolition to final adjustments, ensuring a seamless transformation.',
+      'Our experienced installation team builds your design with close attention to detail. We handle everything from demolition to final adjustments for a clean, careful installation.',
     features: [
       'Experienced, certified installers',
       'Full project management',
@@ -89,7 +89,7 @@ const services = [
     title: 'Cabinet & Component Supply',
     tagline: 'Order Direct From Us',
     description:
-      'You don\'t need a full renovation to work with us. As a licensed distributor of Kitchen Craft and Triangle Kitchen, we\'ll quote, order, and supply exactly what your project calls for — a full set of cabinets, a few replacement doors, or the hardware to finish the job — for homeowners, builders, and contractors.',
+      'You don\'t need a full renovation to work with us. As a licensed distributor of Kitchen Craft and Triangle Kitchen, we\'ll quote, order, and supply exactly what your project calls for (a full set of cabinets, a few replacement doors, or the hardware to finish the job) for homeowners, builders, and contractors.',
     features: [
       'Full cabinet orders from Kitchen Craft & Triangle Kitchen',
       'Replacement doors, drawer fronts & matching panels',
@@ -115,10 +115,9 @@ export default function ServicesPage() {
             Comprehensive <span className="text-gold">Kitchen Solutions</span>
           </h1>
           <p className="text-charcoal-300 text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            From initial concept to final reveal, we offer a complete range of services — custom
-            design, installation, and cabinet supply — to bring your dream kitchen to life with
-            precision and care. As a licensed distributor of Kitchen Craft and Triangle Kitchen,
-            we can also supply the cabinetry and components on their own.
+            From first concept to final install, we offer a complete range of services: custom
+            design, installation, and cabinet supply. As a licensed distributor of Kitchen Craft
+            and Triangle Kitchen, we can also supply the cabinetry and components on their own.
           </p>
           <Link href="/contact">
             <Button variant="gold" size="lg" className="group">
@@ -247,8 +246,8 @@ export default function ServicesPage() {
       {/* CTA */}
       <CTA
         variant="default"
-        title="Ready to Transform Your Kitchen?"
-        description="Schedule your free consultation today and let's start planning your dream kitchen together."
+        title="Ready to Renovate Your Kitchen?"
+        description="Schedule your free consultation today and let's start planning your new kitchen together."
       />
     </>
   );
