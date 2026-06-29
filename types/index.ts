@@ -22,6 +22,17 @@ export interface Partner {
   features: string[];
 }
 
+// A sample cabinet door style or interior, shown on the site and deep-linked
+// out to the manufacturer's product browser.
+export interface DoorStyle {
+  id: string;
+  name: string;
+  finish: string;
+  brand: PartnerName;
+  image: string;
+  href: string;
+}
+
 export type ProductCategory =
   | 'cabinets'
   | 'countertops'

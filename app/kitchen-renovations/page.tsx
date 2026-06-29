@@ -19,8 +19,10 @@ import {
   MapPin,
 } from 'lucide-react';
 import { Section, Card, Badge } from '@/components/ui';
+import { DoorStyles } from '@/components/sections';
 import { LeadForm } from './LeadForm';
 import { siteConfig } from '@/data/site-config';
+import { doorStyles } from '@/data/door-styles';
 import { formatPhone } from '@/lib/utils';
 
 export const metadata: Metadata = {
@@ -284,6 +286,19 @@ export default function KitchenRenovationsLandingPage() {
           ))}
         </div>
       </Section>
+
+      {/* ─── Door Styles (display-only; CTA keeps traffic in the funnel) ──── */}
+      <DoorStyles
+        items={doorStyles}
+        limit={6}
+        eyebrow="Endless Options"
+        title="Choose From Hundreds of Door Styles"
+        description="Kitchen Craft and Triangle Kitchen offer a style for every taste — we'll help you find yours during your free consultation."
+        linkCards={false}
+        footer="form"
+        formHref="#get-started"
+        background="white"
+      />
 
       {/* ─── Process ─────────────────────────────────────────────────────── */}
       <Section background="cream" padding="lg">

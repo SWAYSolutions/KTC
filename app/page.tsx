@@ -12,7 +12,9 @@ import {
   WhyUs,
   CTA,
   DesignProcess,
+  DoorStyles,
 } from '@/components/sections';
+import { doorStyles } from '@/data/door-styles';
 
 export default function HomePage() {
   return (
@@ -31,6 +33,18 @@ export default function HomePage() {
 
       {/* Partners - Kitchen Craft and Triangle Kitchens showcase */}
       <Partners />
+
+      {/* Door Styles teaser - deep-links out; "Explore" drives into /products */}
+      <DoorStyles
+        items={doorStyles}
+        limit={6}
+        eyebrow="Explore"
+        title="Featured Door Styles"
+        description="A taste of the Kitchen Craft and Triangle Kitchen door styles we supply."
+        linkCards
+        footer="products"
+        background="white"
+      />
 
       {/* Call to Action - Free consultation */}
       <CTA variant="split" />

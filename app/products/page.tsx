@@ -8,9 +8,10 @@
 import type { Metadata } from 'next';
 import { ProductGrid } from './ProductGrid';
 import { Section, SectionHeader } from '@/components/ui';
-import { CTA } from '@/components/sections';
+import { CTA, DoorStyles } from '@/components/sections';
 import { products, productCategories } from '@/data/products';
 import { partners } from '@/data/partners';
+import { doorStyles, cabinetInteriors } from '@/data/door-styles';
 
 export const metadata: Metadata = {
   title: 'Cabinets & Components — Kitchen Craft & Triangle Kitchen',
@@ -62,6 +63,28 @@ export default function ProductsPage() {
       <Section background="white" padding="lg">
         <ProductGrid products={products} categories={productCategories} />
       </Section>
+
+      {/* Featured Door Styles — deep-link out to the manufacturer browsers */}
+      <DoorStyles
+        items={doorStyles}
+        eyebrow="Door Styles"
+        title="A Style for Every Kitchen"
+        description="A sample of the door styles and finishes we supply from Kitchen Craft and Triangle Kitchen. Tap any style to explore the full range on the maker's site, then tell us what you have in mind."
+        linkCards
+        footer="makers"
+        background="cream"
+      />
+
+      {/* Smart Cabinet Interiors */}
+      <DoorStyles
+        items={cabinetInteriors}
+        eyebrow="Smart Storage"
+        title="Cabinet Interiors That Work Harder"
+        description="Pull-outs, lazy Susans, and organizers that make the most of every cabinet."
+        linkCards
+        footer="none"
+        background="white"
+      />
 
       {/* CTA */}
       <CTA
