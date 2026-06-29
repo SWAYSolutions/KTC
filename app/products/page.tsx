@@ -6,10 +6,8 @@
  */
 
 import type { Metadata } from 'next';
-import { ProductGrid } from './ProductGrid';
 import { Section, SectionHeader } from '@/components/ui';
 import { CTA, DoorStyles } from '@/components/sections';
-import { products, productCategories } from '@/data/products';
 import { partners } from '@/data/partners';
 import { doorStyles, cabinetInteriors } from '@/data/door-styles';
 
@@ -27,7 +25,7 @@ export default function ProductsPage() {
         <SectionHeader
           subtitle="Kitchen Craft & Triangle Kitchen"
           title="Browse the Collections"
-          description="As a licensed distributor of Kitchen Craft and Triangle Kitchen, we supply their Canadian-made frameless cabinetry — full kitchens, individual cabinets, and the finishing pieces like doors, drawer fronts, and hardware. Explore the collections below, then tell us what you have in mind."
+          description="As a licensed distributor of Kitchen Craft and Triangle Kitchen, we supply their Canadian-made frameless cabinetry — full kitchens, individual cabinets, and the finishing pieces like doors, drawer fronts, and hardware. Browse a sample of door styles below, explore the full collections at each maker, then tell us what you have in mind."
         />
 
         {/* Manufacturer Cards */}
@@ -59,11 +57,6 @@ export default function ProductsPage() {
         </div>
       </Section>
 
-      {/* Product Grid with Filters */}
-      <Section background="white" padding="lg">
-        <ProductGrid products={products} categories={productCategories} />
-      </Section>
-
       {/* Featured Door Styles — deep-link out to the manufacturer browsers */}
       <DoorStyles
         items={doorStyles}
@@ -72,7 +65,7 @@ export default function ProductsPage() {
         description="A sample of the door styles and finishes we supply from Kitchen Craft and Triangle Kitchen. Tap any style to explore the full range on the maker's site, then tell us what you have in mind."
         linkCards
         footer="makers"
-        background="cream"
+        background="white"
       />
 
       {/* Smart Cabinet Interiors */}
@@ -83,7 +76,7 @@ export default function ProductsPage() {
         description="Pull-outs, lazy Susans, and organizers that make the most of every cabinet."
         linkCards
         footer="none"
-        background="white"
+        background="cream"
       />
 
       {/* CTA */}
