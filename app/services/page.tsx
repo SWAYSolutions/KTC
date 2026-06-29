@@ -108,7 +108,7 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <Section background="charcoal" padding="xl">
         <div className="text-center">
-          <span className="text-gold font-medium text-sm uppercase tracking-wider mb-4 block">
+          <span className="text-gold font-medium text-xs uppercase tracking-eyebrow mb-4 block">
             Our Services
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-white mb-6">
@@ -164,7 +164,7 @@ export default function ServicesPage() {
                 <div className="w-14 h-14 rounded-xl bg-gold-50 flex items-center justify-center mb-6">
                   <service.icon className="w-7 h-7 text-gold" />
                 </div>
-                <span className="text-gold font-medium text-sm uppercase tracking-wider">
+                <span className="text-gold font-medium text-xs uppercase tracking-eyebrow">
                   {service.tagline}
                 </span>
                 <h2 className="text-3xl md:text-4xl font-serif font-semibold text-charcoal mt-2 mb-4">

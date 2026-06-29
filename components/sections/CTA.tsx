@@ -71,7 +71,7 @@ export function CTA({
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-gold font-medium text-sm uppercase tracking-wider mb-4 block"
+                className="text-gold font-medium text-xs uppercase tracking-eyebrow mb-4 block"
               >
                 Start Your Journey
               </motion.span>
@@ -111,7 +111,7 @@ export function CTA({
                   <Button
                     variant="outline"
                     size="lg"
-                    className="border-white text-white hover:bg-white hover:text-charcoal"
+                    className="border-white/40 text-white hover:bg-white hover:text-charcoal"
                   >
                     <Phone className="mr-2 w-5 h-5" />
                     {formatPhone(siteConfig.contact.phone)}
@@ -149,7 +149,7 @@ export function CTA({
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="inline-block text-gold font-medium text-sm uppercase tracking-wider mb-4 px-4 py-2 bg-gold/10 rounded-full"
+          className="inline-block text-gold font-medium text-xs uppercase tracking-eyebrow mb-4"
         >
           Free Consultation
         </motion.span>

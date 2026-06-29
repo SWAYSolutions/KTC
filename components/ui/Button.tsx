@@ -31,7 +31,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       ghost:
         'text-charcoal hover:bg-charcoal-50 focus:ring-charcoal-500',
       gold:
-        'bg-gold text-charcoal hover:bg-gold-400 focus:ring-gold-500 shadow-gold hover:shadow-luxury-lg font-semibold',
+        'bg-gold text-charcoal hover:bg-gold-400 focus:ring-gold-500 shadow-gold hover:shadow-luxury-lg hover:-translate-y-0.5 font-semibold',
     };
 
     const sizes = {

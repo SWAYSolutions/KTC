@@ -79,7 +79,7 @@ function SectionHeader({
   return (
     <div className={cn('max-w-3xl mb-12', alignments[align], className)}>
       {subtitle && (
-        <span className="text-gold font-medium text-sm uppercase tracking-wider mb-3 block">
+        <span className="text-gold font-medium text-xs uppercase tracking-eyebrow mb-3 block">
           {subtitle}
         </span>
       )}

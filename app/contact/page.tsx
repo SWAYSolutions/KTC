@@ -29,7 +29,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <Section background="charcoal" padding="xl">
         <div className="text-center">
-          <span className="text-gold font-medium text-sm uppercase tracking-wider mb-4 block">
+          <span className="text-gold font-medium text-xs uppercase tracking-eyebrow mb-4 block">
             Get in Touch
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-white mb-6">

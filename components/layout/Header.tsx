@@ -83,7 +83,7 @@ export function Header() {
           'sticky top-0 z-50 transition-all duration-300',
           isScrolled
             ? 'bg-white/95 backdrop-blur-md shadow-luxury'
-            : 'bg-white'
+            : 'bg-white border-b border-charcoal-100'
         )}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -91,7 +91,7 @@ export function Header() {
             {/* Logo */}
             <Link href="/" className="flex-shrink-0">
               <div className="flex items-center">
-                <span className="text-2xl font-serif font-bold text-charcoal">
+                <span className="text-2xl font-serif font-semibold text-charcoal">
                   Kitchen Table
                 </span>
                 <span className="text-2xl font-serif text-gold ml-2">Cabinetry</span>
@@ -113,7 +113,7 @@ export function Header() {
                       'px-4 py-2 text-sm font-medium rounded-lg transition-colors flex items-center',
                       pathname === item.href
                         ? 'text-gold'
-                        : 'text-charcoal hover:text-gold hover:bg-charcoal-50'
+                        : 'text-charcoal hover:text-charcoal-600 hover:bg-charcoal-50'
                     )}
                   >
                     {item.label}

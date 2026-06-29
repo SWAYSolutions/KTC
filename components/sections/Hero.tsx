@@ -10,8 +10,8 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui';
 import { cn } from '@/lib/utils';
 
@@ -77,61 +77,40 @@ export function Hero() {
             />
           </div>
         ))}
-        {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/80 via-charcoal/50 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
-      </div>
-
-      {/* Floating Particle Effect */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-gold/30 rounded-full"
-            initial={{
-              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1920),
-              y: typeof window !== 'undefined' ? window.innerHeight + 10 : 1000,
-            }}
-            animate={{
-              y: -10,
-              transition: {
-                duration: Math.random() * 10 + 10,
-                repeat: Infinity,
-                delay: Math.random() * 5,
-              },
-            }}
-          />
-        ))}
+        {/* Overlay gradient — holds a strong scrim under the text column */}
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/10 to-charcoal/30" />
       </div>
 
       {/* Content */}
       <div className="relative h-full container mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
         <div className="max-w-3xl">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={isLoaded ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.7, delay: 0.05 }}
           >
-            <span className="inline-block text-gold font-medium text-sm uppercase tracking-wider mb-4 px-4 py-2 bg-gold/10 rounded-full backdrop-blur-sm">
+            <span className="inline-flex items-center gap-3 text-gold font-medium text-xs uppercase tracking-eyebrow mb-5">
+              <span className="h-px w-8 bg-gold/60" />
               Custom Kitchens &amp; Cabinet Supply in Nova Scotia
             </span>
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={isLoaded ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight"
+            transition={{ duration: 0.7, delay: 0.15 }}
+            className="text-4xl md:text-5xl lg:text-7xl font-serif font-semibold text-white mb-6 leading-[1.05] tracking-display"
           >
             Elevate Your Home with{' '}
             <span className="text-gold">Timeless Luxury</span> Kitchens
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={isLoaded ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl leading-relaxed"
+            transition={{ duration: 0.7, delay: 0.25 }}
+            className="text-lg md:text-xl text-white/90 mb-8 max-w-xl leading-relaxed"
           >
             Experience the art of bespoke kitchen design — extraordinary spaces that
             blend innovative functionality with uncompromising elegance. And as a licensed
@@ -140,9 +119,9 @@ export function Hero() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={isLoaded ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.7, delay: 0.35 }}
             className="flex flex-col sm:flex-row gap-4"
           >
             <Link href="/contact">
@@ -176,19 +155,10 @@ export function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-8 right-8 hidden md:flex flex-col items-center"
+        transition={{ delay: 1, duration: 0.8 }}
+        className="absolute bottom-8 right-8 hidden md:block text-white/50"
       >
-        <span className="text-white/60 text-sm tracking-wider mb-2 rotate-90 origin-center translate-y-8">
-          SCROLL
-        </span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2"
-        >
-          <div className="w-1.5 h-3 bg-gold rounded-full" />
-        </motion.div>
+        <ChevronDown className="w-6 h-6 animate-bounce" />
       </motion.div>
     </section>
   );

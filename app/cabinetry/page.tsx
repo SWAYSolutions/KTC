@@ -169,12 +169,12 @@ export default function CabinetSalesPage() {
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Copy */}
             <div className="order-2 lg:order-1">
-              <span className="inline-flex items-center gap-2 text-gold font-medium text-sm uppercase tracking-wider mb-5 px-4 py-2 bg-gold/10 rounded-full backdrop-blur-sm">
+              <span className="inline-flex items-center gap-2 text-gold font-medium text-xs uppercase tracking-eyebrow mb-5">
                 <MapPin className="w-4 h-4" />
                 Licensed Kitchen Craft &amp; Triangle Kitchen Distributor · Truro, NS
               </span>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-white mb-6 leading-[1.05] tracking-display">
                 Beautiful Cabinetry,{' '}
                 <span className="text-gold">Sourced for You</span>
               </h1>
@@ -254,7 +254,7 @@ export default function CabinetSalesPage() {
       {/* ─── What You Can Buy ────────────────────────────────────────────── */}
       <Section background="cream" padding="lg">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-gold font-medium text-sm uppercase tracking-wider mb-3 block">
+          <span className="text-gold font-medium text-xs uppercase tracking-eyebrow mb-3 block">
             What You Can Order
           </span>
           <h2 className="text-3xl md:text-4xl font-serif font-semibold text-charcoal">
@@ -278,7 +278,7 @@ export default function CabinetSalesPage() {
       {/* ─── Why Buy From Us ─────────────────────────────────────────────── */}
       <Section background="white" padding="lg">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-gold font-medium text-sm uppercase tracking-wider mb-3 block">
+          <span className="text-gold font-medium text-xs uppercase tracking-eyebrow mb-3 block">
             Why Order From Us
           </span>
           <h2 className="text-3xl md:text-4xl font-serif font-semibold text-charcoal">
@@ -302,7 +302,7 @@ export default function CabinetSalesPage() {
       {/* ─── How It Works ────────────────────────────────────────────────── */}
       <Section background="cream" padding="lg">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-gold font-medium text-sm uppercase tracking-wider mb-3 block">
+          <span className="text-gold font-medium text-xs uppercase tracking-eyebrow mb-3 block">
             How It Works
           </span>
           <h2 className="text-3xl md:text-4xl font-serif font-semibold text-charcoal">
@@ -326,7 +326,7 @@ export default function CabinetSalesPage() {
       {/* ─── Brands ──────────────────────────────────────────────────────── */}
       <Section background="white" padding="lg">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-gold font-medium text-sm uppercase tracking-wider mb-3 block">
+          <span className="text-gold font-medium text-xs uppercase tracking-eyebrow mb-3 block">
             The Brands We Carry
           </span>
           <h2 className="text-3xl md:text-4xl font-serif font-semibold text-charcoal">
@@ -358,7 +358,7 @@ export default function CabinetSalesPage() {
       {/* ─── FAQ ─────────────────────────────────────────────────────────── */}
       <Section background="cream" padding="lg">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-gold font-medium text-sm uppercase tracking-wider mb-3 block">
+          <span className="text-gold font-medium text-xs uppercase tracking-eyebrow mb-3 block">
             FAQ
           </span>
           <h2 className="text-3xl md:text-4xl font-serif font-semibold text-charcoal">
@@ -392,13 +392,13 @@ export default function CabinetSalesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#get-started"
-              className="inline-flex items-center justify-center font-semibold bg-gold text-charcoal hover:bg-gold-400 shadow-gold hover:shadow-luxury-lg transition-all duration-300 px-8 py-4 text-lg rounded-xl"
+              className="inline-flex items-center justify-center font-semibold bg-gold text-charcoal hover:bg-gold-400 shadow-gold hover:shadow-luxury-lg hover:-translate-y-0.5 transition-all duration-300 px-8 py-4 text-lg rounded-xl"
             >
               Request My Quote
             </a>
             <a
               href={`tel:${phone}`}
-              className="inline-flex items-center justify-center gap-2 font-medium border-2 border-white/30 text-white hover:bg-white/10 transition-all duration-300 px-8 py-4 text-lg rounded-xl"
+              className="inline-flex items-center justify-center gap-2 font-medium border-2 border-white/40 text-white hover:bg-white hover:text-charcoal transition-all duration-300 px-8 py-4 text-lg rounded-xl"
             >
               <Phone className="w-5 h-5" />
               Call {formatPhone(phone)}

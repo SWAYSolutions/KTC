@@ -145,7 +145,7 @@ export function FeaturedProjects() {
 
             {/* Content */}
             <div className="py-4">
-              <span className="text-gold font-medium text-sm uppercase tracking-wider">
+              <span className="text-gold font-medium text-xs uppercase tracking-eyebrow">
                 Kitchen Style
               </span>
               <h3 className="text-3xl md:text-4xl font-serif font-semibold text-charcoal mt-2 mb-4">
