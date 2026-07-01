@@ -13,9 +13,13 @@ import { CheckCircle, ExternalLink, MapPin, ArrowRight } from 'lucide-react';
 import { Section, SectionHeader, Button, Card } from '@/components/ui';
 import { partners } from '@/data/partners';
 
-export function Partners() {
+interface PartnersProps {
+  background?: 'white' | 'cream' | 'charcoal' | 'gradient';
+}
+
+export function Partners({ background = 'white' }: PartnersProps = {}) {
   return (
-    <Section background="white" padding="xl">
+    <Section background={background} padding="xl">
       <SectionHeader
         subtitle="Kitchen Craft & Triangle Kitchen"
         title="Canadian Craftsmanship, Supplied by Us"
@@ -97,7 +101,7 @@ export function Partners() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mt-16 p-8 bg-cream rounded-2xl"
+        className="mt-16 p-8 bg-white shadow-luxury rounded-2xl"
       >
         <div className="text-center mb-6">
           <h3 className="text-2xl font-serif font-semibold text-charcoal mb-2">

@@ -195,7 +195,7 @@ export function CTA({
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="mt-6 text-charcoal-400 text-sm"
+          className="mt-6 text-charcoal-300 text-sm"
         >
           Or call us directly at{' '}
           <a

@@ -28,14 +28,14 @@ const kitchenStyles = [
     name: 'Farmhouse',
     description:
       'Warm, inviting, and full of character. Farmhouse kitchens feature shaker-style cabinetry, apron-front sinks, open shelving, and natural wood tones that create a welcoming gathering space.',
-    image: 'https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=1200&q=80',
+    image: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/keelie/farmhouse-kitchen-1---main-shot.jpg',
   },
   {
     id: 'scandinavian',
     name: 'Scandinavian',
     description:
       'Light, airy, and effortlessly functional. Scandinavian kitchens emphasize white and light wood tones, streamlined cabinetry, and thoughtful storage solutions that keep everything organized.',
-    image: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1200&q=80',
+    image: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/pearson/shaker_style_cabinets_in_casual_kitchen_2.jpg',
   },
   {
     id: 'modern',
@@ -63,7 +63,7 @@ const kitchenStyles = [
     name: 'Rustic',
     description:
       'Warm and natural. Rustic kitchens use natural materials like rough-hewn wood, stone countertops, and iron hardware for a cozy, lived-in feel.',
-    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1200&q=80',
+    image: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/plymouth/knotty_alder_kitchen_cabinets_in_natural_finish.jpg',
   },
 ];
 

@@ -9,7 +9,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PenTool, Wrench, MessageSquare, Home, Package, ArrowRight, CheckCircle } from 'lucide-react';
-import { Section, SectionHeader, Button, Card } from '@/components/ui';
+import { Section, Button } from '@/components/ui';
 import { DesignProcess, CTA } from '@/components/sections';
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ const services = [
       'Detailed project specifications',
       'Coordination with contractors',
     ],
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80',
+    image: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/pearson/shaker_style_cabinets_in_casual_kitchen_3.jpg',
   },
   {
     id: 'installation',
@@ -195,53 +195,6 @@ export default function ServicesPage() {
 
       {/* Design Process */}
       <DesignProcess />
-
-      {/* Pricing Overview */}
-      <Section background="white" padding="lg">
-        <SectionHeader
-          subtitle="Investment"
-          title="Understanding Your Investment"
-          description="Every kitchen is unique, and pricing reflects your specific needs, materials, and scope. Here's a general guide to help you plan."
-        />
-
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          <Card variant="outlined" padding="lg" className="text-center">
-            <span className="text-charcoal-400 text-sm uppercase tracking-wider">Refresh</span>
-            <div className="text-3xl font-serif font-bold text-charcoal mt-2 mb-1">
-              $15K - $30K
-            </div>
-            <p className="text-charcoal-500 text-sm">Cabinet refacing, new countertops, hardware</p>
-          </Card>
-
-          <Card variant="elevated" padding="lg" className="text-center border-2 border-gold relative">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-              <span className="bg-gold text-charcoal text-xs font-bold px-3 py-1 rounded-full">
-                MOST POPULAR
-              </span>
-            </div>
-            <span className="text-charcoal-400 text-sm uppercase tracking-wider">Renovation</span>
-            <div className="text-3xl font-serif font-bold text-charcoal mt-2 mb-1">
-              $40K - $80K
-            </div>
-            <p className="text-charcoal-500 text-sm">
-              Full cabinet replacement, countertops, backsplash
-            </p>
-          </Card>
-
-          <Card variant="outlined" padding="lg" className="text-center">
-            <span className="text-charcoal-400 text-sm uppercase tracking-wider">Premium</span>
-            <div className="text-3xl font-serif font-bold text-charcoal mt-2 mb-1">$80K+</div>
-            <p className="text-charcoal-500 text-sm">
-              Complete transformation with premium materials
-            </p>
-          </Card>
-        </div>
-
-        <p className="text-center text-charcoal-400 text-sm mt-8 max-w-2xl mx-auto">
-          These are general estimates. Contact us for a personalized quote based on your specific
-          project requirements. We offer flexible financing options.
-        </p>
-      </Section>
 
       {/* CTA */}
       <CTA

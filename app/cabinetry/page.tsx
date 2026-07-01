@@ -11,7 +11,6 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import {
   CheckCircle2,
-  Star,
   Phone,
   MapPin,
   Boxes,
@@ -201,16 +200,8 @@ export default function CabinetSalesPage() {
                 ))}
               </ul>
 
-              {/* Rating + phone */}
+              {/* Phone */}
               <div className="flex flex-wrap items-center gap-6">
-                <div className="flex items-center gap-2">
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-gold text-gold" />
-                    ))}
-                  </div>
-                  <span className="text-white/80 text-sm">Trusted by Nova Scotia homeowners</span>
-                </div>
                 <a
                   href={`tel:${phone}`}
                   className="inline-flex items-center gap-2 text-white hover:text-gold transition-colors font-medium"
@@ -224,11 +215,6 @@ export default function CabinetSalesPage() {
             {/* Lead Form */}
             <div id="get-started" className="order-1 lg:order-2 lg:pl-8 scroll-mt-24">
               <div className="lg:hidden flex items-center justify-center gap-2 mb-4 text-white/90 text-sm">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-gold text-gold" />
-                  ))}
-                </div>
                 <span>Genuine product · Free &amp; no-obligation</span>
               </div>
               <LeadForm

@@ -151,16 +151,16 @@ export function Footer() {
       <div className="border-t border-charcoal-600">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12">
-            <span className="text-charcoal-400 text-sm uppercase tracking-wider">
+            <span className="text-charcoal-300 text-sm uppercase tracking-wider">
               Licensed Distributor Of
             </span>
             <div className="flex items-center space-x-8">
               <a href="https://www.kitchencraft.com/products" target="_blank" rel="noopener noreferrer" className="text-white font-serif text-xl hover:text-gold transition-colors">Kitchen Craft</a>
-              <span className="text-charcoal-500">|</span>
+              <span className="text-charcoal-400">|</span>
               <a href="https://trianglekitchen.com/products/styles" target="_blank" rel="noopener noreferrer" className="text-white font-serif text-xl hover:text-gold transition-colors">Triangle Kitchen</a>
             </div>
           </div>
-          <p className="text-charcoal-400 text-sm text-center mt-4">
+          <p className="text-charcoal-300 text-sm text-center mt-4">
             Cabinetry &amp; finishing components: doors, drawer fronts, hardware, and matching panels.
           </p>
         </div>
@@ -170,27 +170,15 @@ export function Footer() {
       <div className="border-t border-charcoal-600">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-charcoal-400 text-sm">
+            <p className="text-charcoal-300 text-sm">
               © {currentYear} {siteConfig.name}. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <Link
                 href="/privacy"
-                className="text-charcoal-400 hover:text-gold transition-colors"
+                className="text-charcoal-300 hover:text-gold transition-colors"
               >
                 Privacy Policy
-              </Link>
-              <Link
-                href="/terms"
-                className="text-charcoal-400 hover:text-gold transition-colors"
-              >
-                Terms of Service
-              </Link>
-              <Link
-                href="/sitemap"
-                className="text-charcoal-400 hover:text-gold transition-colors"
-              >
-                Sitemap
               </Link>
             </div>
           </div>

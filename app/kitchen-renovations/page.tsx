@@ -10,7 +10,6 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import {
   CheckCircle2,
-  Star,
   Phone,
   Award,
   Ruler,
@@ -104,27 +103,6 @@ const steps = [
   },
 ];
 
-const testimonials = [
-  {
-    quote:
-      'Kitchen Table Cabinetry transformed our outdated kitchen into something we never dreamed possible. Every detail was considered, and the result is absolutely stunning.',
-    author: 'Sarah & Michael Chen',
-    location: 'Halifax, NS',
-  },
-  {
-    quote:
-      'They captured exactly what we wanted: a kitchen that feels like home but has all the modern conveniences. Our friends can\'t stop asking who designed it.',
-    author: 'The Morrison Family',
-    location: 'Truro, NS',
-  },
-  {
-    quote:
-      'Professional from start to finish. The project stayed on schedule and on budget, and the craftsmanship is incredible. Worth every penny.',
-    author: 'Jennifer L.',
-    location: 'Bible Hill, NS',
-  },
-];
-
 const faqs = [
   {
     question: 'How much does a kitchen renovation cost?',
@@ -197,16 +175,8 @@ export default function KitchenRenovationsLandingPage() {
                 ))}
               </ul>
 
-              {/* Rating + phone */}
+              {/* Phone */}
               <div className="flex flex-wrap items-center gap-6">
-                <div className="flex items-center gap-2">
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-gold text-gold" />
-                    ))}
-                  </div>
-                  <span className="text-white/80 text-sm">Loved by Nova Scotia homeowners</span>
-                </div>
                 <a
                   href={`tel:${phone}`}
                   className="inline-flex items-center gap-2 text-white hover:text-gold transition-colors font-medium"
@@ -219,14 +189,9 @@ export default function KitchenRenovationsLandingPage() {
 
             {/* Lead Form */}
             <div id="get-started" className="order-1 lg:order-2 lg:pl-8 scroll-mt-24">
-              {/* Mobile-only trust strip (desktop shows trust in the copy column) */}
+              {/* Mobile-only reassurance strip */}
               <div className="lg:hidden flex items-center justify-center gap-2 mb-4 text-white/90 text-sm">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-gold text-gold" />
-                  ))}
-                </div>
-                <span>Loved by Nova Scotia homeowners · Free &amp; no-obligation</span>
+                <span>Free &amp; no-obligation · We reply within one business day</span>
               </div>
               <LeadForm />
             </div>
@@ -297,11 +262,11 @@ export default function KitchenRenovationsLandingPage() {
         linkCards={false}
         footer="form"
         formHref="#get-started"
-        background="white"
+        background="cream"
       />
 
       {/* ─── Process ─────────────────────────────────────────────────────── */}
-      <Section background="cream" padding="lg">
+      <Section background="white" padding="lg">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-gold font-medium text-xs uppercase tracking-eyebrow mb-3 block">
             How It Works
@@ -320,37 +285,6 @@ export default function KitchenRenovationsLandingPage() {
               <h3 className="text-xl font-semibold text-charcoal mb-2">{step.title}</h3>
               <p className="text-charcoal-500 leading-relaxed">{step.description}</p>
             </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* ─── Testimonials ────────────────────────────────────────────────── */}
-      <Section background="white" padding="lg">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-gold font-medium text-xs uppercase tracking-eyebrow mb-3 block">
-            Happy Clients
-          </span>
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-charcoal">
-            What Our Customers Say
-          </h2>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((testimonial) => (
-            <Card key={testimonial.author} variant="elevated" padding="lg">
-              <div className="flex mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-gold text-gold" />
-                ))}
-              </div>
-              <p className="text-charcoal-600 italic mb-6 leading-relaxed">
-                &ldquo;{testimonial.quote}&rdquo;
-              </p>
-              <div>
-                <p className="font-semibold text-charcoal">{testimonial.author}</p>
-                <p className="text-charcoal-400 text-sm">{testimonial.location}</p>
-              </div>
-            </Card>
           ))}
         </div>
       </Section>

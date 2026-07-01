@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 import {
   Palette,
   Award,
-  Leaf,
+  Package,
   Wrench,
   Heart,
   Clock
@@ -35,10 +35,10 @@ const benefits = [
     color: 'wood',
   },
   {
-    icon: Leaf,
-    title: 'Sustainable Materials',
+    icon: Package,
+    title: 'Supply Only or Installed',
     description:
-      'Our commitment to the environment means we prioritize eco-friendly materials and sustainable practices in every project we undertake.',
+      'Order just the cabinets, doors, drawer fronts, or hardware you need, or have our team handle the full installation. It is your call.',
     color: 'sage',
   },
   {
@@ -52,14 +52,14 @@ const benefits = [
     icon: Heart,
     title: 'Personalized Service',
     description:
-      'From your first consultation to final walkthrough, you\'ll receive dedicated attention and support from our passionate team.',
+      'You work with the same local team from first consultation to final walkthrough, in our Truro showroom or your home.',
     color: 'gold',
   },
   {
     icon: Clock,
-    title: 'Lifetime Value',
+    title: 'Built to Last',
     description:
-      'Our kitchens are built to last generations. With proper care, your investment will continue to add beauty and value to your home for decades.',
+      'We build with Canadian-made Kitchen Craft and Triangle Kitchen cabinetry, backed by the manufacturer\'s lifetime warranty.',
     color: 'wood',
   },
 ];
@@ -122,7 +122,7 @@ export function WhyUs() {
       >
         {[
           { value: '20+', label: 'Years of Kitchen Renovation Experience' },
-          { value: '5 Star', label: 'Google Reviews' },
+          { value: 'Licensed', label: 'Kitchen Craft & Triangle Kitchen Distributor' },
         ].map((stat, index) => (
           <div key={index} className="text-center">
             <div className="text-3xl lg:text-4xl font-serif font-bold text-gold mb-1">

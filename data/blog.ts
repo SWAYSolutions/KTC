@@ -22,7 +22,7 @@ The luxury kitchen landscape is evolving, with homeowners seeking spaces that ba
 
 ## 1. Hidden Appliances & Integrated Design
 
-The push toward a clean, built-in look has reached new heights. Custom paneled refrigerators, dishwashers, and even range hoods now disappear into cabinetry, creating an uninterrupted visual flow. At Kitchen Table Cabinetry, we're seeing a 40% increase in requests for fully integrated appliance packages.
+The push toward a clean, built-in look has reached new heights. Custom paneled refrigerators, dishwashers, and even range hoods now disappear into cabinetry, creating an uninterrupted visual flow. It is one of the most requested features we see from homeowners planning a new kitchen.
 
 ## 2. Statement Stone
 
@@ -46,9 +46,9 @@ Luxury now means everything has its place, and that place is well organized. Cus
     `,
     coverImage: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/gentry/gentry2.jpg',
     author: {
-      name: 'Jennifer Mitchell',
-      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80',
-      role: 'Design Director',
+      name: 'Kitchen Table Cabinetry',
+      avatar: '',
+      role: 'Design & Installation Team',
     },
     publishedAt: '2024-03-15',
     readingTime: 6,
@@ -100,11 +100,11 @@ Twice a year, give your cabinets a thorough cleaning:
 
 *Have questions about caring for your Kitchen Craft or Triangle Kitchens cabinets? We're always here to help.*
     `,
-    coverImage: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80',
+    coverImage: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/templeton/shaker_kitchen_cabinets_in_espresso_finish.jpg',
     author: {
-      name: 'Marcus Chen',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80',
-      role: 'Installation Manager',
+      name: 'Kitchen Table Cabinetry',
+      avatar: '',
+      role: 'Design & Installation Team',
     },
     publishedAt: '2024-02-28',
     readingTime: 5,
@@ -174,11 +174,11 @@ For most luxury kitchens, we recommend quartz for primary work surfaces and natu
 
 *Visit our showroom to see countertop samples from our Quartz Supreme and Dekton collections.*
     `,
-    coverImage: 'https://images.unsplash.com/photo-1556912167-f556f1f39fdf?w=1200&q=80',
+    coverImage: 'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/keelie/farmhouse-kitchen-2.jpg',
     author: {
-      name: 'Jennifer Mitchell',
-      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80',
-      role: 'Design Director',
+      name: 'Kitchen Table Cabinetry',
+      avatar: '',
+      role: 'Design & Installation Team',
     },
     publishedAt: '2024-01-20',
     readingTime: 7,

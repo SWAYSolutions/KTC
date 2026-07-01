@@ -82,7 +82,7 @@ const steps = [
     icon: Sparkles,
     title: 'Final Reveal',
     description:
-      'We conduct a thorough walkthrough to ensure every detail meets your expectations. Your new kitchen is ready to enjoy for years to come, with the peace of mind that it\'s covered by our 5 year manufacturer and installation warranty.',
+      'We conduct a thorough walkthrough to ensure every detail meets your expectations. Your new kitchen is ready to enjoy for years to come, backed by the manufacturer\'s lifetime cabinet warranty.',
     duration: '1 day',
     image:
       'https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen1.jpg',
@@ -90,9 +90,13 @@ const steps = [
   },
 ];
 
-export function DesignProcess() {
+interface DesignProcessProps {
+  background?: 'white' | 'cream' | 'charcoal' | 'gradient';
+}
+
+export function DesignProcess({ background = 'cream' }: DesignProcessProps = {}) {
   return (
-    <Section background="cream" padding="xl" id="design-journey">
+    <Section background={background} padding="xl" id="design-journey">
       <SectionHeader
         subtitle="Our Process"
         title="Your Design Journey"
@@ -165,7 +169,7 @@ export function DesignProcess() {
 
                 {/* Center Point (Desktop) */}
                 <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-                  <div className="w-16 h-16 rounded-full bg-gold flex items-center justify-center shadow-gold ring-4 ring-cream">
+                  <div className="w-16 h-16 rounded-full bg-gold flex items-center justify-center shadow-gold">
                     <step.icon className="w-7 h-7 text-white" />
                   </div>
                 </div>

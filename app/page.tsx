@@ -30,10 +30,10 @@ export default function HomePage() {
       <FeaturedProjects />
 
       {/* Design Process - Interactive timeline showing our journey */}
-      <DesignProcess />
+      <DesignProcess background="white" />
 
       {/* Partners - Kitchen Craft and Triangle Kitchens showcase */}
-      <Partners />
+      <Partners background="cream" />
 
       {/* Door Styles teaser - deep-links out; "Explore" drives into /products */}
       <DoorStyles

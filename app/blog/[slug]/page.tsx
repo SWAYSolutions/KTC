@@ -111,13 +111,9 @@ export default async function BlogPostPage({ params }: PageProps) {
 
               {/* Author */}
               <div className="flex items-center gap-4 pb-8 border-b border-charcoal-100">
-                <Image
-                  src={post.author.avatar}
-                  alt={post.author.name}
-                  width={48}
-                  height={48}
-                  className="rounded-full"
-                />
+                <div className="w-12 h-12 rounded-full bg-charcoal flex items-center justify-center flex-shrink-0">
+                  <span className="font-serif font-bold text-gold text-lg">KT</span>
+                </div>
                 <div>
                   <span className="font-medium text-charcoal block">{post.author.name}</span>
                   <span className="text-sm text-charcoal-400">{post.author.role}</span>
