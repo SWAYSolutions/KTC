@@ -31,6 +31,12 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'novatile.ca',
+        port: '',
+        pathname: '/**',
+      },
     ],
     // Optimize images for web
     formats: ['image/avif', 'image/webp'],

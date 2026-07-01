@@ -45,19 +45,29 @@ export const navigation: NavItem[] = [
     href: '/products',
     children: [
       {
-        label: 'Cabinetry & Parts',
-        href: '/cabinetry',
-        description: 'Order cabinets, doors & hardware',
+        label: 'Cabinets',
+        href: '/products/cabinets',
+        description: 'Cabinet door styles and finishes',
+      },
+      {
+        label: 'Cabinet Accessories',
+        href: '/products/accessories',
+        description: 'Interiors, hardware, and accents',
+      },
+      {
+        label: 'Countertops',
+        href: '/products/countertops',
+        description: 'Granite and marble countertops',
       },
       {
         label: 'Kitchen Craft',
         href: 'https://www.kitchencraft.com/products',
-        description: 'Canadian-made frameless cabinetry',
+        description: 'Browse the full collection',
       },
       {
         label: 'Triangle Kitchen',
         href: 'https://trianglekitchen.com/products/styles',
-        description: 'Atlantic Canadian cabinetry',
+        description: 'Browse the full collection',
       },
     ],
   },
@@ -104,9 +114,10 @@ export const navigation: NavItem[] = [
 
 export const footerLinks = {
   products: [
+    { label: 'Cabinets', href: '/products/cabinets' },
+    { label: 'Cabinet Accessories', href: '/products/accessories' },
+    { label: 'Countertops', href: '/products/countertops' },
     { label: 'Cabinetry & Parts', href: '/cabinetry' },
-    { label: 'Kitchen Craft', href: 'https://www.kitchencraft.com/products' },
-    { label: 'Triangle Kitchen', href: 'https://trianglekitchen.com/products/styles' },
   ],
   services: [
     { label: 'Custom Design', href: '/services#custom-design' },

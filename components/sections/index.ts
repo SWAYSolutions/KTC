@@ -13,3 +13,4 @@ export { WhyUs } from './WhyUs';
 export { CTA } from './CTA';
 export { DesignProcess } from './DesignProcess';
 export { DoorStyles } from './DoorStyles';
+export { Countertops } from './Countertops';
