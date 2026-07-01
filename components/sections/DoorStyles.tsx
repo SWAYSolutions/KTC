@@ -9,7 +9,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ExternalLink, ArrowRight } from 'lucide-react';
+import { ExternalLink, ArrowRight, ArrowLeft } from 'lucide-react';
 import { Section, SectionHeader, Button, Badge } from '@/components/ui';
 import { type DoorStyle } from '@/types';
 
@@ -36,6 +36,9 @@ interface DoorStylesProps {
   footer?: FooterMode;
   /** Target for footer="form" (e.g. "#get-started"). */
   formHref?: string;
+  /** Optional back-link rendered tightly above the header. */
+  backHref?: string;
+  backLabel?: string;
 }
 
 /** Compact overlay card used by the default grid. */
@@ -111,6 +114,8 @@ export function DoorStyles({
   linkCards = false,
   footer = 'none',
   formHref = '#get-started',
+  backHref,
+  backLabel = 'Back',
 }: DoorStylesProps) {
   const shown = typeof limit === 'number' ? items.slice(0, limit) : items;
   const gridClass =
@@ -127,6 +132,15 @@ export function DoorStyles({
 
   return (
     <Section background={background} padding="lg">
+      {backHref && (
+        <Link
+          href={backHref}
+          className="inline-flex items-center text-charcoal-400 hover:text-gold transition-colors mb-8"
+        >
+          <ArrowLeft className="mr-2 w-4 h-4" />
+          {backLabel}
+        </Link>
+      )}
       <SectionHeader subtitle={eyebrow} title={title} description={description} />
 
       <div className={gridClass}>

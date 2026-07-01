@@ -9,7 +9,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ExternalLink, ArrowRight } from 'lucide-react';
+import { ExternalLink, ArrowRight, ArrowLeft } from 'lucide-react';
 import { Section, SectionHeader, Button, Badge } from '@/components/ui';
 import { type CountertopMaterial } from '@/data/countertops';
 
@@ -21,6 +21,9 @@ interface CountertopsProps {
   background?: 'white' | 'cream' | 'charcoal' | 'gradient';
   /** Internal quote href, e.g. "/contact?product=". */
   quoteHrefBase?: string;
+  /** Optional back-link rendered tightly above the header. */
+  backHref?: string;
+  backLabel?: string;
 }
 
 export function Countertops({
@@ -30,9 +33,20 @@ export function Countertops({
   description,
   background = 'cream',
   quoteHrefBase = '/contact?product=',
+  backHref,
+  backLabel = 'Back',
 }: CountertopsProps) {
   return (
     <Section background={background} padding="lg">
+      {backHref && (
+        <Link
+          href={backHref}
+          className="inline-flex items-center text-charcoal-400 hover:text-gold transition-colors mb-8"
+        >
+          <ArrowLeft className="mr-2 w-4 h-4" />
+          {backLabel}
+        </Link>
+      )}
       <SectionHeader subtitle={eyebrow} title={title} description={description} />
 
       <div className="space-y-16">

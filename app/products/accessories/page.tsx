@@ -7,9 +7,6 @@
  */
 
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
-import { Section } from '@/components/ui';
 import { CTA, DoorStyles } from '@/components/sections';
 import { cabinetInteriors, mouldingsAccents } from '@/data/door-styles';
 
@@ -22,22 +19,14 @@ export const metadata: Metadata = {
 export default function AccessoriesPage() {
   return (
     <>
-      <Section background="cream" padding="sm">
-        <Link
-          href="/products"
-          className="inline-flex items-center text-charcoal-400 hover:text-gold transition-colors"
-        >
-          <ArrowLeft className="mr-2 w-4 h-4" />
-          Back to Products
-        </Link>
-      </Section>
-
       <DoorStyles
         items={cabinetInteriors}
         eyebrow="Cabinet Accessories"
         title="Interiors That Work Harder"
         description="The right interiors turn good cabinets into a kitchen that works the way you do. Pull-outs, corner units, waste and recycling, soft-close hardware, and more. Here is a sample of what we can order."
         background="cream"
+        backHref="/products"
+        backLabel="Back to Products"
       />
 
       <DoorStyles

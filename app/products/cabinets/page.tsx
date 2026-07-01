@@ -7,9 +7,6 @@
  */
 
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
-import { Section } from '@/components/ui';
 import { CTA, DoorStyles } from '@/components/sections';
 import { doorStyles } from '@/data/door-styles';
 
@@ -22,16 +19,6 @@ export const metadata: Metadata = {
 export default function CabinetsPage() {
   return (
     <>
-      <Section background="cream" padding="sm">
-        <Link
-          href="/products"
-          className="inline-flex items-center text-charcoal-400 hover:text-gold transition-colors"
-        >
-          <ArrowLeft className="mr-2 w-4 h-4" />
-          Back to Products
-        </Link>
-      </Section>
-
       <DoorStyles
         items={doorStyles}
         eyebrow="Cabinets"
@@ -40,6 +27,8 @@ export default function CabinetsPage() {
         linkCards
         footer="makers"
         background="cream"
+        backHref="/products"
+        backLabel="Back to Products"
       />
 
       <CTA
