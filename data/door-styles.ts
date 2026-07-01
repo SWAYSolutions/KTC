@@ -199,3 +199,51 @@ export const mouldingsAccents: DoorStyle[] = [
     href: KC_BROWSER,
   },
 ];
+
+export const hardware: DoorStyle[] = [
+  {
+    id: 'kabo-knob',
+    name: 'Kabo Knob',
+    finish: 'Cabinet knob',
+    brand: 'kitchen-craft',
+    image:
+      'https://www.kitchencraft.com/file/media/kitchencraft/products/hardware/knob/kckaborbh.jpg',
+    href: KC_BROWSER,
+  },
+  {
+    id: 'round-knob',
+    name: 'Round Knob',
+    finish: 'Cabinet knob',
+    brand: 'kitchen-craft',
+    image:
+      'https://www.kitchencraft.com/file/media/kitchencraft/products/hardware/knob/kckanih.jpg',
+    href: KC_BROWSER,
+  },
+  {
+    id: 'classic-pull',
+    name: 'Classic Pull',
+    finish: 'Cabinet pull',
+    brand: 'kitchen-craft',
+    image:
+      'https://www.kitchencraft.com/file/media/kitchencraft/products/hardware/pull/kcclassich.jpg',
+    href: KC_BROWSER,
+  },
+  {
+    id: 'cup-pull',
+    name: 'Cup Pull',
+    finish: 'Cabinet pull',
+    brand: 'kitchen-craft',
+    image:
+      'https://www.kitchencraft.com/file/media/kitchencraft/products/hardware/pull/kcpcubnh.jpg',
+    href: KC_BROWSER,
+  },
+  {
+    id: 'bar-pull',
+    name: 'Bar Pull',
+    finish: 'Cabinet pull',
+    brand: 'kitchen-craft',
+    image:
+      'https://www.kitchencraft.com/file/media/kitchencraft/products/hardware/pull/kchdrwmpoh.jpg',
+    href: KC_BROWSER,
+  },
+];

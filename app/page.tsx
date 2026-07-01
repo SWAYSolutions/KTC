@@ -13,6 +13,7 @@ import {
   CTA,
   DesignProcess,
   DoorStyles,
+  FinishingTouches,
 } from '@/components/sections';
 import { doorStyles } from '@/data/door-styles';
 
@@ -45,6 +46,9 @@ export default function HomePage() {
         footer="products"
         background="white"
       />
+
+      {/* Finishing Touches - compact hardware strip */}
+      <FinishingTouches />
 
       {/* Call to Action - Free consultation */}
       <CTA variant="split" />

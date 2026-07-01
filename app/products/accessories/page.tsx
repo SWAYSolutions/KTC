@@ -8,7 +8,7 @@
 
 import type { Metadata } from 'next';
 import { CTA, DoorStyles } from '@/components/sections';
-import { cabinetInteriors, mouldingsAccents } from '@/data/door-styles';
+import { cabinetInteriors, mouldingsAccents, hardware } from '@/data/door-styles';
 
 export const metadata: Metadata = {
   title: 'Cabinet Accessories & Interiors',
@@ -34,8 +34,16 @@ export default function AccessoriesPage() {
         eyebrow="Mouldings & Accents"
         title="The Finishing Touches"
         description="Range hoods, corbels, open shelving, and decorative details that give a kitchen its character."
-        footer="makers"
         background="white"
+      />
+
+      <DoorStyles
+        items={hardware}
+        eyebrow="Hardware & Handles"
+        title="Handles That Finish the Look"
+        description="Knobs and pulls are the jewellery of a kitchen. Here is a sample of the cabinet hardware we can order to match your doors and finishes."
+        footer="makers"
+        background="cream"
       />
 
       <CTA
