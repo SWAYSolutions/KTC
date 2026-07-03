@@ -6,16 +6,20 @@
  */
 
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Section, SectionHeader, Card } from '@/components/ui';
 import { ContactForm } from './ContactForm';
 import { siteConfig } from '@/data/site-config';
 import { formatPhone } from '@/lib/utils';
+import { JsonLd } from '@/components/JsonLd';
+import { faqSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Contact Us - Schedule Your Free Consultation',
   description:
     'Get in touch with Kitchen Table Cabinetry. Schedule a free consultation, request a quote, or visit our showroom in Truro, Nova Scotia.',
+  alternates: { canonical: '/contact' },
 };
 
 export default function ContactPage() {
@@ -26,6 +30,8 @@ export default function ContactPage() {
 
   return (
     <>
+      <JsonLd data={faqSchema(faqs)} />
+
       {/* Hero Section */}
       <Section background="charcoal" padding="xl">
         <div className="text-center">
@@ -114,7 +120,9 @@ export default function ContactPage() {
               description="Fill out the form below and one of our design experts will get back to you within 24 hours."
               align="left"
             />
-            <ContactForm />
+            <Suspense fallback={<div className="min-h-[600px]" aria-hidden="true" />}>
+              <ContactForm />
+            </Suspense>
           </div>
 
           {/* Map */}

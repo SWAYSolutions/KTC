@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   title: 'Products - Cabinets, Accessories & Countertops',
   description:
     'Explore what we supply: Canadian-made cabinet door styles, cabinet interiors and accessories, and granite and marble countertops. Request a free quote.',
+  alternates: { canonical: '/products' },
 };
 
 const categories = [
@@ -53,6 +54,7 @@ export default function ProductsPage() {
       {/* Hero + category cards */}
       <Section background="cream" padding="xl">
         <SectionHeader
+          as="h1"
           subtitle="What We Supply"
           title="Cabinets, Accessories & Countertops"
           description="Everything we need to build or refresh your kitchen, from Canadian-made cabinetry to the countertops that top it off. Browse a category below, then reach out for a free quote."

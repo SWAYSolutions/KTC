@@ -11,6 +11,7 @@ import { siteConfig } from '@/data/site-config';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'Privacy policy for Kitchen Table Cabinetry website and services.',
+  alternates: { canonical: '/privacy' },
 };
 
 export default function PrivacyPage() {
@@ -18,6 +19,7 @@ export default function PrivacyPage() {
     <Section background="white" padding="xl">
       <div className="max-w-3xl mx-auto">
         <SectionHeader
+          as="h1"
           subtitle="Legal"
           title="Privacy Policy"
           description={`Last updated: ${new Date().toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })}`}

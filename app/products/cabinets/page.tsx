@@ -9,16 +9,25 @@
 import type { Metadata } from 'next';
 import { CTA, DoorStyles } from '@/components/sections';
 import { doorStyles } from '@/data/door-styles';
+import { JsonLd } from '@/components/JsonLd';
+import { breadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Kitchen Cabinets & Door Styles',
   description:
     'Browse a sample of Canadian-made cabinet door styles in finishes from thermofoil to solid maple, cherry, and acrylic. Tap any style to explore the range, then request a free quote.',
+  alternates: { canonical: '/products/cabinets' },
 };
 
 export default function CabinetsPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Products', path: '/products' },
+          { name: 'Cabinets', path: '/products/cabinets' },
+        ])}
+      />
       <DoorStyles
         items={doorStyles}
         eyebrow="Cabinets"
@@ -29,6 +38,7 @@ export default function CabinetsPage() {
         background="cream"
         backHref="/products"
         backLabel="Back to Products"
+        headingAs="h1"
       />
 
       <CTA

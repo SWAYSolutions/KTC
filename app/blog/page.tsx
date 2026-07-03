@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   title: 'Blog - Kitchen Design Trends, Tips & Inspiration',
   description:
     'Explore our blog for the latest kitchen design trends, expert tips, and inspiration for your kitchen project.',
+  alternates: { canonical: '/blog' },
 };
 
 export default function BlogPage() {
@@ -29,6 +30,7 @@ export default function BlogPage() {
       {/* Hero Section */}
       <Section background="cream" padding="xl">
         <SectionHeader
+          as="h1"
           subtitle="Our Blog"
           title="Kitchen Design Insights"
           description="Expert advice, design trends, and inspiration to help you create the kitchen of your dreams."

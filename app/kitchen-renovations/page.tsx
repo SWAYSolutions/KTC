@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import { Section, Card, Badge } from '@/components/ui';
 import { DoorStyles } from '@/components/sections';
+import { StickyMobileCTA } from '@/components/StickyMobileCTA';
 import { LeadForm } from './LeadForm';
 import { siteConfig } from '@/data/site-config';
 import { doorStyles } from '@/data/door-styles';
@@ -32,6 +33,7 @@ export const metadata: Metadata = {
     title: 'Kitchen Renovations in Nova Scotia',
     description:
       'Book your free, no-obligation design consultation with Kitchen Table Cabinetry today.',
+    images: [{ url: '/og-image.jpg', width: 1440, height: 1080 }],
   },
   // Campaign landing pages are typically excluded from search indexing
   robots: {
@@ -340,6 +342,9 @@ export default function KitchenRenovationsLandingPage() {
           </div>
         </div>
       </Section>
+
+      {/* Mobile: persistent call / consultation bar */}
+      <StickyMobileCTA ctaLabel="Free Consultation" />
     </>
   );
 }

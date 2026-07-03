@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: 'Style Quiz - Discover Your Perfect Kitchen Style',
   description:
     'Take our quick style quiz to discover your ideal kitchen aesthetic. Get personalized recommendations based on your preferences.',
+  alternates: { canonical: '/style-quiz' },
 };
 
 export default function StyleQuizPage() {
@@ -21,6 +22,7 @@ export default function StyleQuizPage() {
       {/* Hero Section */}
       <Section background="cream" padding="xl">
         <SectionHeader
+          as="h1"
           subtitle="Style Quiz"
           title="Discover Your Perfect Kitchen Style"
           description="Answer a few questions to help us understand your aesthetic preferences. We'll provide personalized recommendations to guide your design journey."

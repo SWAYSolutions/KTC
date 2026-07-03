@@ -9,16 +9,25 @@
 import type { Metadata } from 'next';
 import { CTA, DoorStyles } from '@/components/sections';
 import { cabinetInteriors, mouldingsAccents, hardware } from '@/data/door-styles';
+import { JsonLd } from '@/components/JsonLd';
+import { breadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Cabinet Accessories & Interiors',
   description:
     'Cabinet interiors, pull-outs, corner units, and hardware, plus decorative mouldings and accents that make a kitchen work beautifully. Request a free quote.',
+  alternates: { canonical: '/products/accessories' },
 };
 
 export default function AccessoriesPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Products', path: '/products' },
+          { name: 'Cabinet Accessories', path: '/products/accessories' },
+        ])}
+      />
       <DoorStyles
         items={cabinetInteriors}
         eyebrow="Cabinet Accessories"
@@ -27,6 +36,7 @@ export default function AccessoriesPage() {
         background="cream"
         backHref="/products"
         backLabel="Back to Products"
+        headingAs="h1"
       />
 
       <DoorStyles

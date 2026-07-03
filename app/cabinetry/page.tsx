@@ -28,16 +28,21 @@ import { LeadForm } from '@/app/kitchen-renovations/LeadForm';
 import { partners } from '@/data/partners';
 import { doorStyles } from '@/data/door-styles';
 import { siteConfig } from '@/data/site-config';
+import { JsonLd } from '@/components/JsonLd';
+import { StickyMobileCTA } from '@/components/StickyMobileCTA';
+import { faqSchema } from '@/lib/schema';
 import { formatPhone } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Cabinetry & Cabinet Parts in Nova Scotia',
   description:
     'Canadian-made Kitchen Craft and Triangle Kitchen cabinetry, replacement doors, drawer fronts, and hardware, supplied by a licensed distributor in Truro, NS. Request a quote, supply only or installed.',
+  alternates: { canonical: '/cabinetry' },
   openGraph: {
     title: 'Cabinetry & Cabinet Parts in Nova Scotia',
     description:
       'Genuine Kitchen Craft & Triangle Kitchen cabinetry and parts from a local licensed distributor. Request a quote today.',
+    images: [{ url: '/og-image.jpg', width: 1440, height: 1080 }],
   },
   robots: {
     index: true,
@@ -151,6 +156,8 @@ export default function CabinetSalesPage() {
 
   return (
     <>
+      <JsonLd data={faqSchema(faqs)} />
+
       {/* ─── Hero with Lead Form ─────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-charcoal">
         {/* Background image */}
@@ -409,6 +416,9 @@ export default function CabinetSalesPage() {
           </div>
         </div>
       </Section>
+
+      {/* Mobile: persistent call / quote bar */}
+      <StickyMobileCTA ctaLabel="Get My Free Quote" />
     </>
   );
 }

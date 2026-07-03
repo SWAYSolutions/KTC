@@ -34,6 +34,9 @@ const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || '';
 // Metadata for SEO
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
+  alternates: {
+    canonical: '/',
+  },
   title: {
     default: `${siteConfig.name} | Kitchen Renovations & Cabinet Distribution in Truro, Nova Scotia`,
     template: `%s | ${siteConfig.name}`,
@@ -78,9 +81,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: `${siteConfig.name} - Luxury Kitchen Design`,
+        width: 1440,
+        height: 1080,
+        alt: `${siteConfig.name} - custom kitchen in Nova Scotia`,
       },
     ],
   },
@@ -101,9 +104,11 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code',
-  },
+  // Google Search Console verification: set NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+  // to your code; the tag is omitted entirely when unset.
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }
+    : {}),
 };
 
 // Viewport configuration
@@ -204,9 +209,7 @@ export default function RootLayout({
             }}
           />
         )}
-        {/* Preconnect for performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Preconnect for performance (fonts are self-hosted via next/font) */}
         <link rel="preconnect" href="https://www.kitchencraft.com" />
         {/* Favicons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />

@@ -16,8 +16,6 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'From hidden appliances to statement stone, discover the trends shaping luxury kitchens this year and how to incorporate them into your own space.',
     content: `
-# 2024 Luxury Kitchen Trends: What's Defining High-End Design
-
 The luxury kitchen landscape is evolving, with homeowners seeking spaces that balance good looks with everyday function. Here are the defining trends we're seeing in high-end kitchen design this year.
 
 ## 1. Hidden Appliances & Integrated Design
@@ -63,8 +61,6 @@ Luxury now means everything has its place, and that place is well organized. Cus
     excerpt:
       'Protect your investment with these expert tips for maintaining and caring for high-quality kitchen cabinetry.',
     content: `
-# The Complete Guide to Caring for Your Premium Cabinets
-
 Your luxury cabinets are built to last, but proper care ensures they maintain their beauty for decades. Here's our comprehensive guide to cabinet maintenance.
 
 ## Daily Care
@@ -118,8 +114,6 @@ Twice a year, give your cabinets a thorough cleaning:
     excerpt:
       'An in-depth comparison of countertop materials to help you make the right choice for your lifestyle and aesthetic preferences.',
     content: `
-# Quartz vs. Natural Stone: Choosing the Perfect Countertop
-
 Selecting the right countertop is one of the most important decisions in your kitchen design. Here's our detailed comparison to help guide your choice.
 
 ## Engineered Quartz

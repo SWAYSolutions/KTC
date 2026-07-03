@@ -24,6 +24,8 @@ interface CountertopsProps {
   /** Optional back-link rendered tightly above the header. */
   backHref?: string;
   backLabel?: string;
+  /** Heading level for the section title ("h1" when this is the page's top heading). */
+  headingAs?: 'h1' | 'h2';
 }
 
 export function Countertops({
@@ -35,6 +37,7 @@ export function Countertops({
   quoteHrefBase = '/contact?product=',
   backHref,
   backLabel = 'Back',
+  headingAs = 'h2',
 }: CountertopsProps) {
   return (
     <Section background={background} padding="lg">
@@ -47,7 +50,7 @@ export function Countertops({
           {backLabel}
         </Link>
       )}
-      <SectionHeader subtitle={eyebrow} title={title} description={description} />
+      <SectionHeader subtitle={eyebrow} title={title} description={description} as={headingAs} />
 
       <div className="space-y-16">
         {materials.map((material) => {

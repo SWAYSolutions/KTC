@@ -127,12 +127,9 @@ export const footerLinks = {
   ],
   company: [
     { label: 'Blog', href: '/blog' },
-    { label: 'Contact Us', href: '/contact' },
-  ],
-  support: [
-    { label: 'Contact Us', href: '/contact' },
+    { label: 'Style Quiz', href: '/style-quiz' },
+    { label: 'Request a Quote', href: '/contact#quote' },
     { label: 'FAQs', href: '/contact#faq' },
-    { label: 'Request Quote', href: '/contact#quote' },
-    { label: 'Privacy Policy', href: '/privacy' },
+    { label: 'Contact Us', href: '/contact' },
   ],
 };

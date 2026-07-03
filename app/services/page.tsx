@@ -11,11 +11,14 @@ import Link from 'next/link';
 import { PenTool, Wrench, MessageSquare, Home, Package, ArrowRight, CheckCircle } from 'lucide-react';
 import { Section, Button } from '@/components/ui';
 import { DesignProcess, CTA } from '@/components/sections';
+import { JsonLd } from '@/components/JsonLd';
+import { servicesSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Services - Kitchen Design, Installation & Cabinet Supply',
   description:
     'Explore our kitchen services: custom design, professional installation, design consultation, complete renovation, and cabinet & parts supply as a licensed distributor of Kitchen Craft and Triangle Kitchen.',
+  alternates: { canonical: '/services' },
 };
 
 const services = [
@@ -105,6 +108,8 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
+      <JsonLd data={servicesSchema(services)} />
+
       {/* Hero Section */}
       <Section background="charcoal" padding="xl">
         <div className="text-center">

@@ -57,7 +57,7 @@ export function CTA({
           <div className="relative h-64 lg:h-auto min-h-[400px]">
             <Image
               src="https://www.kitchencraft.com/file/media/kitchencraft/products/environment/gentry/gentry2.jpg"
-              alt="Luxury kitchen interior"
+              alt="Kitchen Craft Gentry kitchen with sage-blue shaker cabinets and light oak island"
               fill
               className="object-cover"
             />
@@ -132,7 +132,7 @@ export function CTA({
       <div className="absolute inset-0">
         <Image
           src="https://www.kitchencraft.com/file/media/kitchencraft/products/environment/summit/acrylicbluekitchen1.jpg"
-          alt="Modern kitchen background"
+          alt="Kitchen Craft Summit contemporary kitchen with high-gloss cabinetry"
           fill
           className="object-cover"
         />

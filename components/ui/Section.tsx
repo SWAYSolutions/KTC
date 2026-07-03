@@ -61,6 +61,8 @@ interface SectionHeaderProps {
   description?: string;
   align?: 'left' | 'center' | 'right';
   className?: string;
+  /** Heading level for the title. Use "h1" for the page's top heading (SEO). */
+  as?: 'h1' | 'h2';
 }
 
 function SectionHeader({
@@ -69,6 +71,7 @@ function SectionHeader({
   description,
   align = 'center',
   className,
+  as: Heading = 'h2',
 }: SectionHeaderProps) {
   const alignments = {
     left: 'text-left',
@@ -83,9 +86,9 @@ function SectionHeader({
           {subtitle}
         </span>
       )}
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-4">
+      <Heading className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-4">
         {title}
-      </h2>
+      </Heading>
       {description && (
         <p className="text-charcoal-400 text-lg leading-relaxed">{description}</p>
       )}

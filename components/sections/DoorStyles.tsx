@@ -39,6 +39,8 @@ interface DoorStylesProps {
   /** Optional back-link rendered tightly above the header. */
   backHref?: string;
   backLabel?: string;
+  /** Heading level for the section title ("h1" when this is the page's top heading). */
+  headingAs?: 'h1' | 'h2';
 }
 
 /** Compact overlay card used by the default grid. */
@@ -116,6 +118,7 @@ export function DoorStyles({
   formHref = '#get-started',
   backHref,
   backLabel = 'Back',
+  headingAs = 'h2',
 }: DoorStylesProps) {
   const shown = typeof limit === 'number' ? items.slice(0, limit) : items;
   const gridClass =
@@ -141,7 +144,7 @@ export function DoorStyles({
           {backLabel}
         </Link>
       )}
-      <SectionHeader subtitle={eyebrow} title={title} description={description} />
+      <SectionHeader subtitle={eyebrow} title={title} description={description} as={headingAs} />
 
       <div className={gridClass}>
         {shown.map((item) =>

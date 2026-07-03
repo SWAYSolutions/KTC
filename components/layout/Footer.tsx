@@ -1,9 +1,7 @@
-'use client';
-
 /**
  * ═══════════════════════════════════════════════════════════════════════════════
  * Kitchen Table Cabinetry - Footer Component
- * Comprehensive site footer with links, contact info, and newsletter
+ * Comprehensive site footer with links and contact info (server component)
  * ═══════════════════════════════════════════════════════════════════════════════
  */
 
@@ -19,7 +17,7 @@ export function Footer() {
     <footer className="bg-charcoal text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <div className="mb-6">
@@ -61,14 +59,29 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.products.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="text-charcoal-300 hover:text-gold transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services Links */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-white">Services</h4>
+            <ul className="space-y-3">
+              {footerLinks.services.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-charcoal-300 hover:text-gold transition-colors"
+                  >
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>

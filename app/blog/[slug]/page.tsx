@@ -14,6 +14,8 @@ import { Section, Button, Badge, Card } from '@/components/ui';
 import { CTA } from '@/components/sections';
 import { getBlogPostBySlug, blogPosts, getRecentBlogPosts } from '@/data/blog';
 import { formatDate } from '@/lib/utils';
+import { JsonLd } from '@/components/JsonLd';
+import { blogPostingSchema, breadcrumbSchema } from '@/lib/schema';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -38,6 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       type: 'article',
       title: post.title,
@@ -62,6 +65,14 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <>
+      <JsonLd data={blogPostingSchema(post)} />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Blog', path: '/blog' },
+          { name: post.title, path: `/blog/${post.slug}` },
+        ])}
+      />
+
       {/* Article Header */}
       <article>
         {/* Hero Image */}
