@@ -72,6 +72,10 @@ export const navigation: NavItem[] = [
     ],
   },
   {
+    label: 'Our Work',
+    href: '/our-work',
+  },
+  {
     label: 'Services',
     href: '/services',
     children: [
@@ -126,6 +130,7 @@ export const footerLinks = {
     { label: 'Renovation', href: '/services#renovation' },
   ],
   company: [
+    { label: 'Our Work', href: '/our-work' },
     { label: 'Blog', href: '/blog' },
     { label: 'Style Quiz', href: '/style-quiz' },
     { label: 'Request a Quote', href: '/contact#quote' },
