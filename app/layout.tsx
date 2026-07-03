@@ -8,6 +8,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
 import { Header, Footer } from '@/components/layout';
+import { AttributionTracker } from '@/components/AttributionTracker';
 import { siteConfig } from '@/data/site-config';
 import { FB_PIXEL_ID } from '@/lib/fpixel';
 import './globals.css';
@@ -25,11 +26,10 @@ const playfair = Playfair_Display({
   variable: '--font-playfair',
 });
 
-// Google Analytics 4 Measurement ID. Defaults to the live property so GA
-// works on deploy without extra env config; NEXT_PUBLIC_GOOGLE_ANALYTICS_ID
-// overrides it. Measurement IDs are non-secret (exposed client-side).
-const GA_MEASUREMENT_ID =
-  process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || 'G-7SQZE4VR3T';
+// Google Analytics 4 Measurement ID. Set NEXT_PUBLIC_GOOGLE_ANALYTICS_ID to
+// YOUR GA4 property; when unset, GA does not load (no default account).
+// Measurement IDs are non-secret (exposed client-side).
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || '';
 
 // Metadata for SEO
 export const metadata: Metadata = {
@@ -238,6 +238,9 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
+
+        {/* Captures first-touch ad attribution (UTM / fbclid) for lead tracking */}
+        <AttributionTracker />
 
         <Header />
 

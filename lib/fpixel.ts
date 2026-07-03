@@ -9,7 +9,9 @@
  * ═══════════════════════════════════════════════════════════════════════════════
  */
 
-export const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID || '1735485277483767';
+// Set NEXT_PUBLIC_FB_PIXEL_ID to YOUR Meta Pixel. When unset, the Pixel does
+// not load (no default account), so events never fire to someone else's pixel.
+export const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID || '';
 
 declare global {
   interface Window {

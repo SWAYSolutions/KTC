@@ -219,6 +219,7 @@ export default function CabinetSalesPage() {
               </div>
               <LeadForm
                 source="Cabinet Sales Page"
+                leadCategory="Cabinet Sales"
                 heading="Request Your Cabinet Quote"
                 subheading="Tell us what you need: full cabinets, doors, drawer fronts, or hardware. Takes 30 seconds, no obligation. We'll reply within one business day."
                 submitLabel="Request My Quote"

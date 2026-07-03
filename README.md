@@ -88,9 +88,12 @@ Set these in your Vercel project settings:
 
 | Variable | Description |
 |----------|-------------|
-| `NEXT_PUBLIC_GOOGLE_ANALYTICS_ID` | Google Analytics 4 Measurement ID |
-| `NEXT_PUBLIC_FORMSPREE_ID` | Formspree form endpoint ID |
-| `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | Google Maps API Key |
+| `NEXT_PUBLIC_FORMSPREE_ID` | Formspree form endpoint ID (**required** — where leads are delivered) |
+| `NEXT_PUBLIC_FB_PIXEL_ID` | Meta (Facebook) Pixel ID — powers ad Lead tracking. Must be **your** pixel; unset = disabled |
+| `NEXT_PUBLIC_GOOGLE_ANALYTICS_ID` | Google Analytics 4 Measurement ID — must be **your** property; unset = disabled |
+| `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | Google Maps API Key (optional) |
+
+> Before running Facebook ads, set `NEXT_PUBLIC_FB_PIXEL_ID` and `NEXT_PUBLIC_FORMSPREE_ID` to your own accounts. See `docs/facebook-ads-playbook.md`.
 
 ## 🏗️ Project Structure
 

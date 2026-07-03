@@ -14,6 +14,7 @@ import { Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { Button, Input, Textarea } from '@/components/ui';
 import { isValidEmail, isValidPhone } from '@/lib/utils';
 import { trackLead } from '@/lib/fpixel';
+import { getAttribution } from '@/lib/attribution';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -111,13 +112,14 @@ export function ContactForm() {
         },
         body: JSON.stringify({
           ...formData,
+          ...getAttribution(),
           _subject: `New Contact: ${formData.subject}`,
         }),
       });
 
       if (response.ok) {
         // Fire the Meta Pixel "Lead" conversion event.
-        trackLead({ content_name: 'Contact Page' });
+        trackLead({ content_name: 'Contact Page', content_category: 'General Enquiry' });
         setStatus('success');
         setFormData(initialFormData);
       } else {

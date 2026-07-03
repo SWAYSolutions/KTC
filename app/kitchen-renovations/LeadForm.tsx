@@ -16,6 +16,7 @@ import { Send, CheckCircle, AlertCircle, ShieldCheck } from 'lucide-react';
 import { Button, Input, Textarea } from '@/components/ui';
 import { isValidEmail, isValidPhone } from '@/lib/utils';
 import { trackLead } from '@/lib/fpixel';
+import { getAttribution } from '@/lib/attribution';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -69,6 +70,10 @@ interface LeadFormProps {
   projectOptions?: ProjectOption[];
   /** Prefix used to build the email subject line */
   subjectPrefix?: string;
+  /** Category for the Meta "Lead" event so each offer can optimize/report separately */
+  leadCategory?: string;
+  /** Optional lead value for Meta value-based optimization (CAD) */
+  leadValue?: number;
 }
 
 export function LeadForm({
@@ -82,6 +87,8 @@ export function LeadForm({
   projectTypePlaceholder = 'Select a project type',
   projectOptions = defaultProjectOptions,
   subjectPrefix = 'New Renovation Lead',
+  leadCategory = 'Kitchen Renovation',
+  leadValue,
 }: LeadFormProps) {
   const [formData, setFormData] = useState<LeadFormData>(initialFormData);
   const [errors, setErrors] = useState<Partial<LeadFormData>>({});
@@ -141,6 +148,7 @@ export function LeadForm({
         },
         body: JSON.stringify({
           ...formData,
+          ...getAttribution(),
           _source: source,
           _subject: `${subjectPrefix} (${source}): ${formData.name}`,
         }),
@@ -148,8 +156,13 @@ export function LeadForm({
 
       if (response.ok) {
         // Fire the Meta Pixel "Lead" conversion event so the ad campaign
-        // can optimize for and report on form submissions.
-        trackLead({ content_name: source });
+        // can optimize for and report on form submissions. content_category
+        // lets each offer (cabinet sales vs renovation) optimize separately.
+        trackLead({
+          content_name: source,
+          content_category: leadCategory,
+          ...(leadValue ? { value: leadValue, currency: 'CAD' } : {}),
+        });
         setStatus('success');
         setFormData(initialFormData);
       } else {
