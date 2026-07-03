@@ -1,7 +1,7 @@
 /**
  * ═══════════════════════════════════════════════════════════════════════════════
  * Kitchen Table Cabinetry - Style Quiz Data
- * AI-powered style recommendation quiz questions and results
+ * Style recommendation quiz questions and results (preference scoring)
  * ═══════════════════════════════════════════════════════════════════════════════
  */
 

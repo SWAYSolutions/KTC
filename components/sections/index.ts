@@ -6,7 +6,7 @@
  */
 
 export { Hero } from './Hero';
-export { FeaturedProjects } from './FeaturedProjects';
+export { StyleQuizSection } from './StyleQuizSection';
 export { Partners } from './Partners';
 export { WhyUs } from './WhyUs';
 

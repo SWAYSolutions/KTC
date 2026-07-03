@@ -7,7 +7,7 @@
 
 import {
   Hero,
-  FeaturedProjects,
+  StyleQuizSection,
   Partners,
   WhyUs,
   CTA,
@@ -26,8 +26,8 @@ export default function HomePage() {
       {/* Why Choose Us - Our unique value propositions */}
       <WhyUs />
 
-      {/* Featured Projects - Gallery carousel of our best work */}
-      <FeaturedProjects />
+      {/* Style Quiz - interactive style finder that feeds the consultation funnel */}
+      <StyleQuizSection />
 
       {/* Design Process - Interactive timeline showing our journey */}
       <DesignProcess background="white" />

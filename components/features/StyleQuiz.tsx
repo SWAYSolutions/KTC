@@ -3,7 +3,7 @@
 /**
  * ═══════════════════════════════════════════════════════════════════════════════
  * Kitchen Table Cabinetry - Style Quiz Component
- * AI-powered style recommendation quiz
+ * Interactive style recommendation quiz (preference scoring)
  * ═══════════════════════════════════════════════════════════════════════════════
  */
 
@@ -105,7 +105,7 @@ export function StyleQuiz({ onComplete }: StyleQuizProps) {
 
           {/* Actions */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <Link href={`/contact?product=${encodeURIComponent(result.title)}`}>
               <Button variant="gold" size="lg" className="group">
                 Schedule Consultation
                 <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
